@@ -51,18 +51,30 @@ def remove_duplicates(intakes):
         keep="first",
     ).copy()
 
-
+def split_datetime(intakes):
+    intakes = intakes.copy()
+    intakes["Intake Date"] = (
+        intakes["DateTime"]
+        .dt.strftime("%Y-%m-%d")
+    )
+    intakes["Intake Time"] = (
+        intakes["DateTime"]
+        .dt.strftime("%H:%M:%S")
+    )
+    intakes = intakes.drop(
+        columns=["DateTime"]
+    )
+    return intakes    
 
 if __name__ == "__main__":
     intakes = convert_datetime(intakes)
+    intakes = intakes.sort_values(
+            by = ["DateTime"],
+            ascending= True
+        )
     intakes_2024 = filter_2024(intakes)
     intakes_2024 = remove_duplicates(intakes_2024)
-
-    intakes_2024 = intakes_2024.sort_values(
-        by = ["DateTime"],
-        ascending= True
-    )
-    
+    intakes_2024 = split_datetime(intakes_2024)
     # delete useless columns
     intakes_2024 = intakes_2024.drop(
         columns=["Name", "MonthYear"],
@@ -71,6 +83,6 @@ if __name__ == "__main__":
     intakes_2024.to_csv(
         OUTPUT_PATH,
         index = False,
-        date_format="%Y-%m-%d %H:%M:%S"
+        date_format="%Y-%m-%d"
     )
 
