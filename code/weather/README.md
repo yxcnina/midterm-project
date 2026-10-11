@@ -1,3 +1,91 @@
-# Weather Code
 
-Python scripts for retrieving, cleaning, and validating Austin weather data for 2024.
+# Austin Weather Data Collection
+
+## Overview
+
+This module retrieves historical daily weather data for Austin, Texas, covering January 1 through December 31, 2024.
+
+Weather data are collected from two sources:
+
+1. NOAA NCEI Daily Summaries
+2. Open-Meteo Historical Weather API
+
+The datasets will be cleaned and merged by date in the subsequent data-processing stage.
+
+## Data Sources
+
+### NOAA
+
+- Provider: National Oceanic and Atmospheric Administration (NOAA)
+- Dataset: NCEI Daily Summaries
+- Station: Austin Camp Mabry
+- Station ID: USW00013958
+- Period: January 1–December 31, 2024
+- API: https://www.ncei.noaa.gov/access/services/data/v1
+
+Variables:
+
+| Variable | Description | Unit |
+| --- | --- | --- |
+| TMAX | Daily maximum temperature | °C |
+| TMIN | Daily minimum temperature | °C |
+| PRCP | Daily precipitation total | mm |
+
+### Open-Meteo
+
+- Provider: Open-Meteo
+- Dataset: Historical Weather API
+- Latitude: 30.3208
+- Longitude: -97.7603
+- Timezone: America/Chicago
+- Period: January 1–December 31, 2024
+- API: https://archive-api.open-meteo.com/v1/archive
+
+Variables:
+
+| Variable | Description | Unit |
+| --- | --- | --- |
+| relative_humidity_2m_mean | Daily mean relative humidity at 2 meters | % |
+| cloud_cover_mean | Daily mean cloud cover | % |
+| wind_speed_10m_max | Daily maximum wind speed at 10 meters | km/h |
+
+## Reproducing the Data Collection
+
+From the project root directory, run:
+
+```bash
+python3 code/weather/fetch_noaa.py
+python3 code/weather/fetch_open_meteo.py
+```
+
+The scripts use Python's standard library and do not require additional packages.
+
+## Raw Data Outputs
+
+The scripts save their results to:
+
+- `data/raw/noaa_austin_2024.json`
+- `data/raw/open_meteo_austin_2024.json`
+
+## Initial Validation
+
+Both sources returned 366 daily observations for 2024.
+
+The initial checks reported:
+
+- No missing calendar dates
+- No duplicate dates
+- No missing requested weather fields or values
+
+Further numerical and logical validation will be performed during data processing.
+
+## Data Limitations
+
+NOAA provides station-based weather observations, whereas Open-Meteo provides historical gridded weather estimates for the requested coordinates.
+
+The two sources may differ in spatial coverage and daily measurement conventions.
+
+Daily records should therefore be interpreted with attention to differences in observation windows and local time definitions.
+
+The data collection stage preserves raw source values. Cleaning, harmonization, date merging, and derived variables are handled separately.
+
