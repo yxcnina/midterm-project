@@ -67,13 +67,13 @@ def split_datetime(outcomes):
 
 if __name__ == "__main__":
     outcomes = convert_datetime(outcomes)
-    outcomes = outcomes.sort_values(
-            by = ["DateTime"],
-            ascending= True
-        )
     outcomes_2024 = filter_2024(outcomes)
     outcomes_2024 = remove_duplicates(outcomes_2024)
     # delete useless columns
+    outcomes_2024 = outcomes_2024.sort_values(
+                by=["DateTime", "Animal ID"],
+                ascending=[True, True],
+            )
     outcomes_2024 = outcomes_2024.drop(
         columns=["Name", "MonthYear"],
     ).copy()
