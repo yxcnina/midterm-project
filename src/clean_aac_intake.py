@@ -61,9 +61,6 @@ def split_datetime(intakes):
         intakes["DateTime"]
         .dt.strftime("%H:%M:%S")
     )
-    intakes = intakes.drop(
-        columns=["DateTime"]
-    )
     return intakes    
 
 if __name__ == "__main__":
@@ -83,6 +80,6 @@ if __name__ == "__main__":
     intakes_2024.to_csv(
         OUTPUT_PATH,
         index = False,
-        date_format="%Y-%m-%d"
+        date_format="%Y-%m-%d %H:%M:%S"
     )
 
