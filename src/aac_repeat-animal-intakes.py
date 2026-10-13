@@ -43,53 +43,21 @@ intakes = intakes.sort_values(
     kind="mergesort",
 ).reset_index(drop=True)
 
+intakes["Intake Event Number"] = (
+    intakes.groupby("Animal ID").cumcount() + 1
+)
+
 intakes["Intake Event ID"] = (
-    intakes["Animal ID"]
+    intakes["Animal ID"].astype(str)
     + "_"
-    + (
-        intakes.groupby("Animal ID")
-        .cumcount() + 1)
-        .astype(str)
-    )
-
-
-
-    # columns = [
-    #     "Intake Event ID"
-    #     "Animal ID",
-    #     "Intake_DateTime",
-    #     "Found Location",
-    #     "Intake Type",
-    #     "Intake Condition",
-    #     "Animal Type",
-    #     "Sex upon Intake",
-    #     "Age upon Intake",
-    #     "Breed",
-    #     "Color",
-    # ]
-
-    # return intakes[columns]
-
+    + intakes["Intake Event Number"].astype(str)
+)
 
 outcomes = outcomes.rename(
     columns ={
         "DateTime": "Outcome_DateTime",
         }
 ).copy()
-
-    # columns = [
-    #     "Animal ID",
-    #     "Outcome_DateTime",
-    #     "Outcome Type",
-    #     "Outcome Subtype"
-    # ]
-
-    # outcomes = outcomes[columns]
-
-# outcomes.sort_values(
-#     ["Animal ID", "Outcome_DateTime"],
-#     kind="mergesort",
-# ).reset_index(drop=True)
 
 def match_outcomes_to_intakes(intakes, outcomes):
     intakes_for_matching = intakes.sort_values(
@@ -161,6 +129,7 @@ def match_outcomes_to_intakes(intakes, outcomes):
 
     columns = [
         "Intake Event ID",
+        "Intake Event Number",
         "Animal ID",
         "Intake_DateTime",
         "Intake Date",
@@ -183,6 +152,14 @@ def match_outcomes_to_intakes(intakes, outcomes):
     ]
 
     Repeat_Intakes = Repeat_Intakes[columns]
+
+    Repeat_Intakes = Repeat_Intakes.sort_values(
+        [
+        "Animal ID",
+        "Intake Event Number",
+        ],
+        kind="mergesort",
+    ).reset_index(drop=True)
 
     Repeat_Intakes.to_csv(
         OUTPUT_PATH,
