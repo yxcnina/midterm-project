@@ -1,0 +1,33 @@
+animal_type,category,count,denominator,percent
+Cat,Normal,4614,6046,76.314919
+Cat,Injured,409,6046,6.764803
+Cat,Sick,375,6046,6.202448
+Cat,Neonatal,530,6046,8.766126
+Cat,Medical,91,6046,1.505127
+Cat,Med Attn,9,6046,0.148859
+Cat,Pregnant,1,6046,0.016540
+Cat,Aged,0,6046,0.000000
+Cat,Behavior,3,6046,0.049620
+Cat,Unknown,0,6046,0.000000
+Cat,Other,1,6046,0.016540
+Cat,Feral,8,6046,0.132319
+Cat,Med Urgent,3,6046,0.049620
+Cat,Neurologic,1,6046,0.016540
+Cat,Parvo,0,6046,0.000000
+Cat,Agonal,1,6046,0.016540
+Dog,Normal,4082,5188,78.681573
+Dog,Injured,478,5188,9.213570
+Dog,Sick,284,5188,5.474171
+Dog,Neonatal,89,5188,1.715497
+Dog,Medical,134,5188,2.582884
+Dog,Med Attn,37,5188,0.713184
+Dog,Pregnant,23,5188,0.443331
+Dog,Aged,19,5188,0.366230
+Dog,Behavior,10,5188,0.192753
+Dog,Unknown,13,5188,0.250578
+Dog,Other,10,5188,0.192753
+Dog,Feral,0,5188,0.000000
+Dog,Med Urgent,4,5188,0.077101
+Dog,Neurologic,2,5188,0.038551
+Dog,Parvo,3,5188,0.057826
+Dog,Agonal,0,5188,0.000000

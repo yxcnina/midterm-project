@@ -1,0 +1,4 @@
+animal_type,intake_records,geocoded_records,not_geocoded_records,coverage_percent
+All animals,11815,7545,4270,63.859500634786286
+Cat,6046,4113,1933,68.02844856103209
+Dog,5188,3036,2152,58.519660755589825

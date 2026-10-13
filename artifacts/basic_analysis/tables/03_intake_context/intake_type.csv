@@ -1,0 +1,9 @@
+animal_type,category,count,denominator,percent
+Cat,Stray,4948,6046,81.839233
+Cat,Owner Surrender,862,6046,14.257360
+Cat,Public Assist,97,6046,1.604367
+Cat,Abandoned,139,6046,2.299041
+Dog,Stray,3155,5188,60.813416
+Dog,Owner Surrender,1184,5188,22.821897
+Dog,Public Assist,590,5188,11.372398
+Dog,Abandoned,259,5188,4.992290

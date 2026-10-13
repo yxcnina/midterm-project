@@ -1,0 +1,914 @@
+animal_type,feature,category,outcome_records,adoption_records,adoption_share_percent,shown_in_chart
+Cat,age,<6 months,3642,2424,66.556837,True
+Cat,age,1 to <3 years,1393,782,56.137832,True
+Cat,age,3 to <7 years,420,256,60.952381,True
+Cat,age,6 to <12 months,344,265,77.034884,True
+Cat,age,7+ years,200,92,46.000000,True
+Cat,age,Recorded as 0 years,12,0,0.000000,True
+Cat,sex,Male,2847,1943,68.247278,True
+Cat,sex,Female,2773,1876,67.652362,True
+Cat,sex,Unknown,391,0,0.000000,True
+Cat,breed,Domestic Shorthair,4944,3099,62.682039,True
+Cat,breed,Domestic Medium Hair,378,252,66.666667,True
+Cat,breed,Domestic Shorthair Mix,345,228,66.086957,True
+Cat,breed,Domestic Longhair,111,81,72.972973,True
+Cat,breed,Siamese,92,58,63.043478,True
+Cat,breed,Siamese Mix,38,28,73.684211,False
+Cat,breed,Domestic Longhair Mix,16,13,81.250000,False
+Cat,breed,Domestic Medium Hair Mix,16,10,62.500000,False
+Cat,breed,Snowshoe Mix,11,10,90.909091,False
+Cat,breed,American Shorthair,10,4,40.000000,False
+Cat,breed,Russian Blue,7,3,42.857143,False
+Cat,breed,Abyssinian,3,2,66.666667,False
+Cat,breed,Abyssinian Mix,3,3,100.000000,False
+Cat,breed,Bengal,3,3,100.000000,False
+Cat,breed,British Shorthair,3,3,100.000000,False
+Cat,breed,Himalayan,3,2,66.666667,False
+Cat,breed,Snowshoe,3,3,100.000000,False
+Cat,breed,Cymric Mix,2,2,100.000000,False
+Cat,breed,Domestic Longhair/Persian,2,2,100.000000,False
+Cat,breed,Domestic Shorthair/Manx,2,2,100.000000,False
+Cat,breed,Manx,2,1,50.000000,False
+Cat,breed,Persian,2,0,0.000000,False
+Cat,breed,Ragdoll,2,2,100.000000,False
+Cat,breed,Scottish Fold,2,2,100.000000,False
+Cat,breed,Siamese/Domestic Shorthair,2,2,100.000000,False
+Cat,breed,Bengal Mix,1,1,100.000000,False
+Cat,breed,Burmese Mix,1,0,0.000000,False
+Cat,breed,Havana Brown,1,0,0.000000,False
+Cat,breed,Himalayan Mix,1,0,0.000000,False
+Cat,breed,Maine Coon,1,0,0.000000,False
+Cat,breed,Maine Coon Mix,1,0,0.000000,False
+Cat,breed,Oriental Sh,1,1,100.000000,False
+Cat,breed,Persian Mix,1,1,100.000000,False
+Cat,breed,Snowshoe/Domestic Shorthair,1,1,100.000000,False
+Cat,color,Brown Tabby,1019,677,66.437684,True
+Cat,color,Black,783,468,59.770115,True
+Cat,color,Brown Tabby/White,508,359,70.669291,True
+Cat,color,Black/White,468,297,63.461538,True
+Cat,color,Orange Tabby,450,274,60.888889,True
+Cat,color,Blue Tabby,250,160,64.000000,False
+Cat,color,Calico,247,170,68.825911,False
+Cat,color,Tortie,238,137,57.563025,False
+Cat,color,Orange Tabby/White,232,146,62.931034,False
+Cat,color,Blue,203,129,63.546798,False
+Cat,color,Torbie,199,132,66.331658,False
+Cat,color,Blue/White,140,93,66.428571,False
+Cat,color,Blue Tabby/White,125,96,76.800000,False
+Cat,color,Cream Tabby,109,75,68.807339,False
+Cat,color,White/Black,86,55,63.953488,False
+Cat,color,Cream Tabby/White,60,51,85.000000,False
+Cat,color,White/Brown Tabby,57,40,70.175439,False
+Cat,color,Flame Point,55,35,63.636364,False
+Cat,color,Lynx Point,53,37,69.811321,False
+Cat,color,White,48,25,52.083333,False
+Cat,color,Torbie/White,43,27,62.790698,False
+Cat,color,Seal Point,40,28,70.000000,False
+Cat,color,Calico/White,37,18,48.648649,False
+Cat,color,White/Blue,32,19,59.375000,False
+Cat,color,Orange,31,11,35.483871,False
+Cat,color,Gray Tabby,27,13,48.148148,False
+Cat,color,White/Orange Tabby,27,19,70.370370,False
+Cat,color,Orange/White,24,7,29.166667,False
+Cat,color,Tortie Point,23,19,82.608696,False
+Cat,color,Lilac Point,19,12,63.157895,False
+Cat,color,Lynx Point/White,16,11,68.750000,False
+Cat,color,Cream,15,4,26.666667,False
+Cat,color,Silver Tabby,14,7,50.000000,False
+Cat,color,White/Gray,14,8,57.142857,False
+Cat,color,Gray,13,2,15.384615,False
+Cat,color,White/Brown,13,5,38.461538,False
+Cat,color,White/Orange,13,5,38.461538,False
+Cat,color,Black Tabby,12,4,33.333333,False
+Cat,color,Gray Tabby/White,12,8,66.666667,False
+Cat,color,White/Blue Tabby,12,9,75.000000,False
+Cat,color,Black Smoke,11,5,45.454545,False
+Cat,color,Black Tabby/White,10,6,60.000000,False
+Cat,color,Tortie/White,10,6,60.000000,False
+Cat,color,Black/Black,8,1,12.500000,False
+Cat,color,Chocolate Point,8,2,25.000000,False
+Cat,color,Seal Point/White,8,7,87.500000,False
+Cat,color,Blue Point,7,5,71.428571,False
+Cat,color,Calico Point,7,7,100.000000,False
+Cat,color,Brown,6,3,50.000000,False
+Cat,color,Brown Tabby/Black,6,3,50.000000,False
+Cat,color,Brown/White,6,2,33.333333,False
+Cat,color,Gray/White,6,1,16.666667,False
+Cat,color,Black/Gray,5,0,0.000000,False
+Cat,color,Blue Cream,5,3,60.000000,False
+Cat,color,Brown Tabby/Cream,5,5,100.000000,False
+Cat,color,Brown Tiger/White,5,3,60.000000,False
+Cat,color,Cream/White,5,3,60.000000,False
+Cat,color,White/Cream Tabby,5,4,80.000000,False
+Cat,color,White/Gray Tabby,5,3,60.000000,False
+Cat,color,Blue Point/White,4,3,75.000000,False
+Cat,color,Brown Tabby/Gray,4,1,25.000000,False
+Cat,color,Chocolate Point/White,4,3,75.000000,False
+Cat,color,Silver Tabby/White,4,2,50.000000,False
+Cat,color,Torbie/Orange,4,3,75.000000,False
+Cat,color,Tortie/Black,4,0,0.000000,False
+Cat,color,White/Calico,4,2,50.000000,False
+Cat,color,Blue Smoke,3,3,100.000000,False
+Cat,color,Brown Tabby/Orange,3,0,0.000000,False
+Cat,color,Brown Tiger,3,1,33.333333,False
+Cat,color,Brown/Black,3,2,66.666667,False
+Cat,color,Buff/White,3,1,33.333333,False
+Cat,color,Calico/Orange,3,2,66.666667,False
+Cat,color,Silver Lynx Point,3,1,33.333333,False
+Cat,color,Agouti,2,1,50.000000,False
+Cat,color,Black Smoke/Black Tabby,2,1,50.000000,False
+Cat,color,Black Smoke/White,2,1,50.000000,False
+Cat,color,Black/Brown,2,1,50.000000,False
+Cat,color,Lilac Point/White,2,2,100.000000,False
+Cat,color,Silver Lynx Point/Cream,2,0,0.000000,False
+Cat,color,Torbie/Brown,2,0,0.000000,False
+Cat,color,Torbie/Brown Tabby,2,0,0.000000,False
+Cat,color,Tortie/Blue,2,1,50.000000,False
+Cat,color,Tortie/Orange,2,1,50.000000,False
+Cat,color,White/Black Tabby,2,1,50.000000,False
+Cat,color,White/Cream,2,2,100.000000,False
+Cat,color,White/Flame Point,2,1,50.000000,False
+Cat,color,Apricot,1,1,100.000000,False
+Cat,color,Black/Black Tabby,1,0,0.000000,False
+Cat,color,Blue Point/Cream,1,0,0.000000,False
+Cat,color,Blue Tabby/Brown Tabby,1,0,0.000000,False
+Cat,color,Blue Tabby/Cream,1,0,0.000000,False
+Cat,color,Blue Tiger/Black,1,0,0.000000,False
+Cat,color,Brown Merle,1,1,100.000000,False
+Cat,color,Brown Tabby/Brown,1,1,100.000000,False
+Cat,color,Brown Tabby/Gold,1,1,100.000000,False
+Cat,color,Brown Tabby/Gray Tabby,1,0,0.000000,False
+Cat,color,Brown Tabby/Tortie,1,1,100.000000,False
+Cat,color,Brown Tiger/Black,1,0,0.000000,False
+Cat,color,Brown/Brown Tabby,1,0,0.000000,False
+Cat,color,Buff,1,1,100.000000,False
+Cat,color,Calico/Brown,1,0,0.000000,False
+Cat,color,Calico/Gray,1,1,100.000000,False
+Cat,color,Calico/Gray Tabby,1,0,0.000000,False
+Cat,color,Chocolate,1,0,0.000000,False
+Cat,color,Chocolate/White,1,1,100.000000,False
+Cat,color,Cream/Blue Point,1,1,100.000000,False
+Cat,color,Gray/Black,1,0,0.000000,False
+Cat,color,Gray/Brown,1,0,0.000000,False
+Cat,color,Gray/Gray Tabby,1,1,100.000000,False
+Cat,color,Lilac Point/Gray,1,1,100.000000,False
+Cat,color,Orange Tabby/Cream,1,1,100.000000,False
+Cat,color,Red/Orange Tabby,1,0,0.000000,False
+Cat,color,Ruddy,1,1,100.000000,False
+Cat,color,Seal Point/Cream,1,1,100.000000,False
+Cat,color,Torbie/Black,1,1,100.000000,False
+Cat,color,Torbie/Blue,1,0,0.000000,False
+Cat,color,Torbie/Silver Tabby,1,0,0.000000,False
+Cat,color,Tortie Point/White,1,0,0.000000,False
+Cat,color,Tortie/Black Smoke,1,0,0.000000,False
+Cat,color,Tortie/Blue Cream,1,1,100.000000,False
+Cat,color,Tortie/Gray,1,1,100.000000,False
+Cat,color,Tortie/Tan,1,0,0.000000,False
+Cat,color,Tortie/Tortie,1,1,100.000000,False
+Cat,color,Tricolor/Tortie,1,1,100.000000,False
+Cat,color,White/Chocolate,1,1,100.000000,False
+Cat,color,White/Tortie Point,1,1,100.000000,False
+Cat,color,White/Tricolor,1,1,100.000000,False
+Cat,sex_status,Neutered Male,2047,1894,92.525647,False
+Cat,sex_status,Spayed Female,1959,1825,93.159775,False
+Cat,sex_status,Intact Female,814,51,6.265356,False
+Cat,sex_status,Intact Male,800,49,6.125000,False
+Cat,sex_status,Unknown,391,0,0.000000,False
+Dog,age,1 to <3 years,1787,1165,65.193061,True
+Dog,age,<6 months,1557,1139,73.153500,True
+Dog,age,3 to <7 years,898,507,56.458797,True
+Dog,age,6 to <12 months,516,433,83.914729,True
+Dog,age,7+ years,473,214,45.243129,True
+Dog,age,Recorded as 0 years,2,2,100.000000,True
+Dog,sex,Male,2740,1754,64.014599,True
+Dog,sex,Female,2446,1705,69.705642,True
+Dog,sex,Unknown,47,1,2.127660,True
+Dog,breed,Pit Bull,437,270,61.784897,True
+Dog,breed,Labrador Retriever Mix,432,337,78.009259,True
+Dog,breed,Pit Bull Mix,374,219,58.556150,True
+Dog,breed,Labrador Retriever,278,169,60.791367,True
+Dog,breed,Chihuahua Shorthair,228,136,59.649123,True
+Dog,breed,German Shepherd,226,159,70.353982,False
+Dog,breed,German Shepherd Mix,201,143,71.144279,False
+Dog,breed,Chihuahua Shorthair Mix,106,59,55.660377,False
+Dog,breed,Siberian Husky,97,65,67.010309,False
+Dog,breed,Australian Cattle Dog Mix,89,56,62.921348,False
+Dog,breed,Great Pyrenees,64,49,76.562500,False
+Dog,breed,Great Pyrenees Mix,60,46,76.666667,False
+Dog,breed,Siberian Husky Mix,57,51,89.473684,False
+Dog,breed,Australian Cattle Dog,55,34,61.818182,False
+Dog,breed,American Pit Bull Terrier,54,22,40.740741,False
+Dog,breed,Border Collie Mix,43,30,69.767442,False
+Dog,breed,Black Mouth Cur Mix,39,36,92.307692,False
+Dog,breed,Doberman Pinsch,37,22,59.459459,False
+Dog,breed,Catahoula Mix,35,29,82.857143,False
+Dog,breed,American Bulldog Mix,32,21,65.625000,False
+Dog,breed,Anatol Shepherd Mix,32,23,71.875000,False
+Dog,breed,Australian Shepherd Mix,31,23,74.193548,False
+Dog,breed,Catahoula,30,25,83.333333,False
+Dog,breed,Labrador Retriever/Pit Bull,30,15,50.000000,False
+Dog,breed,Rottweiler,29,12,41.379310,False
+Dog,breed,Staffordshire Mix,29,15,51.724138,False
+Dog,breed,Yorkshire Terrier,28,12,42.857143,False
+Dog,breed,Boxer Mix,26,16,61.538462,False
+Dog,breed,Dachshund,25,8,32.000000,False
+Dog,breed,Pointer Mix,25,23,92.000000,False
+Dog,breed,Shih Tzu,25,6,24.000000,False
+Dog,breed,Cairn Terrier Mix,24,20,83.333333,False
+Dog,breed,Pit Bull/Labrador Retriever,24,17,70.833333,False
+Dog,breed,Alaskan Husky Mix,22,19,86.363636,False
+Dog,breed,Belgian Malinois,22,15,68.181818,False
+Dog,breed,Cairn Terrier,22,17,77.272727,False
+Dog,breed,Dachshund Mix,22,9,40.909091,False
+Dog,breed,Miniature Poodle,22,13,59.090909,False
+Dog,breed,Labrador Retriever/Australian Cattle Dog,21,15,71.428571,False
+Dog,breed,Alaskan Husky,20,11,55.000000,False
+Dog,breed,American Bulldog,20,12,60.000000,False
+Dog,breed,Black Mouth Cur,20,14,70.000000,False
+Dog,breed,Boxer,20,10,50.000000,False
+Dog,breed,Plott Hound Mix,20,15,75.000000,False
+Dog,breed,Chihuahua Longhair,19,15,78.947368,False
+Dog,breed,French Bulldog,19,2,10.526316,False
+Dog,breed,Jack Russell Terrier Mix,19,10,52.631579,False
+Dog,breed,Miniature Schnauzer Mix,19,11,57.894737,False
+Dog,breed,Plott Hound,19,14,73.684211,False
+Dog,breed,American Pit Bull Terrier Mix,18,13,72.222222,False
+Dog,breed,Chihuahua Shorthair/Dachshund,17,14,82.352941,False
+Dog,breed,Miniature Poodle Mix,17,9,52.941176,False
+Dog,breed,Pug,17,1,5.882353,False
+Dog,breed,Border Terrier Mix,16,13,81.250000,False
+Dog,breed,Labrador Retriever/Great Pyrenees,16,12,75.000000,False
+Dog,breed,Rottweiler Mix,16,11,68.750000,False
+Dog,breed,Australian Cattle Dog/Labrador Retriever,15,13,86.666667,False
+Dog,breed,Australian Kelpie Mix,15,14,93.333333,False
+Dog,breed,Doberman Pinsch Mix,15,7,46.666667,False
+Dog,breed,Rat Terrier Mix,15,7,46.666667,False
+Dog,breed,Belgian Malinois Mix,14,12,85.714286,False
+Dog,breed,Dachshund/Chihuahua Shorthair,14,10,71.428571,False
+Dog,breed,Miniature Schnauzer,14,13,92.857143,False
+Dog,breed,Staffordshire,14,9,64.285714,False
+Dog,breed,Anatol Shepherd,13,10,76.923077,False
+Dog,breed,Border Collie,13,9,69.230769,False
+Dog,breed,Bulldog Mix,13,9,69.230769,False
+Dog,breed,Cardigan Welsh Corgi Mix,13,11,84.615385,False
+Dog,breed,Carolina Dog Mix,13,6,46.153846,False
+Dog,breed,Pomeranian,13,4,30.769231,False
+Dog,breed,Rat Terrier,13,11,84.615385,False
+Dog,breed,American Foxhound Mix,12,9,75.000000,False
+Dog,breed,Australian Shepherd,12,8,66.666667,False
+Dog,breed,Chihuahua Longhair Mix,12,9,75.000000,False
+Dog,breed,German Shepherd/Labrador Retriever,12,10,83.333333,False
+Dog,breed,Pointer,12,11,91.666667,False
+Dog,breed,Dutch Shepherd Mix,11,10,90.909091,False
+Dog,breed,Golden Retriever Mix,11,11,100.000000,False
+Dog,breed,Great Dane,11,4,36.363636,False
+Dog,breed,Jack Russell Terrier,11,6,54.545455,False
+Dog,breed,Labrador Retriever/German Shepherd,11,8,72.727273,False
+Dog,breed,English Bulldog,10,1,10.000000,False
+Dog,breed,German Shepherd/Australian Cattle Dog,10,10,100.000000,False
+Dog,breed,Plott Hound/Doberman Pinsch,10,10,100.000000,False
+Dog,breed,Siberian Husky/German Shepherd,10,10,100.000000,False
+Dog,breed,Standard Schnauzer Mix,10,9,90.000000,False
+Dog,breed,Yorkshire Terrier Mix,10,9,90.000000,False
+Dog,breed,American Staffordshire Terrier,9,6,66.666667,False
+Dog,breed,Beagle Mix,9,7,77.777778,False
+Dog,breed,Blue Lacy Mix,9,8,88.888889,False
+Dog,breed,Bulldog,9,2,22.222222,False
+Dog,breed,Maltese,9,3,33.333333,False
+Dog,breed,Pointer/Labrador Retriever,9,8,88.888889,False
+Dog,breed,Wire Hair Fox Terrier,9,6,66.666667,False
+Dog,breed,American Staffordshire Terrier Mix,8,6,75.000000,False
+Dog,breed,Beagle,8,5,62.500000,False
+Dog,breed,Border Collie/German Shepherd,8,3,37.500000,False
+Dog,breed,Chihuahua Shorthair/Cairn Terrier,8,6,75.000000,False
+Dog,breed,Chinese Sharpei Mix,8,6,75.000000,False
+Dog,breed,Chow Chow,8,1,12.500000,False
+Dog,breed,Great Pyrenees/Labrador Retriever,8,7,87.500000,False
+Dog,breed,Labrador Retriever/Alaskan Husky,8,3,37.500000,False
+Dog,breed,Labrador Retriever/Border Collie,8,7,87.500000,False
+Dog,breed,Labrador Retriever/Chihuahua Shorthair,8,8,100.000000,False
+Dog,breed,Miniature Pinscher Mix,8,4,50.000000,False
+Dog,breed,Plott Hound/Australian Cattle Dog,8,8,100.000000,False
+Dog,breed,Anatol Shepherd/Great Pyrenees,7,7,100.000000,False
+Dog,breed,Australian Kelpie,7,7,100.000000,False
+Dog,breed,Blue Lacy,7,4,57.142857,False
+Dog,breed,Boxer/Pit Bull,7,5,71.428571,False
+Dog,breed,Dachshund Wirehair Mix,7,4,57.142857,False
+Dog,breed,Field Spaniel,7,3,42.857143,False
+Dog,breed,Maltese/Toy Poodle,7,5,71.428571,False
+Dog,breed,Pug Mix,7,3,42.857143,False
+Dog,breed,Shih Tzu Mix,7,1,14.285714,False
+Dog,breed,Standard Poodle,7,4,57.142857,False
+Dog,breed,Weimaraner Mix,7,3,42.857143,False
+Dog,breed,Akita Mix,6,3,50.000000,False
+Dog,breed,Carolina Dog,6,6,100.000000,False
+Dog,breed,Chihuahua Shorthair/Miniature Pinscher,6,6,100.000000,False
+Dog,breed,German Shepherd/Siberian Husky,6,6,100.000000,False
+Dog,breed,Golden Retriever,6,3,50.000000,False
+Dog,breed,Labrador Retriever/Catahoula,6,5,83.333333,False
+Dog,breed,Mastiff Mix,6,2,33.333333,False
+Dog,breed,Miniature Poodle/Maltese,6,5,83.333333,False
+Dog,breed,Queensland Heeler,6,4,66.666667,False
+Dog,breed,Rhod Ridgeback,6,3,50.000000,False
+Dog,breed,Standard Poodle Mix,6,4,66.666667,False
+Dog,breed,American Foxhound,5,3,60.000000,False
+Dog,breed,Australian Cattle Dog/German Shepherd,5,5,100.000000,False
+Dog,breed,Black/Tan Hound Mix,5,4,80.000000,False
+Dog,breed,Border Collie/Labrador Retriever,5,4,80.000000,False
+Dog,breed,Boxer/Labrador Retriever,5,3,60.000000,False
+Dog,breed,Catahoula/Labrador Retriever,5,4,80.000000,False
+Dog,breed,Chihuahua Shorthair/Labrador Retriever,5,2,40.000000,False
+Dog,breed,Chinese Sharpei,5,4,80.000000,False
+Dog,breed,German Shepherd/Alaskan Husky,5,4,80.000000,False
+Dog,breed,German Shepherd/Belgian Malinois,5,5,100.000000,False
+Dog,breed,German Shepherd/Border Collie,5,0,0.000000,False
+Dog,breed,German Shorthair Pointer Mix,5,5,100.000000,False
+Dog,breed,Maltese Mix,5,5,100.000000,False
+Dog,breed,Maltese/Miniature Poodle,5,4,80.000000,False
+Dog,breed,Mastiff,5,3,60.000000,False
+Dog,breed,Miniature Pinscher,5,4,80.000000,False
+Dog,breed,Pit Bull/Boxer,5,3,60.000000,False
+Dog,breed,Standard Poodle/Labrador Retriever,5,0,0.000000,False
+Dog,breed,Treeing Walker Coonhound Mix,5,5,100.000000,False
+Dog,breed,Vizsla Mix,5,5,100.000000,False
+Dog,breed,Whippet Mix,5,4,80.000000,False
+Dog,breed,Akita,4,1,25.000000,False
+Dog,breed,Alaskan Husky/Australian Cattle Dog,4,0,0.000000,False
+Dog,breed,Alaskan Husky/German Shepherd,4,3,75.000000,False
+Dog,breed,American Bulldog/Boxer,4,3,75.000000,False
+Dog,breed,American Pit Bull Terrier/Boxer,4,3,75.000000,False
+Dog,breed,Basenji Mix,4,4,100.000000,False
+Dog,breed,Black Mouth Cur/Labrador Retriever,4,3,75.000000,False
+Dog,breed,Border Collie/Pembroke Welsh Corgi,4,3,75.000000,False
+Dog,breed,Border Terrier,4,3,75.000000,False
+Dog,breed,Boston Terrier,4,3,75.000000,False
+Dog,breed,Catahoula/Australian Cattle Dog,4,3,75.000000,False
+Dog,breed,Chow Chow Mix,4,1,25.000000,False
+Dog,breed,Collie Smooth Mix,4,3,75.000000,False
+Dog,breed,Dachshund Longhair/Labrador Retriever,4,0,0.000000,False
+Dog,breed,Dachshund/English Foxhound,4,4,100.000000,False
+Dog,breed,Dalmatian,4,4,100.000000,False
+Dog,breed,English Bulldog Mix,4,0,0.000000,False
+Dog,breed,German Pinscher,4,4,100.000000,False
+Dog,breed,German Shepherd/Pit Bull,4,1,25.000000,False
+Dog,breed,Great Dane/Labrador Retriever,4,4,100.000000,False
+Dog,breed,Irish Wolfhound Mix,4,4,100.000000,False
+Dog,breed,Labrador Retriever/Anatol Shepherd,4,3,75.000000,False
+Dog,breed,Labrador Retriever/Siberian Husky,4,1,25.000000,False
+Dog,breed,Manchester Terrier Mix,4,3,75.000000,False
+Dog,breed,Papillon Mix,4,2,50.000000,False
+Dog,breed,Pekingese Mix,4,2,50.000000,False
+Dog,breed,Pit Bull/Catahoula,4,4,100.000000,False
+Dog,breed,Pointer/Pit Bull,4,2,50.000000,False
+Dog,breed,Pug/Chihuahua Shorthair,4,2,50.000000,False
+Dog,breed,Queensland Heeler Mix,4,1,25.000000,False
+Dog,breed,Rat Terrier/Chihuahua Shorthair,4,2,50.000000,False
+Dog,breed,Redbone Hound Mix,4,4,100.000000,False
+Dog,breed,Rhod Ridgeback Mix,4,3,75.000000,False
+Dog,breed,Rottweiler/Labrador Retriever,4,3,75.000000,False
+Dog,breed,Siberian Husky/Border Collie,4,4,100.000000,False
+Dog,breed,Standard Schnauzer,4,2,50.000000,False
+Dog,breed,Treeing Cur/Boxer,4,4,100.000000,False
+Dog,breed,West Highland,4,0,0.000000,False
+Dog,breed,Alaskan Husky/Labrador Retriever,3,3,100.000000,False
+Dog,breed,Alaskan Malamute Mix,3,3,100.000000,False
+Dog,breed,American Bulldog/Pit Bull,3,3,100.000000,False
+Dog,breed,Anatol Shepherd/Labrador Retriever,3,3,100.000000,False
+Dog,breed,Australian Cattle Dog/Alaskan Husky,3,3,100.000000,False
+Dog,breed,Basset Hound,3,0,0.000000,False
+Dog,breed,Basset Hound Mix,3,2,66.666667,False
+Dog,breed,Basset Hound/Labrador Retriever,3,3,100.000000,False
+Dog,breed,Beagle/Labrador Retriever,3,3,100.000000,False
+Dog,breed,Black Mouth Cur/German Shepherd,3,3,100.000000,False
+Dog,breed,Bloodhound,3,1,33.333333,False
+Dog,breed,Bluetick Hound,3,2,66.666667,False
+Dog,breed,Bull Terrier,3,3,100.000000,False
+Dog,breed,Cairn Terrier/Dachshund,3,3,100.000000,False
+Dog,breed,Cairn Terrier/Pit Bull,3,2,66.666667,False
+Dog,breed,Cairn Terrier/Yorkshire Terrier,3,2,66.666667,False
+Dog,breed,Canaan Dog Mix,3,1,33.333333,False
+Dog,breed,Chihuahua Shorthair/Dachshund Wirehair,3,3,100.000000,False
+Dog,breed,Chihuahua Shorthair/Pit Bull,3,3,100.000000,False
+Dog,breed,Chihuahua Shorthair/Rat Terrier,3,2,66.666667,False
+Dog,breed,Chinese Sharpei/Labrador Retriever,3,2,66.666667,False
+Dog,breed,Cocker Spaniel Mix,3,0,0.000000,False
+Dog,breed,Collie Rough Mix,3,2,66.666667,False
+Dog,breed,Dachshund Longhair,3,1,33.333333,False
+Dog,breed,Dachshund Longhair Mix,3,1,33.333333,False
+Dog,breed,Dalmatian Mix,3,3,100.000000,False
+Dog,breed,Dutch Shepherd,3,2,66.666667,False
+Dog,breed,German Shepherd/Anatol Shepherd,3,3,100.000000,False
+Dog,breed,German Shepherd/Bloodhound,3,3,100.000000,False
+Dog,breed,German Shepherd/Golden Retriever,3,3,100.000000,False
+Dog,breed,German Shepherd/Great Pyrenees,3,3,100.000000,False
+Dog,breed,Golden Retriever/Great Pyrenees,3,2,66.666667,False
+Dog,breed,Great Pyrenees/Anatol Shepherd,3,3,100.000000,False
+Dog,breed,Great Pyrenees/German Shepherd,3,2,66.666667,False
+Dog,breed,Labrador Retriever/Akbash,3,3,100.000000,False
+Dog,breed,Labrador Retriever/Harrier,3,1,33.333333,False
+Dog,breed,Lhasa Apso,3,0,0.000000,False
+Dog,breed,Lhasa Apso Mix,3,0,0.000000,False
+Dog,breed,Miniature Schnauzer/Miniature Poodle,3,0,0.000000,False
+Dog,breed,Pekingese,3,1,33.333333,False
+Dog,breed,Pit Bull/Cairn Terrier,3,3,100.000000,False
+Dog,breed,Pit Bull/Siberian Husky,3,2,66.666667,False
+Dog,breed,Scottish Terrier Mix,3,3,100.000000,False
+Dog,breed,Siberian Husky/Australian Cattle Dog,3,3,100.000000,False
+Dog,breed,West Highland Mix,3,2,66.666667,False
+Dog,breed,Wire Hair Fox Terrier Mix,3,1,33.333333,False
+Dog,breed,Anatol Shepherd/German Shepherd,2,0,0.000000,False
+Dog,breed,Australian Cattle Dog/Basenji,2,1,50.000000,False
+Dog,breed,Australian Cattle Dog/Bloodhound,2,2,100.000000,False
+Dog,breed,Australian Cattle Dog/Pit Bull,2,2,100.000000,False
+Dog,breed,Australian Cattle Dog/Siberian Husky,2,2,100.000000,False
+Dog,breed,Australian Shepherd/Australian Cattle Dog,2,1,50.000000,False
+Dog,breed,Australian Shepherd/Border Collie,2,2,100.000000,False
+Dog,breed,Australian Shepherd/Labrador Retriever,2,2,100.000000,False
+Dog,breed,Australian Shepherd/Pit Bull,2,2,100.000000,False
+Dog,breed,Belgian Malinois/Siberian Husky,2,2,100.000000,False
+Dog,breed,Black/Tan Hound,2,2,100.000000,False
+Dog,breed,Border Collie/Australian Cattle Dog,2,2,100.000000,False
+Dog,breed,Border Collie/Pit Bull,2,2,100.000000,False
+Dog,breed,Boxer/Catahoula,2,0,0.000000,False
+Dog,breed,Bull Terrier Mix,2,0,0.000000,False
+Dog,breed,Bullmastiff/Pit Bull,2,2,100.000000,False
+Dog,breed,Cairn Terrier/Miniature Poodle,2,2,100.000000,False
+Dog,breed,Cane Corso,2,1,50.000000,False
+Dog,breed,Cane Corso/Great Dane,2,2,100.000000,False
+Dog,breed,Cardigan Welsh Corgi,2,2,100.000000,False
+Dog,breed,Catahoula/Black Mouth Cur,2,1,50.000000,False
+Dog,breed,Catahoula/Great Dane,2,2,100.000000,False
+Dog,breed,Catahoula/Pit Bull,2,0,0.000000,False
+Dog,breed,Catahoula/Siberian Husky,2,2,100.000000,False
+Dog,breed,Chihuahua Longhair/Papillon,2,2,100.000000,False
+Dog,breed,Chihuahua Shorthair/Norfolk Terrier,2,2,100.000000,False
+Dog,breed,Chihuahua Shorthair/Pug,2,2,100.000000,False
+Dog,breed,Chinese Crested Mix,2,2,100.000000,False
+Dog,breed,Cocker Spaniel/Labrador Retriever,2,1,50.000000,False
+Dog,breed,English Coonhound,2,1,50.000000,False
+Dog,breed,English Springer Spaniel/Labrador Retriever,2,2,100.000000,False
+Dog,breed,Feist Mix,2,1,50.000000,False
+Dog,breed,Flat Coat Retriever Mix,2,1,50.000000,False
+Dog,breed,French Bulldog Mix,2,1,50.000000,False
+Dog,breed,German Shepherd/Australian Shepherd,2,1,50.000000,False
+Dog,breed,German Shepherd/Doberman Pinsch,2,2,100.000000,False
+Dog,breed,Great Dane Mix,2,0,0.000000,False
+Dog,breed,Great Dane/Cane Corso,2,0,0.000000,False
+Dog,breed,Great Pyrenees/Border Collie,2,1,50.000000,False
+Dog,breed,Great Pyrenees/Siberian Husky,2,2,100.000000,False
+Dog,breed,Jack Russell Terrier/Beagle,2,2,100.000000,False
+Dog,breed,Jack Russell Terrier/Chihuahua Shorthair,2,2,100.000000,False
+Dog,breed,Labrador Retriever/Chow Chow,2,1,50.000000,False
+Dog,breed,Labrador Retriever/Great Dane,2,2,100.000000,False
+Dog,breed,Labrador Retriever/Pointer,2,2,100.000000,False
+Dog,breed,Labrador Retriever/Standard Schnauzer,2,2,100.000000,False
+Dog,breed,Manchester Terrier,2,1,50.000000,False
+Dog,breed,Mastiff/Labrador Retriever,2,2,100.000000,False
+Dog,breed,Norfolk Terrier/Chihuahua Shorthair,2,2,100.000000,False
+Dog,breed,Pembroke Welsh Corgi,2,0,0.000000,False
+Dog,breed,Pit Bull/Australian Cattle Dog,2,1,50.000000,False
+Dog,breed,Pit Bull/Bulldog,2,1,50.000000,False
+Dog,breed,Pit Bull/Chinese Sharpei,2,2,100.000000,False
+Dog,breed,Pit Bull/German Shepherd,2,2,100.000000,False
+Dog,breed,Plott Hound/Catahoula,2,2,100.000000,False
+Dog,breed,Rhod Ridgeback/Pit Bull,2,0,0.000000,False
+Dog,breed,Schnauzer Giant,2,1,50.000000,False
+Dog,breed,Schnauzer Giant Mix,2,2,100.000000,False
+Dog,breed,Shiba Inu,2,0,0.000000,False
+Dog,breed,Shih Tzu/Border Terrier,2,0,0.000000,False
+Dog,breed,Siberian Husky/Australian Shepherd,2,2,100.000000,False
+Dog,breed,Siberian Husky/Great Pyrenees,2,2,100.000000,False
+Dog,breed,Siberian Husky/Labrador Retriever,2,2,100.000000,False
+Dog,breed,Soft Coated Wheaten Terrier,2,2,100.000000,False
+Dog,breed,Tibetan Spaniel Mix,2,1,50.000000,False
+Dog,breed,Toy Fox Terrier,2,0,0.000000,False
+Dog,breed,Toy Poodle,2,0,0.000000,False
+Dog,breed,Toy Poodle Mix,2,2,100.000000,False
+Dog,breed,Toy Poodle/Maltese,2,1,50.000000,False
+Dog,breed,Treeing Cur,2,2,100.000000,False
+Dog,breed,Treeing Cur/Pit Bull,2,2,100.000000,False
+Dog,breed,Treeing Walker Coonhound/Labrador Retriever,2,2,100.000000,False
+Dog,breed,Yorkshire Terrier/Chihuahua Shorthair,2,1,50.000000,False
+Dog,breed,Affenpinscher Mix,1,1,100.000000,False
+Dog,breed,Akbash,1,1,100.000000,False
+Dog,breed,Akita/German Shepherd,1,1,100.000000,False
+Dog,breed,Alaskan Malamute,1,0,0.000000,False
+Dog,breed,American Bulldog/Dalmatian,1,0,0.000000,False
+Dog,breed,American Bulldog/Queensland Heeler,1,0,0.000000,False
+Dog,breed,American Eskimo Mix,1,1,100.000000,False
+Dog,breed,American Pit Bull Terrier/Alaskan Husky,1,0,0.000000,False
+Dog,breed,American Pit Bull Terrier/Labrador Retriever,1,1,100.000000,False
+Dog,breed,Anatol Shepherd/American Bulldog,1,1,100.000000,False
+Dog,breed,Anatol Shepherd/Basset Hound,1,1,100.000000,False
+Dog,breed,Australian Cattle Dog/American Foxhound,1,1,100.000000,False
+Dog,breed,Australian Cattle Dog/Australian Cattle Dog,1,1,100.000000,False
+Dog,breed,Australian Cattle Dog/Australian Shepherd,1,0,0.000000,False
+Dog,breed,Australian Cattle Dog/Blue Lacy,1,0,0.000000,False
+Dog,breed,Australian Cattle Dog/Border Collie,1,1,100.000000,False
+Dog,breed,Australian Cattle Dog/Chihuahua Shorthair,1,1,100.000000,False
+Dog,breed,Australian Cattle Dog/Great Pyrenees,1,1,100.000000,False
+Dog,breed,Australian Cattle Dog/Landseer,1,1,100.000000,False
+Dog,breed,Australian Cattle Dog/Pointer,1,0,0.000000,False
+Dog,breed,Australian Kelpie/Siberian Husky,1,1,100.000000,False
+Dog,breed,Australian Shepherd/Alaskan Husky,1,1,100.000000,False
+Dog,breed,Australian Shepherd/Belgian Tervuren,1,1,100.000000,False
+Dog,breed,Australian Shepherd/Border Terrier,1,1,100.000000,False
+Dog,breed,Australian Shepherd/Chow Chow,1,1,100.000000,False
+Dog,breed,Australian Shepherd/Collie Rough,1,1,100.000000,False
+Dog,breed,Australian Shepherd/Miniature Poodle,1,0,0.000000,False
+Dog,breed,Australian Shepherd/Wire Hair Fox Terrier,1,0,0.000000,False
+Dog,breed,Basenji/Cardigan Welsh Corgi,1,1,100.000000,False
+Dog,breed,Basenji/Dachshund,1,0,0.000000,False
+Dog,breed,Basenji/Labrador Retriever,1,0,0.000000,False
+Dog,breed,Basset Hound/Cocker Spaniel,1,1,100.000000,False
+Dog,breed,Beagle/Australian Cattle Dog,1,1,100.000000,False
+Dog,breed,Beagle/German Shepherd,1,1,100.000000,False
+Dog,breed,Beagle/Pug,1,0,0.000000,False
+Dog,breed,Bearded Collie Mix,1,0,0.000000,False
+Dog,breed,Belgian Malinois/Belgian Tervuren,1,1,100.000000,False
+Dog,breed,Belgian Malinois/German Shepherd,1,1,100.000000,False
+Dog,breed,Belgian Malinois/Great Pyrenees,1,1,100.000000,False
+Dog,breed,Belgian Tervuren Mix,1,1,100.000000,False
+Dog,breed,Bernese Hound/Great Dane,1,0,0.000000,False
+Dog,breed,Bernese Hound/Standard Poodle,1,0,0.000000,False
+Dog,breed,Bichon Frise,1,0,0.000000,False
+Dog,breed,Black Mouth Cur/American Staffordshire Terrier,1,1,100.000000,False
+Dog,breed,Black Mouth Cur/Black Mouth Cur,1,1,100.000000,False
+Dog,breed,Black Mouth Cur/Bulldog,1,1,100.000000,False
+Dog,breed,Black Mouth Cur/Carolina Dog,1,0,0.000000,False
+Dog,breed,Black Mouth Cur/Chesa Bay Retr,1,1,100.000000,False
+Dog,breed,Black Mouth Cur/English Pointer,1,0,0.000000,False
+Dog,breed,Black Mouth Cur/Pit Bull,1,0,0.000000,False
+Dog,breed,Black/Tan Hound/Doberman Pinsch,1,1,100.000000,False
+Dog,breed,Blue Lacy/Dutch Shepherd,1,1,100.000000,False
+Dog,breed,Blue Lacy/Pit Bull,1,1,100.000000,False
+Dog,breed,Boerboel Mix,1,1,100.000000,False
+Dog,breed,Border Collie/Alaskan Husky,1,1,100.000000,False
+Dog,breed,Border Collie/American Eskimo,1,1,100.000000,False
+Dog,breed,Border Collie/Collie Rough,1,0,0.000000,False
+Dog,breed,Border Collie/Field Spaniel,1,1,100.000000,False
+Dog,breed,Border Collie/Great Pyrenees,1,0,0.000000,False
+Dog,breed,Border Terrier/Chihuahua Shorthair,1,0,0.000000,False
+Dog,breed,Boxer/Dalmatian,1,1,100.000000,False
+Dog,breed,Brittany,1,1,100.000000,False
+Dog,breed,Brittany Mix,1,0,0.000000,False
+Dog,breed,Brittany/Australian Shepherd,1,1,100.000000,False
+Dog,breed,Bruss Griffon/Chihuahua Shorthair,1,0,0.000000,False
+Dog,breed,Bull Terrier/Australian Cattle Dog,1,1,100.000000,False
+Dog,breed,Bull Terrier/Pit Bull,1,0,0.000000,False
+Dog,breed,Bulldog/American Pit Bull Terrier,1,0,0.000000,False
+Dog,breed,Bullmastiff,1,1,100.000000,False
+Dog,breed,Bullmastiff/Boxer,1,0,0.000000,False
+Dog,breed,Cairn Terrier/Bruss Griffon,1,0,0.000000,False
+Dog,breed,Cane Corso Mix,1,1,100.000000,False
+Dog,breed,Cardigan Welsh Corgi/Australian Cattle Dog,1,1,100.000000,False
+Dog,breed,Cardigan Welsh Corgi/Border Collie,1,1,100.000000,False
+Dog,breed,Cardigan Welsh Corgi/Bulldog,1,1,100.000000,False
+Dog,breed,Carolina Dog/Collie Smooth,1,0,0.000000,False
+Dog,breed,Carolina Dog/Labrador Retriever,1,1,100.000000,False
+Dog,breed,Catahoula/German Shepherd,1,1,100.000000,False
+Dog,breed,Cavalier Span Mix,1,1,100.000000,False
+Dog,breed,Chihuahua Longhair/Border Terrier,1,1,100.000000,False
+Dog,breed,Chihuahua Longhair/Dachshund,1,0,0.000000,False
+Dog,breed,Chihuahua Longhair/Dachshund Wirehair,1,1,100.000000,False
+Dog,breed,Chihuahua Longhair/Pomeranian,1,0,0.000000,False
+Dog,breed,Chihuahua Longhair/Wire Hair Fox Terrier,1,1,100.000000,False
+Dog,breed,Chihuahua Shorthair/Australian Cattle Dog,1,1,100.000000,False
+Dog,breed,Chihuahua Shorthair/Beagle,1,1,100.000000,False
+Dog,breed,Chihuahua Shorthair/Cardigan Welsh Corgi,1,1,100.000000,False
+Dog,breed,Chihuahua Shorthair/French Bulldog,1,1,100.000000,False
+Dog,breed,Chihuahua Shorthair/Maltese,1,1,100.000000,False
+Dog,breed,Chihuahua Shorthair/Pembroke Welsh Corgi,1,1,100.000000,False
+Dog,breed,Chihuahua Shorthair/Pomeranian,1,0,0.000000,False
+Dog,breed,Chihuahua Shorthair/Yorkshire Terrier,1,1,100.000000,False
+Dog,breed,Chinese Crested,1,1,100.000000,False
+Dog,breed,Chinese Crested/Yorkshire Terrier,1,1,100.000000,False
+Dog,breed,Chow Chow/Alaskan Husky,1,0,0.000000,False
+Dog,breed,Chow Chow/German Shepherd,1,1,100.000000,False
+Dog,breed,Cocker Spaniel,1,1,100.000000,False
+Dog,breed,Collie Smooth,1,1,100.000000,False
+Dog,breed,Coton De Tulear,1,0,0.000000,False
+Dog,breed,Curly Coat Retriever,1,1,100.000000,False
+Dog,breed,Dachshund Longhair/Cairn Terrier,1,1,100.000000,False
+Dog,breed,Dachshund Longhair/Standard Schnauzer,1,0,0.000000,False
+Dog,breed,Dachshund Wirehair/Bruss Griffon,1,1,100.000000,False
+Dog,breed,Dachshund Wirehair/Chihuahua Shorthair,1,1,100.000000,False
+Dog,breed,Dachshund/Beagle,1,0,0.000000,False
+Dog,breed,Dachshund/Chinese Crested,1,0,0.000000,False
+Dog,breed,Dachshund/Pug,1,1,100.000000,False
+Dog,breed,Doberman Pinsch/Chihuahua Shorthair,1,1,100.000000,False
+Dog,breed,Doberman Pinsch/German Shepherd,1,1,100.000000,False
+Dog,breed,Dogo Argentino,1,0,0.000000,False
+Dog,breed,Dogo Argentino Mix,1,1,100.000000,False
+Dog,breed,Dutch Shepherd/Pit Bull,1,1,100.000000,False
+Dog,breed,English Bulldog/Pit Bull,1,0,0.000000,False
+Dog,breed,English Cocker Spaniel/Pembroke Welsh Corgi,1,1,100.000000,False
+Dog,breed,English Coonhound Mix,1,0,0.000000,False
+Dog,breed,English Coonhound/Doberman Pinsch,1,1,100.000000,False
+Dog,breed,English Foxhound Mix,1,1,100.000000,False
+Dog,breed,English Pointer Mix,1,0,0.000000,False
+Dog,breed,English Pointer/Black Mouth Cur,1,0,0.000000,False
+Dog,breed,English Pointer/Boxer,1,1,100.000000,False
+Dog,breed,English Setter,1,1,100.000000,False
+Dog,breed,English Setter/Labrador Retriever,1,0,0.000000,False
+Dog,breed,English Springer Spaniel,1,0,0.000000,False
+Dog,breed,Field Spaniel Mix,1,1,100.000000,False
+Dog,breed,Finnish Spitz Mix,1,0,0.000000,False
+Dog,breed,French Bulldog/Dachshund,1,1,100.000000,False
+Dog,breed,German Pinscher Mix,1,1,100.000000,False
+Dog,breed,German Shepherd/Alaskan Malamute,1,1,100.000000,False
+Dog,breed,German Shepherd/Beauceron,1,1,100.000000,False
+Dog,breed,German Shepherd/Cardigan Welsh Corgi,1,1,100.000000,False
+Dog,breed,German Shepherd/Chow Chow,1,1,100.000000,False
+Dog,breed,German Shepherd/German Shepherd,1,1,100.000000,False
+Dog,breed,German Shepherd/Great Dane,1,1,100.000000,False
+Dog,breed,German Shepherd/Rottweiler,1,0,0.000000,False
+Dog,breed,German Shorthair Pointer,1,0,0.000000,False
+Dog,breed,German Shorthair Pointer/English Shepherd,1,0,0.000000,False
+Dog,breed,German Shorthair Pointer/Labrador Retriever,1,1,100.000000,False
+Dog,breed,German Wirehaired Pointer,1,0,0.000000,False
+Dog,breed,German Wirehaired Pointer/German Wirehaired Pointer,1,1,100.000000,False
+Dog,breed,Golden Retriever/Cocker Spaniel,1,0,0.000000,False
+Dog,breed,Golden Retriever/Labrador Retriever,1,1,100.000000,False
+Dog,breed,Great Dane/American Pit Bull Terrier,1,0,0.000000,False
+Dog,breed,Great Pyrenees/Australian Cattle Dog,1,1,100.000000,False
+Dog,breed,Great Pyrenees/Australian Shepherd,1,1,100.000000,False
+Dog,breed,Havanese Mix,1,0,0.000000,False
+Dog,breed,Ibizan Hound/Australian Cattle Dog,1,0,0.000000,False
+Dog,breed,Irish Terrier,1,1,100.000000,False
+Dog,breed,Irish Terrier Mix,1,1,100.000000,False
+Dog,breed,Italian Greyhound Mix,1,1,100.000000,False
+Dog,breed,Jack Russell Terrier/Australian Cattle Dog,1,0,0.000000,False
+Dog,breed,Jack Russell Terrier/Wire Hair Fox Terrier,1,1,100.000000,False
+Dog,breed,Kangal,1,0,0.000000,False
+Dog,breed,Kangal/Great Dane,1,0,0.000000,False
+Dog,breed,Kangal/Great Pyrenees,1,1,100.000000,False
+Dog,breed,Keeshond Mix,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Australian Shepherd,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Beagle,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Black Mouth Cur,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Bluetick Hound,1,0,0.000000,False
+Dog,breed,Labrador Retriever/Collie Smooth,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Doberman Pinsch,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Dutch Shepherd,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Flat Coat Retriever,1,1,100.000000,False
+Dog,breed,Labrador Retriever/German Shorthair Pointer,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Golden Retriever,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Greyhound,1,0,0.000000,False
+Dog,breed,Labrador Retriever/Plott Hound,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Pug,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Queensland Heeler,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Redbone Hound,1,1,100.000000,False
+Dog,breed,Labrador Retriever/Whippet,1,1,100.000000,False
+Dog,breed,Landseer Mix,1,1,100.000000,False
+Dog,breed,Leonberger Mix,1,1,100.000000,False
+Dog,breed,Lhasa Apso/Toy Poodle,1,1,100.000000,False
+Dog,breed,Maltese/Cairn Terrier,1,0,0.000000,False
+Dog,breed,Maltese/Chihuahua Shorthair,1,0,0.000000,False
+Dog,breed,Mastiff/Boxer,1,0,0.000000,False
+Dog,breed,Mastiff/Pit Bull,1,1,100.000000,False
+Dog,breed,Miniature Pinscher/Chihuahua Shorthair,1,1,100.000000,False
+Dog,breed,Miniature Poodle/Cairn Terrier,1,1,100.000000,False
+Dog,breed,Miniature Poodle/Dachshund,1,1,100.000000,False
+Dog,breed,Miniature Poodle/Labrador Retriever,1,0,0.000000,False
+Dog,breed,Miniature Poodle/Lhasa Apso,1,1,100.000000,False
+Dog,breed,Miniature Poodle/Miniature Poodle,1,1,100.000000,False
+Dog,breed,Miniature Poodle/Pomeranian,1,1,100.000000,False
+Dog,breed,Miniature Poodle/Scottish Terrier,1,0,0.000000,False
+Dog,breed,Miniature Poodle/Yorkshire Terrier,1,1,100.000000,False
+Dog,breed,Miniature Schnauzer/Beagle,1,0,0.000000,False
+Dog,breed,Miniature Schnauzer/Chihuahua Longhair,1,1,100.000000,False
+Dog,breed,Miniature Schnauzer/Chihuahua Shorthair,1,1,100.000000,False
+Dog,breed,Miniature Schnauzer/Maltese,1,1,100.000000,False
+Dog,breed,Miniature Schnauzer/Pug,1,1,100.000000,False
+Dog,breed,Newfoundland Mix,1,0,0.000000,False
+Dog,breed,Newfoundland/Labrador Retriever,1,1,100.000000,False
+Dog,breed,Norfolk Terrier,1,1,100.000000,False
+Dog,breed,Norfolk Terrier Mix,1,1,100.000000,False
+Dog,breed,Norwegian Elkhound,1,0,0.000000,False
+Dog,breed,Nova Scotia Duck Tolling Retriever Mix,1,1,100.000000,False
+Dog,breed,Old English Sheepdog Mix,1,0,0.000000,False
+Dog,breed,Patterdale Terr,1,1,100.000000,False
+Dog,breed,Patterdale Terr Mix,1,0,0.000000,False
+Dog,breed,Patterdale Terr/Cardigan Welsh Corgi,1,1,100.000000,False
+Dog,breed,Pbgv,1,0,0.000000,False
+Dog,breed,Pembroke Welsh Corgi/Akita,1,1,100.000000,False
+Dog,breed,Pembroke Welsh Corgi/Australian Kelpie,1,1,100.000000,False
+Dog,breed,Pit Bull/Alaskan Husky,1,0,0.000000,False
+Dog,breed,Pit Bull/American Staffordshire Terrier,1,1,100.000000,False
+Dog,breed,Pit Bull/Basset Hound,1,0,0.000000,False
+Dog,breed,Pit Bull/Cane Corso,1,0,0.000000,False
+Dog,breed,Pit Bull/Golden Retriever,1,1,100.000000,False
+Dog,breed,Pit Bull/Great Pyrenees,1,0,0.000000,False
+Dog,breed,Pit Bull/Neapolitan Mastiff,1,1,100.000000,False
+Dog,breed,Pit Bull/Pointer,1,1,100.000000,False
+Dog,breed,Plott Hound/Boxer,1,1,100.000000,False
+Dog,breed,Plott Hound/German Shepherd,1,0,0.000000,False
+Dog,breed,Pointer/Great Pyrenees,1,1,100.000000,False
+Dog,breed,Pomeranian Mix,1,0,0.000000,False
+Dog,breed,Pug/Beagle,1,1,100.000000,False
+Dog,breed,Pug/Border Collie,1,1,100.000000,False
+Dog,breed,Pug/Boxer,1,1,100.000000,False
+Dog,breed,Pug/Pit Bull,1,1,100.000000,False
+Dog,breed,Rat Terrier/Cairn Terrier,1,0,0.000000,False
+Dog,breed,Rat Terrier/Cardigan Welsh Corgi,1,0,0.000000,False
+Dog,breed,Rat Terrier/Chihuahua Longhair,1,0,0.000000,False
+Dog,breed,Rat Terrier/Dachshund,1,1,100.000000,False
+Dog,breed,Rat Terrier/Pointer,1,0,0.000000,False
+Dog,breed,Rat Terrier/Whippet,1,0,0.000000,False
+Dog,breed,Rhod Ridgeback/Australian Cattle Dog,1,1,100.000000,False
+Dog,breed,Rhod Ridgeback/Black Mouth Cur,1,1,100.000000,False
+Dog,breed,Samoyed/Alaskan Husky,1,1,100.000000,False
+Dog,breed,Shetland Sheepdog,1,0,0.000000,False
+Dog,breed,Shiba Inu Mix,1,1,100.000000,False
+Dog,breed,Shiba Inu/Chihuahua Shorthair,1,1,100.000000,False
+Dog,breed,Shiba Inu/Labrador Retriever,1,0,0.000000,False
+Dog,breed,Shih Tzu/Bichon Frise,1,0,0.000000,False
+Dog,breed,Shih Tzu/Cocker Spaniel,1,0,0.000000,False
+Dog,breed,Shih Tzu/Maltese,1,0,0.000000,False
+Dog,breed,Shih Tzu/Standard Poodle,1,0,0.000000,False
+Dog,breed,Siberian Husky/Akita,1,1,100.000000,False
+Dog,breed,Silky Terrier Mix,1,0,0.000000,False
+Dog,breed,Smooth Fox Terrier Mix,1,1,100.000000,False
+Dog,breed,St. Bernard Rough Coat,1,0,0.000000,False
+Dog,breed,St. Bernard Smooth Coat,1,1,100.000000,False
+Dog,breed,St. Bernard Smooth Coat Mix,1,1,100.000000,False
+Dog,breed,Staffordshire/Labrador Retriever,1,1,100.000000,False
+Dog,breed,Standard Schnauzer/Standard Poodle,1,1,100.000000,False
+Dog,breed,Swedish Vallhund/Siberian Husky,1,1,100.000000,False
+Dog,breed,Tibetan Spaniel,1,0,0.000000,False
+Dog,breed,Tibetan Terrier,1,1,100.000000,False
+Dog,breed,Tosa,1,1,100.000000,False
+Dog,breed,Toy Fox Terrier Mix,1,1,100.000000,False
+Dog,breed,Toy Poodle/Standard Schnauzer,1,1,100.000000,False
+Dog,breed,Treeing Cur Mix,1,0,0.000000,False
+Dog,breed,Treeing Tennesse Brindle/Labrador Retriever,1,0,0.000000,False
+Dog,breed,Treeing Walker Coonhound,1,1,100.000000,False
+Dog,breed,Weimaraner,1,0,0.000000,False
+Dog,breed,West Highland/Chihuahua Shorthair,1,1,100.000000,False
+Dog,breed,West Highland/Miniature Poodle,1,1,100.000000,False
+Dog,breed,Whippet,1,1,100.000000,False
+Dog,breed,Whippet/Australian Cattle Dog,1,0,0.000000,False
+Dog,breed,Whippet/Beagle,1,0,0.000000,False
+Dog,breed,Yorkshire Terrier/Cairn Terrier,1,1,100.000000,False
+Dog,breed,Yorkshire Terrier/Standard Schnauzer,1,0,0.000000,False
+Dog,color,Black/White,623,436,69.983949,True
+Dog,color,White,342,232,67.836257,True
+Dog,color,Black,297,190,63.973064,True
+Dog,color,Brown,275,167,60.727273,True
+Dog,color,Brown/White,265,169,63.773585,True
+Dog,color,Tan/White,263,164,62.357414,False
+Dog,color,Brown/Black,236,172,72.881356,False
+Dog,color,Tan,203,134,66.009852,False
+Dog,color,Black/Brown,197,130,65.989848,False
+Dog,color,Blue/White,193,129,66.839378,False
+Dog,color,White/Black,184,114,61.956522,False
+Dog,color,Black/Tan,173,121,69.942197,False
+Dog,color,White/Brown,159,98,61.635220,False
+Dog,color,Brown Brindle/White,146,89,60.958904,False
+Dog,color,Tricolor,109,69,63.302752,False
+Dog,color,Tan/Black,106,75,70.754717,False
+Dog,color,White/Tan,97,68,70.103093,False
+Dog,color,Brown Brindle,89,57,64.044944,False
+Dog,color,Cream,71,51,71.830986,False
+Dog,color,Red,59,36,61.016949,False
+Dog,color,Red/White,56,36,64.285714,False
+Dog,color,Brown/Tan,55,40,72.727273,False
+Dog,color,Blue,48,25,52.083333,False
+Dog,color,Chocolate/White,40,31,77.500000,False
+Dog,color,Chocolate,39,21,53.846154,False
+Dog,color,White/Gray,37,24,64.864865,False
+Dog,color,Gold/Tan,32,29,90.625000,False
+Dog,color,Buff,29,16,55.172414,False
+Dog,color,Fawn/White,29,19,65.517241,False
+Dog,color,Sable,29,15,51.724138,False
+Dog,color,Black/Black,25,11,44.000000,False
+Dog,color,Black Brindle/White,24,17,70.833333,False
+Dog,color,Fawn,24,10,41.666667,False
+Dog,color,Black Brindle,23,15,65.217391,False
+Dog,color,Cream/White,23,18,78.260870,False
+Dog,color,Gray/White,23,17,73.913043,False
+Dog,color,White/White,21,13,61.904762,False
+Dog,color,White/Brown Brindle,20,15,75.000000,False
+Dog,color,Black/Tricolor,19,17,89.473684,False
+Dog,color,Tan/Brown,17,12,70.588235,False
+Dog,color,Blue Merle,16,10,62.500000,False
+Dog,color,Brown Brindle/Black,16,10,62.500000,False
+Dog,color,Brown Merle,16,12,75.000000,False
+Dog,color,White/Blue,16,9,56.250000,False
+Dog,color,Yellow/White,16,15,93.750000,False
+Dog,color,Tricolor/White,15,11,73.333333,False
+Dog,color,Black/Gray,14,9,64.285714,False
+Dog,color,Blue Tick,14,12,85.714286,False
+Dog,color,White/Cream,14,9,64.285714,False
+Dog,color,Gold,13,10,76.923077,False
+Dog,color,Gray/Black,13,6,46.153846,False
+Dog,color,White/Red,13,10,76.923077,False
+Dog,color,White/Tricolor,13,13,100.000000,False
+Dog,color,Brown Merle/White,12,6,50.000000,False
+Dog,color,Gray,12,5,41.666667,False
+Dog,color,Gold/White,10,7,70.000000,False
+Dog,color,Tricolor/Black,10,6,60.000000,False
+Dog,color,Blue Merle/White,9,5,55.555556,False
+Dog,color,Chocolate/Tan,9,3,33.333333,False
+Dog,color,Black Brindle/Brown,8,7,87.500000,False
+Dog,color,Blue Merle/Black,8,6,75.000000,False
+Dog,color,Brown/Brown,8,3,37.500000,False
+Dog,color,Fawn/Black,8,5,62.500000,False
+Dog,color,Sable/White,8,7,87.500000,False
+Dog,color,Tan/Cream,8,6,75.000000,False
+Dog,color,Yellow,8,6,75.000000,False
+Dog,color,Black/Red,7,5,71.428571,False
+Dog,color,Blue/Tan,7,1,14.285714,False
+Dog,color,Brown/Red,7,5,71.428571,False
+Dog,color,Buff/White,7,5,71.428571,False
+Dog,color,Red Tick/White,7,4,57.142857,False
+Dog,color,White/Chocolate,7,6,85.714286,False
+Dog,color,Black/Brown Brindle,6,6,100.000000,False
+Dog,color,Blue Merle/Tan,6,5,83.333333,False
+Dog,color,Brown Brindle/Brown,6,3,50.000000,False
+Dog,color,Buff/Black,6,5,83.333333,False
+Dog,color,Red Tick,6,4,66.666667,False
+Dog,color,Red/Tan,6,3,50.000000,False
+Dog,color,Black/Blue Tick,5,3,60.000000,False
+Dog,color,Blue Tick/White,5,3,60.000000,False
+Dog,color,Red Merle,5,4,80.000000,False
+Dog,color,Red/Black,5,3,60.000000,False
+Dog,color,Yellow Brindle/White,5,3,60.000000,False
+Dog,color,Blue Tick/Red Tick,4,4,100.000000,False
+Dog,color,Brown/Gray,4,2,50.000000,False
+Dog,color,Brown/Tricolor,4,2,50.000000,False
+Dog,color,Cream/Tan,4,3,75.000000,False
+Dog,color,Tan/Blue,4,4,100.000000,False
+Dog,color,White/Blue Merle,4,3,75.000000,False
+Dog,color,White/Fawn,4,4,100.000000,False
+Dog,color,Blue Tick/Black,3,2,66.666667,False
+Dog,color,Cream/Black,3,3,100.000000,False
+Dog,color,Gold/Cream,3,1,33.333333,False
+Dog,color,Red Merle/White,3,3,100.000000,False
+Dog,color,Red/Brown,3,1,33.333333,False
+Dog,color,Tricolor/Brown,3,2,66.666667,False
+Dog,color,Tricolor/Tan,3,2,66.666667,False
+Dog,color,White/Orange,3,2,66.666667,False
+Dog,color,Apricot,2,1,50.000000,False
+Dog,color,Black Smoke,2,0,0.000000,False
+Dog,color,Black/Black Brindle,2,1,50.000000,False
+Dog,color,Blue Tiger,2,0,0.000000,False
+Dog,color,Blue/Brown,2,0,0.000000,False
+Dog,color,Blue/Gray,2,2,100.000000,False
+Dog,color,Brown Brindle/Brown Brindle,2,0,0.000000,False
+Dog,color,Fawn/Brown,2,2,100.000000,False
+Dog,color,Gray/Gray,2,1,50.000000,False
+Dog,color,Tan/Red,2,2,100.000000,False
+Dog,color,White/Black Brindle,2,2,100.000000,False
+Dog,color,White/Brown Merle,2,2,100.000000,False
+Dog,color,White/Red Tick,2,0,0.000000,False
+Dog,color,White/Yellow,2,2,100.000000,False
+Dog,color,Black Brindle/Blue Tick,1,1,100.000000,False
+Dog,color,Blue Merle/Brown,1,1,100.000000,False
+Dog,color,Blue Merle/Brown Merle,1,1,100.000000,False
+Dog,color,Blue Smoke/Tan,1,1,100.000000,False
+Dog,color,Blue Tick/Tricolor,1,1,100.000000,False
+Dog,color,Blue Tiger/White,1,0,0.000000,False
+Dog,color,Blue/Black,1,1,100.000000,False
+Dog,color,Blue/Black Brindle,1,0,0.000000,False
+Dog,color,Brown Brindle/Blue Tick,1,1,100.000000,False
+Dog,color,Brown Brindle/Tan,1,1,100.000000,False
+Dog,color,Brown Merle/Brown Merle,1,1,100.000000,False
+Dog,color,Brown Merle/Tan,1,1,100.000000,False
+Dog,color,Brown/Blue,1,0,0.000000,False
+Dog,color,Brown/Brown Brindle,1,1,100.000000,False
+Dog,color,Brown/Gold,1,1,100.000000,False
+Dog,color,Brown/Red Tick,1,1,100.000000,False
+Dog,color,Brown/Silver,1,0,0.000000,False
+Dog,color,Buff/Cream,1,1,100.000000,False
+Dog,color,Chocolate/Tricolor,1,1,100.000000,False
+Dog,color,Fawn/Blue,1,0,0.000000,False
+Dog,color,Fawn/Tan,1,1,100.000000,False
+Dog,color,Fawn/Yellow,1,1,100.000000,False
+Dog,color,Gray/Brown,1,1,100.000000,False
+Dog,color,Gray/Cream,1,1,100.000000,False
+Dog,color,Gray/Tan,1,1,100.000000,False
+Dog,color,Liver/Liver Tick,1,0,0.000000,False
+Dog,color,Red Merle/Black,1,0,0.000000,False
+Dog,color,Red Merle/Blue Merle,1,0,0.000000,False
+Dog,color,Red/Gray,1,1,100.000000,False
+Dog,color,Sable/Black,1,1,100.000000,False
+Dog,color,Tan/Brown Brindle,1,1,100.000000,False
+Dog,color,Tan/Brown Tiger,1,0,0.000000,False
+Dog,color,Tan/Buff,1,1,100.000000,False
+Dog,color,Tan/Silver,1,0,0.000000,False
+Dog,color,Tan/Tan,1,0,0.000000,False
+Dog,color,Tricolor/Blue,1,0,0.000000,False
+Dog,color,Tricolor/Gray,1,1,100.000000,False
+Dog,color,White/Apricot,1,0,0.000000,False
+Dog,color,White/Buff,1,1,100.000000,False
+Dog,color,White/Ruddy,1,0,0.000000,False
+Dog,color,Yellow Brindle,1,1,100.000000,False
+Dog,color,Yellow/Tan,1,1,100.000000,False
+Dog,color,Yellow/Yellow,1,1,100.000000,False
+Dog,sex_status,Neutered Male,2090,1677,80.239234,False
+Dog,sex_status,Spayed Female,1871,1625,86.851951,False
+Dog,sex_status,Intact Male,650,77,11.846154,False
+Dog,sex_status,Intact Female,575,80,13.913043,False
+Dog,sex_status,Unknown,47,1,2.127660,False

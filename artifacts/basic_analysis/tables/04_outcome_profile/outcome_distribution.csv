@@ -1,0 +1,21 @@
+animal_type,outcome_type,count,denominator,percent
+Cat,Adoption,3819,6011,63.533522
+Dog,Adoption,3460,5233,66.118861
+Cat,Transfer,1729,6011,28.763933
+Dog,Transfer,822,5233,15.708007
+Cat,Return to Owner,153,6011,2.545334
+Dog,Return to Owner,676,5233,12.918020
+Cat,Euthanasia,142,6011,2.362336
+Dog,Euthanasia,113,5233,2.159373
+Cat,Died,108,6011,1.796706
+Dog,Died,33,5233,0.630613
+Cat,Rto-Adopt,19,6011,0.316087
+Dog,Rto-Adopt,106,5233,2.025607
+Cat,Disposal,32,6011,0.532357
+Dog,Disposal,15,5233,0.286642
+Cat,Not recorded,2,6011,0.033272
+Dog,Not recorded,7,5233,0.133766
+Cat,Missing,7,6011,0.116453
+Dog,Missing,0,5233,0.000000
+Cat,Lost,0,6011,0.000000
+Dog,Lost,1,5233,0.019109
