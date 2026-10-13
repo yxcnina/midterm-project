@@ -1,3 +1,4 @@
 pandas
 requests
 matplotlib
+shapely>=2.0,<3
