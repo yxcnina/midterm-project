@@ -1,0 +1,15 @@
+animal_type,intake_type,intake_records,geocoded_records,coverage_percent
+All animals,Abandoned,404,288,71.2871287128713
+All animals,Euthanasia Request,2,1,50.0
+All animals,Owner Surrender,2128,279,13.110902255639099
+All animals,Public Assist,710,532,74.92957746478874
+All animals,Stray,8211,6174,75.1918158567775
+All animals,Wildlife,360,271,75.27777777777777
+Cat,Abandoned,139,95,68.34532374100719
+Cat,Owner Surrender,862,75,8.700696055684455
+Cat,Public Assist,97,74,76.28865979381443
+Cat,Stray,4948,3869,78.19320937752627
+Dog,Abandoned,259,189,72.97297297297297
+Dog,Owner Surrender,1184,198,16.722972972972972
+Dog,Public Assist,590,437,74.0677966101695
+Dog,Stray,3155,2212,70.11093502377179

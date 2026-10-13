@@ -1,0 +1,49 @@
+month,age_group,count,denominator,percent
+1,<6 months,100,313,31.948882
+1,6 months or older,212,313,67.731629
+1,Recorded as 0 years,1,313,0.319489
+1,Not recorded,0,313,0.000000
+2,<6 months,87,343,25.364431
+2,6 months or older,251,343,73.177843
+2,Recorded as 0 years,5,343,1.457726
+2,Not recorded,0,343,0.000000
+3,<6 months,153,358,42.737430
+3,6 months or older,198,358,55.307263
+3,Recorded as 0 years,7,358,1.955307
+3,Not recorded,0,358,0.000000
+4,<6 months,390,638,61.128527
+4,6 months or older,238,638,37.304075
+4,Recorded as 0 years,10,638,1.567398
+4,Not recorded,0,638,0.000000
+5,<6 months,653,887,73.618940
+5,6 months or older,228,887,25.704622
+5,Recorded as 0 years,6,887,0.676437
+5,Not recorded,0,887,0.000000
+6,<6 months,407,598,68.060201
+6,6 months or older,191,598,31.939799
+6,Recorded as 0 years,0,598,0.000000
+6,Not recorded,0,598,0.000000
+7,<6 months,371,510,72.745098
+7,6 months or older,124,510,24.313725
+7,Recorded as 0 years,15,510,2.941176
+7,Not recorded,0,510,0.000000
+8,<6 months,356,490,72.653061
+8,6 months or older,132,490,26.938776
+8,Recorded as 0 years,2,490,0.408163
+8,Not recorded,0,490,0.000000
+9,<6 months,370,566,65.371025
+9,6 months or older,184,566,32.508834
+9,Recorded as 0 years,12,566,2.120141
+9,Not recorded,0,566,0.000000
+10,<6 months,385,586,65.699659
+10,6 months or older,201,586,34.300341
+10,Recorded as 0 years,0,586,0.000000
+10,Not recorded,0,586,0.000000
+11,<6 months,243,392,61.989796
+11,6 months or older,149,392,38.010204
+11,Recorded as 0 years,0,392,0.000000
+11,Not recorded,0,392,0.000000
+12,<6 months,196,365,53.698630
+12,6 months or older,169,365,46.301370
+12,Recorded as 0 years,0,365,0.000000
+12,Not recorded,0,365,0.000000

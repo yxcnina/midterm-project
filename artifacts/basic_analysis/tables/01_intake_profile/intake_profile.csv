@@ -1,0 +1,653 @@
+animal_type,feature,category,count,denominator,percent
+All animals,animal_type,Cat,6046,11815,51.172239
+All animals,animal_type,Dog,5188,11815,43.910284
+All animals,animal_type,Other,493,11815,4.172662
+All animals,animal_type,Bird,81,11815,0.685569
+All animals,animal_type,Livestock,7,11815,0.059247
+Cat,age,<6 months,3711,6046,61.379424
+Cat,age,6 to <12 months,272,6046,4.498842
+Cat,age,1 to <3 years,1387,6046,22.940787
+Cat,age,3 to <7 years,419,6046,6.930202
+Cat,age,7+ years,199,6046,3.291432
+Cat,age,Recorded as 0 years,58,6046,0.959312
+Cat,age,Not recorded,0,6046,0.000000
+Cat,sex,Female,2797,6046,46.261991
+Cat,sex,Male,2858,6046,47.270923
+Cat,sex,Unknown,391,6046,6.467086
+Cat,sex,Not recorded,0,6046,0.000000
+Cat,sterilization,Intact,4905,6046,81.128019
+Cat,sterilization,Spayed or neutered,750,6046,12.404896
+Cat,sterilization,Unknown,391,6046,6.467086
+Cat,sterilization,Not recorded,0,6046,0.000000
+Cat,breed,Domestic Shorthair,4994,6046,82.600066
+Cat,breed,Domestic Medium Hair,381,6046,6.301687
+Cat,breed,Domestic Shorthair Mix,322,6046,5.325835
+Cat,breed,Domestic Longhair,113,6046,1.869004
+Cat,breed,Siamese,95,6046,1.571287
+Cat,breed,Siamese Mix,39,6046,0.645055
+Cat,breed,Domestic Longhair Mix,17,6046,0.281178
+Cat,breed,Domestic Medium Hair Mix,16,6046,0.264638
+Cat,breed,Snowshoe Mix,11,6046,0.181938
+Cat,breed,American Shorthair,10,6046,0.165399
+Cat,breed,Russian Blue,7,6046,0.115779
+Cat,breed,Himalayan,3,6046,0.049620
+Cat,breed,Bengal,3,6046,0.049620
+Cat,breed,Snowshoe,3,6046,0.049620
+Cat,breed,British Shorthair,3,6046,0.049620
+Cat,breed,Abyssinian Mix,3,6046,0.049620
+Cat,breed,Abyssinian,2,6046,0.033080
+Cat,breed,Cymric Mix,2,6046,0.033080
+Cat,breed,Domestic Longhair/Persian,2,6046,0.033080
+Cat,breed,Ragdoll,2,6046,0.033080
+Cat,breed,Siamese/Domestic Shorthair,2,6046,0.033080
+Cat,breed,Scottish Fold,2,6046,0.033080
+Cat,breed,Domestic Shorthair/Manx,2,6046,0.033080
+Cat,breed,Persian,2,6046,0.033080
+Cat,breed,Maine Coon Mix,1,6046,0.016540
+Cat,breed,Manx,1,6046,0.016540
+Cat,breed,Persian Mix,1,6046,0.016540
+Cat,breed,Bengal Mix,1,6046,0.016540
+Cat,breed,Himalayan Mix,1,6046,0.016540
+Cat,breed,Maine Coon,1,6046,0.016540
+Cat,breed,Snowshoe/Domestic Shorthair,1,6046,0.016540
+Cat,breed,Oriental Sh,1,6046,0.016540
+Cat,breed,Burmese Mix,1,6046,0.016540
+Cat,breed,Havana Brown,1,6046,0.016540
+Dog,age,<6 months,1633,5188,31.476484
+Dog,age,6 to <12 months,474,5188,9.136469
+Dog,age,1 to <3 years,1723,5188,33.211257
+Dog,age,3 to <7 years,861,5188,16.595991
+Dog,age,7+ years,470,5188,9.059368
+Dog,age,Recorded as 0 years,27,5188,0.520432
+Dog,age,Not recorded,0,5188,0.000000
+Dog,sex,Female,2449,5188,47.205089
+Dog,sex,Male,2693,5188,51.908250
+Dog,sex,Unknown,46,5188,0.886662
+Dog,sex,Not recorded,0,5188,0.000000
+Dog,sterilization,Intact,3892,5188,75.019275
+Dog,sterilization,Spayed or neutered,1250,5188,24.094063
+Dog,sterilization,Unknown,46,5188,0.886662
+Dog,sterilization,Not recorded,0,5188,0.000000
+Dog,breed,Pit Bull,435,5188,8.384734
+Dog,breed,Labrador Retriever Mix,426,5188,8.211257
+Dog,breed,Pit Bull Mix,337,5188,6.495759
+Dog,breed,Labrador Retriever,275,5188,5.300694
+Dog,breed,Chihuahua Shorthair,230,5188,4.433308
+Dog,breed,German Shepherd,223,5188,4.298381
+Dog,breed,German Shepherd Mix,201,5188,3.874325
+Dog,breed,Chihuahua Shorthair Mix,101,5188,1.946800
+Dog,breed,Australian Cattle Dog Mix,96,5188,1.850424
+Dog,breed,Siberian Husky,94,5188,1.811874
+Dog,breed,Great Pyrenees,65,5188,1.252891
+Dog,breed,Great Pyrenees Mix,63,5188,1.214341
+Dog,breed,American Pit Bull Terrier,60,5188,1.156515
+Dog,breed,Australian Cattle Dog,57,5188,1.098689
+Dog,breed,Siberian Husky Mix,50,5188,0.963763
+Dog,breed,Border Collie Mix,44,5188,0.848111
+Dog,breed,Black Mouth Cur Mix,38,5188,0.732460
+Dog,breed,Doberman Pinsch,38,5188,0.732460
+Dog,breed,Catahoula Mix,35,5188,0.674634
+Dog,breed,Australian Shepherd Mix,34,5188,0.655359
+Dog,breed,Anatol Shepherd Mix,33,5188,0.636083
+Dog,breed,Labrador Retriever/Pit Bull,31,5188,0.597533
+Dog,breed,Catahoula,29,5188,0.558982
+Dog,breed,Yorkshire Terrier,28,5188,0.539707
+Dog,breed,Boxer Mix,26,5188,0.501157
+Dog,breed,American Bulldog Mix,26,5188,0.501157
+Dog,breed,Rottweiler,26,5188,0.501157
+Dog,breed,Pointer Mix,25,5188,0.481881
+Dog,breed,Shih Tzu,25,5188,0.481881
+Dog,breed,Pit Bull/Labrador Retriever,25,5188,0.481881
+Dog,breed,Dachshund,25,5188,0.481881
+Dog,breed,Cairn Terrier Mix,25,5188,0.481881
+Dog,breed,Staffordshire Mix,24,5188,0.462606
+Dog,breed,Black Mouth Cur,24,5188,0.462606
+Dog,breed,Dachshund Mix,23,5188,0.443331
+Dog,breed,Cairn Terrier,23,5188,0.443331
+Dog,breed,Labrador Retriever/Australian Cattle Dog,22,5188,0.424056
+Dog,breed,Miniature Poodle,22,5188,0.424056
+Dog,breed,Belgian Malinois,21,5188,0.404780
+Dog,breed,Alaskan Husky,21,5188,0.404780
+Dog,breed,Chihuahua Longhair,21,5188,0.404780
+Dog,breed,Doberman Pinsch Mix,21,5188,0.404780
+Dog,breed,American Pit Bull Terrier Mix,20,5188,0.385505
+Dog,breed,Jack Russell Terrier Mix,20,5188,0.385505
+Dog,breed,Labrador Retriever/Great Pyrenees,20,5188,0.385505
+Dog,breed,American Bulldog,19,5188,0.366230
+Dog,breed,French Bulldog,19,5188,0.366230
+Dog,breed,Miniature Schnauzer Mix,18,5188,0.346955
+Dog,breed,Plott Hound Mix,18,5188,0.346955
+Dog,breed,Plott Hound,18,5188,0.346955
+Dog,breed,Boxer,18,5188,0.346955
+Dog,breed,Miniature Poodle Mix,17,5188,0.327679
+Dog,breed,Chihuahua Shorthair/Dachshund,17,5188,0.327679
+Dog,breed,Australian Kelpie Mix,17,5188,0.327679
+Dog,breed,Pug,17,5188,0.327679
+Dog,breed,Rottweiler Mix,16,5188,0.308404
+Dog,breed,Alaskan Husky Mix,16,5188,0.308404
+Dog,breed,Anatol Shepherd,15,5188,0.289129
+Dog,breed,Staffordshire,15,5188,0.289129
+Dog,breed,Australian Cattle Dog/Labrador Retriever,15,5188,0.289129
+Dog,breed,Redbone Hound Mix,15,5188,0.289129
+Dog,breed,Rat Terrier Mix,14,5188,0.269854
+Dog,breed,Border Terrier Mix,14,5188,0.269854
+Dog,breed,Dachshund/Chihuahua Shorthair,14,5188,0.269854
+Dog,breed,Carolina Dog Mix,14,5188,0.269854
+Dog,breed,Australian Shepherd,13,5188,0.250578
+Dog,breed,Cardigan Welsh Corgi Mix,13,5188,0.250578
+Dog,breed,German Shepherd/Labrador Retriever,13,5188,0.250578
+Dog,breed,Pomeranian,13,5188,0.250578
+Dog,breed,Miniature Schnauzer,13,5188,0.250578
+Dog,breed,American Staffordshire Terrier,13,5188,0.250578
+Dog,breed,Golden Retriever Mix,12,5188,0.231303
+Dog,breed,Border Collie,12,5188,0.231303
+Dog,breed,Bulldog Mix,12,5188,0.231303
+Dog,breed,Labrador Retriever/German Shepherd,11,5188,0.212028
+Dog,breed,Pointer,11,5188,0.212028
+Dog,breed,English Bulldog,11,5188,0.212028
+Dog,breed,Great Dane,11,5188,0.212028
+Dog,breed,American Foxhound Mix,10,5188,0.192753
+Dog,breed,Chihuahua Longhair Mix,10,5188,0.192753
+Dog,breed,Jack Russell Terrier,10,5188,0.192753
+Dog,breed,Plott Hound/Doberman Pinsch,10,5188,0.192753
+Dog,breed,Maltese,9,5188,0.173477
+Dog,breed,Yorkshire Terrier Mix,9,5188,0.173477
+Dog,breed,Beagle Mix,9,5188,0.173477
+Dog,breed,German Shepherd/Australian Cattle Dog,9,5188,0.173477
+Dog,breed,Rat Terrier,9,5188,0.173477
+Dog,breed,Chihuahua Shorthair/Cairn Terrier,9,5188,0.173477
+Dog,breed,Pointer/Labrador Retriever,9,5188,0.173477
+Dog,breed,Wire Hair Fox Terrier,9,5188,0.173477
+Dog,breed,Australian Kelpie,9,5188,0.173477
+Dog,breed,Standard Schnauzer Mix,9,5188,0.173477
+Dog,breed,American Staffordshire Terrier Mix,9,5188,0.173477
+Dog,breed,Labrador Retriever/Chihuahua Shorthair,8,5188,0.154202
+Dog,breed,Labrador Retriever/Border Collie,8,5188,0.154202
+Dog,breed,Miniature Pinscher Mix,8,5188,0.154202
+Dog,breed,Bulldog,8,5188,0.154202
+Dog,breed,Plott Hound/Australian Cattle Dog,8,5188,0.154202
+Dog,breed,Labrador Retriever/Alaskan Husky,8,5188,0.154202
+Dog,breed,Border Collie/German Shepherd,8,5188,0.154202
+Dog,breed,Blue Lacy Mix,7,5188,0.134927
+Dog,breed,German Shepherd/Siberian Husky,7,5188,0.134927
+Dog,breed,Rhod Ridgeback,7,5188,0.134927
+Dog,breed,Anatol Shepherd/Great Pyrenees,7,5188,0.134927
+Dog,breed,Great Pyrenees/Labrador Retriever,7,5188,0.134927
+Dog,breed,Maltese/Toy Poodle,7,5188,0.134927
+Dog,breed,Standard Poodle,7,5188,0.134927
+Dog,breed,Queensland Heeler,7,5188,0.134927
+Dog,breed,Pug Mix,7,5188,0.134927
+Dog,breed,Field Spaniel,7,5188,0.134927
+Dog,breed,Pit Bull/Boxer,7,5188,0.134927
+Dog,breed,Weimaraner Mix,7,5188,0.134927
+Dog,breed,Carolina Dog,7,5188,0.134927
+Dog,breed,Dachshund Wirehair Mix,7,5188,0.134927
+Dog,breed,Shih Tzu Mix,6,5188,0.115652
+Dog,breed,Beagle,6,5188,0.115652
+Dog,breed,Standard Poodle Mix,6,5188,0.115652
+Dog,breed,German Shepherd/Alaskan Husky,6,5188,0.115652
+Dog,breed,Great Dane/Labrador Retriever,6,5188,0.115652
+Dog,breed,Golden Retriever,6,5188,0.115652
+Dog,breed,Miniature Poodle/Maltese,6,5188,0.115652
+Dog,breed,Boxer/Labrador Retriever,6,5188,0.115652
+Dog,breed,Chihuahua Shorthair/Miniature Pinscher,6,5188,0.115652
+Dog,breed,Belgian Malinois Mix,6,5188,0.115652
+Dog,breed,Dutch Shepherd Mix,6,5188,0.115652
+Dog,breed,Maltese Mix,6,5188,0.115652
+Dog,breed,American Foxhound,6,5188,0.115652
+Dog,breed,Chinese Sharpei Mix,6,5188,0.115652
+Dog,breed,Great Pyrenees/Anatol Shepherd,6,5188,0.115652
+Dog,breed,Rhod Ridgeback Mix,6,5188,0.115652
+Dog,breed,Cairn Terrier/Chihuahua Shorthair,6,5188,0.115652
+Dog,breed,Akita Mix,5,5188,0.096376
+Dog,breed,Chihuahua Shorthair/Labrador Retriever,5,5188,0.096376
+Dog,breed,Siberian Husky/German Shepherd,5,5188,0.096376
+Dog,breed,Collie Smooth Mix,5,5188,0.096376
+Dog,breed,Treeing Walker Coonhound Mix,5,5188,0.096376
+Dog,breed,Standard Poodle/Labrador Retriever,5,5188,0.096376
+Dog,breed,Mastiff,5,5188,0.096376
+Dog,breed,Vizsla Mix,5,5188,0.096376
+Dog,breed,Mastiff Mix,5,5188,0.096376
+Dog,breed,Whippet Mix,5,5188,0.096376
+Dog,breed,German Shepherd/Border Collie,5,5188,0.096376
+Dog,breed,Australian Cattle Dog/German Shepherd,5,5188,0.096376
+Dog,breed,Miniature Pinscher,5,5188,0.096376
+Dog,breed,Maltese/Miniature Poodle,5,5188,0.096376
+Dog,breed,Catahoula/Australian Cattle Dog,5,5188,0.096376
+Dog,breed,Papillon Mix,5,5188,0.096376
+Dog,breed,Treeing Cur/Boxer,5,5188,0.096376
+Dog,breed,German Shepherd/Belgian Malinois,5,5188,0.096376
+Dog,breed,Chow Chow,4,5188,0.077101
+Dog,breed,Rat Terrier/Chihuahua Shorthair,4,5188,0.077101
+Dog,breed,Catahoula/Labrador Retriever,4,5188,0.077101
+Dog,breed,Labrador Retriever/Catahoula,4,5188,0.077101
+Dog,breed,Bluetick Hound,4,5188,0.077101
+Dog,breed,Queensland Heeler Mix,4,5188,0.077101
+Dog,breed,Pug/Chihuahua Shorthair,4,5188,0.077101
+Dog,breed,Chow Chow Mix,4,5188,0.077101
+Dog,breed,Rottweiler/Labrador Retriever,4,5188,0.077101
+Dog,breed,Boxer/Pit Bull,4,5188,0.077101
+Dog,breed,Border Terrier,4,5188,0.077101
+Dog,breed,Blue Lacy,4,5188,0.077101
+Dog,breed,Boston Terrier,4,5188,0.077101
+Dog,breed,Border Collie/Pembroke Welsh Corgi,4,5188,0.077101
+Dog,breed,Dalmatian,4,5188,0.077101
+Dog,breed,Basenji Mix,4,5188,0.077101
+Dog,breed,Black/Tan Hound Mix,4,5188,0.077101
+Dog,breed,Canaan Dog Mix,4,5188,0.077101
+Dog,breed,West Highland,4,5188,0.077101
+Dog,breed,German Shepherd/Pit Bull,4,5188,0.077101
+Dog,breed,Manchester Terrier Mix,4,5188,0.077101
+Dog,breed,American Pit Bull Terrier/Boxer,4,5188,0.077101
+Dog,breed,Akita,4,5188,0.077101
+Dog,breed,Siberian Husky/Border Collie,4,5188,0.077101
+Dog,breed,English Bulldog Mix,4,5188,0.077101
+Dog,breed,Bull Terrier,4,5188,0.077101
+Dog,breed,Pekingese Mix,4,5188,0.077101
+Dog,breed,Alaskan Husky/Australian Cattle Dog,4,5188,0.077101
+Dog,breed,Irish Wolfhound Mix,4,5188,0.077101
+Dog,breed,Standard Schnauzer,4,5188,0.077101
+Dog,breed,German Shorthair Pointer Mix,4,5188,0.077101
+Dog,breed,Border Collie/Labrador Retriever,4,5188,0.077101
+Dog,breed,German Pinscher,4,5188,0.077101
+Dog,breed,Dachshund Longhair/Labrador Retriever,4,5188,0.077101
+Dog,breed,Dachshund/English Foxhound,4,5188,0.077101
+Dog,breed,Cocker Spaniel Mix,3,5188,0.057826
+Dog,breed,Tibetan Spaniel Mix,3,5188,0.057826
+Dog,breed,Pointer/Pit Bull,3,5188,0.057826
+Dog,breed,Catahoula/Pit Bull,3,5188,0.057826
+Dog,breed,Cairn Terrier/Pit Bull,3,5188,0.057826
+Dog,breed,Labrador Retriever/Anatol Shepherd,3,5188,0.057826
+Dog,breed,Chinese Sharpei/Labrador Retriever,3,5188,0.057826
+Dog,breed,Bull Terrier Mix,3,5188,0.057826
+Dog,breed,American Bulldog/Boxer,3,5188,0.057826
+Dog,breed,Black Mouth Cur/Labrador Retriever,3,5188,0.057826
+Dog,breed,Alaskan Husky/German Shepherd,3,5188,0.057826
+Dog,breed,Great Pyrenees/German Shepherd,3,5188,0.057826
+Dog,breed,Pit Bull/Bulldog,3,5188,0.057826
+Dog,breed,Collie Rough Mix,3,5188,0.057826
+Dog,breed,Cairn Terrier/Dachshund,3,5188,0.057826
+Dog,breed,Siberian Husky/Labrador Retriever,3,5188,0.057826
+Dog,breed,Beagle/Labrador Retriever,3,5188,0.057826
+Dog,breed,Lhasa Apso Mix,3,5188,0.057826
+Dog,breed,Pit Bull/Cairn Terrier,3,5188,0.057826
+Dog,breed,Pit Bull/Catahoula,3,5188,0.057826
+Dog,breed,American Bulldog/Pit Bull,3,5188,0.057826
+Dog,breed,Golden Retriever/Great Pyrenees,3,5188,0.057826
+Dog,breed,Pit Bull/Chinese Sharpei,3,5188,0.057826
+Dog,breed,Alaskan Malamute Mix,3,5188,0.057826
+Dog,breed,German Shepherd/Bloodhound,3,5188,0.057826
+Dog,breed,German Shepherd/Anatol Shepherd,3,5188,0.057826
+Dog,breed,Labrador Retriever/Harrier,3,5188,0.057826
+Dog,breed,Dutch Shepherd,3,5188,0.057826
+Dog,breed,Basset Hound,3,5188,0.057826
+Dog,breed,Labrador Retriever/Pointer,3,5188,0.057826
+Dog,breed,Dalmatian Mix,3,5188,0.057826
+Dog,breed,Alaskan Husky/Labrador Retriever,3,5188,0.057826
+Dog,breed,Labrador Retriever/Akbash,3,5188,0.057826
+Dog,breed,Bloodhound,3,5188,0.057826
+Dog,breed,Pit Bull/Siberian Husky,3,5188,0.057826
+Dog,breed,Australian Shepherd/Labrador Retriever,3,5188,0.057826
+Dog,breed,Pit Bull/Australian Cattle Dog,3,5188,0.057826
+Dog,breed,Miniature Schnauzer/Miniature Poodle,3,5188,0.057826
+Dog,breed,Chihuahua Shorthair/Rat Terrier,3,5188,0.057826
+Dog,breed,Basset Hound Mix,3,5188,0.057826
+Dog,breed,Black Mouth Cur/German Shepherd,3,5188,0.057826
+Dog,breed,Australian Cattle Dog/Alaskan Husky,3,5188,0.057826
+Dog,breed,Chihuahua Shorthair/Dachshund Wirehair,3,5188,0.057826
+Dog,breed,Dachshund Longhair Mix,3,5188,0.057826
+Dog,breed,Chihuahua Shorthair/Pit Bull,3,5188,0.057826
+Dog,breed,Toy Poodle Mix,3,5188,0.057826
+Dog,breed,Siberian Husky/Australian Cattle Dog,3,5188,0.057826
+Dog,breed,Chinese Sharpei,3,5188,0.057826
+Dog,breed,German Shepherd/Golden Retriever,3,5188,0.057826
+Dog,breed,Lhasa Apso,3,5188,0.057826
+Dog,breed,Labrador Retriever/Siberian Husky,3,5188,0.057826
+Dog,breed,Scottish Terrier Mix,3,5188,0.057826
+Dog,breed,Chihuahua Shorthair/Pug,2,5188,0.038551
+Dog,breed,Labrador Retriever/American Bulldog,2,5188,0.038551
+Dog,breed,Norfolk Terrier/Chihuahua Shorthair,2,5188,0.038551
+Dog,breed,Pekingese,2,5188,0.038551
+Dog,breed,American Pit Bull Terrier/Labrador Retriever,2,5188,0.038551
+Dog,breed,German Shepherd/Great Pyrenees,2,5188,0.038551
+Dog,breed,Toy Fox Terrier,2,5188,0.038551
+Dog,breed,English Coonhound,2,5188,0.038551
+Dog,breed,Cardigan Welsh Corgi,2,5188,0.038551
+Dog,breed,Belgian Malinois/Siberian Husky,2,5188,0.038551
+Dog,breed,Manchester Terrier,2,5188,0.038551
+Dog,breed,French Bulldog Mix,2,5188,0.038551
+Dog,breed,Schnauzer Giant,2,5188,0.038551
+Dog,breed,Australian Shepherd/Pit Bull,2,5188,0.038551
+Dog,breed,Cane Corso/Great Dane,2,5188,0.038551
+Dog,breed,Schnauzer Giant Mix,2,5188,0.038551
+Dog,breed,Chinese Crested Mix,2,5188,0.038551
+Dog,breed,Australian Cattle Dog/Bloodhound,2,5188,0.038551
+Dog,breed,Pembroke Welsh Corgi,2,5188,0.038551
+Dog,breed,Cairn Terrier/Miniature Poodle,2,5188,0.038551
+Dog,breed,Bullmastiff/Pit Bull,2,5188,0.038551
+Dog,breed,Labrador Retriever/Great Dane,2,5188,0.038551
+Dog,breed,Pomeranian Mix,2,5188,0.038551
+Dog,breed,Feist Mix,2,5188,0.038551
+Dog,breed,Rhod Ridgeback/Pit Bull,2,5188,0.038551
+Dog,breed,Dachshund Longhair,2,5188,0.038551
+Dog,breed,Shiba Inu,2,5188,0.038551
+Dog,breed,Flat Coat Retriever Mix,2,5188,0.038551
+Dog,breed,Australian Cattle Dog/Basenji,2,5188,0.038551
+Dog,breed,West Highland Mix,2,5188,0.038551
+Dog,breed,Labrador Retriever/Australian Shepherd,2,5188,0.038551
+Dog,breed,Toy Poodle/Maltese,2,5188,0.038551
+Dog,breed,Great Dane/Cane Corso,2,5188,0.038551
+Dog,breed,Australian Cattle Dog/Pit Bull,2,5188,0.038551
+Dog,breed,Chihuahua Shorthair/Norfolk Terrier,2,5188,0.038551
+Dog,breed,Shih Tzu/Border Terrier,2,5188,0.038551
+Dog,breed,Jack Russell Terrier/Beagle,2,5188,0.038551
+Dog,breed,Wire Hair Fox Terrier Mix,2,5188,0.038551
+Dog,breed,Great Pyrenees/Siberian Husky,2,5188,0.038551
+Dog,breed,Soft Coated Wheaten Terrier,2,5188,0.038551
+Dog,breed,Treeing Cur/Pit Bull,2,5188,0.038551
+Dog,breed,Treeing Cur,2,5188,0.038551
+Dog,breed,Weimaraner,2,5188,0.038551
+Dog,breed,Yorkshire Terrier/Chihuahua Shorthair,2,5188,0.038551
+Dog,breed,Pit Bull/German Shepherd,2,5188,0.038551
+Dog,breed,Australian Shepherd/Australian Cattle Dog,2,5188,0.038551
+Dog,breed,Great Dane Mix,2,5188,0.038551
+Dog,breed,English Springer Spaniel/Labrador Retriever,2,5188,0.038551
+Dog,breed,Cocker Spaniel/Labrador Retriever,2,5188,0.038551
+Dog,breed,Boxer/Catahoula,2,5188,0.038551
+Dog,breed,Labrador Retriever/Chow Chow,2,5188,0.038551
+Dog,breed,Australian Cattle Dog/Siberian Husky,2,5188,0.038551
+Dog,breed,Labrador Retriever/Standard Schnauzer,2,5188,0.038551
+Dog,breed,Border Collie/Australian Cattle Dog,2,5188,0.038551
+Dog,breed,German Shepherd/Australian Shepherd,2,5188,0.038551
+Dog,breed,Border Collie/Pit Bull,2,5188,0.038551
+Dog,breed,Cairn Terrier/Yorkshire Terrier,2,5188,0.038551
+Dog,breed,Australian Shepherd/Border Collie,2,5188,0.038551
+Dog,breed,Great Pyrenees/Border Collie,2,5188,0.038551
+Dog,breed,Catahoula/Siberian Husky,2,5188,0.038551
+Dog,breed,Toy Poodle,2,5188,0.038551
+Dog,breed,Siberian Husky/Australian Shepherd,2,5188,0.038551
+Dog,breed,Miniature Schnauzer/Maltese,2,5188,0.038551
+Dog,breed,Catahoula/Great Dane,2,5188,0.038551
+Dog,breed,Plott Hound/Catahoula,2,5188,0.038551
+Dog,breed,Nova Scotia Duck Tolling Retriever Mix,2,5188,0.038551
+Dog,breed,German Pinscher Mix,2,5188,0.038551
+Dog,breed,Cane Corso,2,5188,0.038551
+Dog,breed,Rat Terrier/Cardigan Welsh Corgi,1,5188,0.019275
+Dog,breed,German Shepherd/Rottweiler,1,5188,0.019275
+Dog,breed,Havanese Mix,1,5188,0.019275
+Dog,breed,Rat Terrier/Chihuahua Longhair,1,5188,0.019275
+Dog,breed,Labrador Retriever/Flat Coat Retriever,1,5188,0.019275
+Dog,breed,Labrador Retriever/Whippet,1,5188,0.019275
+Dog,breed,Shih Tzu/Bichon Frise,1,5188,0.019275
+Dog,breed,Old English Sheepdog Mix,1,5188,0.019275
+Dog,breed,Miniature Schnauzer/Beagle,1,5188,0.019275
+Dog,breed,Dachshund/Beagle,1,5188,0.019275
+Dog,breed,American Bulldog/Queensland Heeler,1,5188,0.019275
+Dog,breed,Labrador Retriever/Australian Kelpie,1,5188,0.019275
+Dog,breed,Boxer/Chinese Sharpei,1,5188,0.019275
+Dog,breed,Labrador Retriever/Plott Hound,1,5188,0.019275
+Dog,breed,Australian Shepherd/Border Terrier,1,5188,0.019275
+Dog,breed,Labrador Retriever/Queensland Heeler,1,5188,0.019275
+Dog,breed,Rat Terrier/Dachshund,1,5188,0.019275
+Dog,breed,Miniature Poodle/Miniature Poodle,1,5188,0.019275
+Dog,breed,American Bulldog/Labrador Retriever,1,5188,0.019275
+Dog,breed,Cairn Terrier/Bruss Griffon,1,5188,0.019275
+Dog,breed,English Pointer/Boxer,1,5188,0.019275
+Dog,breed,Catahoula/Black Mouth Cur,1,5188,0.019275
+Dog,breed,Golden Retriever/Cocker Spaniel,1,5188,0.019275
+Dog,breed,St. Bernard Smooth Coat,1,5188,0.019275
+Dog,breed,Plott Hound/German Shepherd,1,5188,0.019275
+Dog,breed,Norfolk Terrier Mix,1,5188,0.019275
+Dog,breed,Maltese/Cairn Terrier,1,5188,0.019275
+Dog,breed,German Shepherd/Alaskan Malamute,1,5188,0.019275
+Dog,breed,Golden Retriever/Labrador Retriever,1,5188,0.019275
+Dog,breed,Brittany,1,5188,0.019275
+Dog,breed,Labrador Retriever/Beagle,1,5188,0.019275
+Dog,breed,Anatol Shepherd/German Shepherd,1,5188,0.019275
+Dog,breed,Maltese/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Great Pyrenees/Australian Shepherd,1,5188,0.019275
+Dog,breed,Landseer Mix,1,5188,0.019275
+Dog,breed,Field Spaniel Mix,1,5188,0.019275
+Dog,breed,Border Collie/Field Spaniel,1,5188,0.019275
+Dog,breed,Black Mouth Cur/Chesa Bay Retr,1,5188,0.019275
+Dog,breed,Silky Terrier Mix,1,5188,0.019275
+Dog,breed,Jack Russell Terrier/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Australian Shepherd/Miniature Poodle,1,5188,0.019275
+Dog,breed,Labrador Retriever/Chinese Sharpei,1,5188,0.019275
+Dog,breed,English Cocker Spaniel/Pembroke Welsh Corgi,1,5188,0.019275
+Dog,breed,Miniature Poodle/Scottish Terrier,1,5188,0.019275
+Dog,breed,Toy Fox Terrier Mix,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Landseer,1,5188,0.019275
+Dog,breed,Shetland Sheepdog,1,5188,0.019275
+Dog,breed,American Pit Bull Terrier/Alaskan Husky,1,5188,0.019275
+Dog,breed,Miniature Poodle/Cairn Terrier,1,5188,0.019275
+Dog,breed,English Springer Spaniel,1,5188,0.019275
+Dog,breed,Basenji/Cardigan Welsh Corgi,1,5188,0.019275
+Dog,breed,Chinese Crested/Yorkshire Terrier,1,5188,0.019275
+Dog,breed,Chihuahua Longhair/Dachshund,1,5188,0.019275
+Dog,breed,Boxer/Dalmatian,1,5188,0.019275
+Dog,breed,Border Collie/Great Pyrenees,1,5188,0.019275
+Dog,breed,West Highland/Miniature Poodle,1,5188,0.019275
+Dog,breed,Pit Bull/Great Pyrenees,1,5188,0.019275
+Dog,breed,Bernese Hound/Great Dane,1,5188,0.019275
+Dog,breed,Australian Kelpie/Siberian Husky,1,5188,0.019275
+Dog,breed,Siberian Husky/Great Pyrenees,1,5188,0.019275
+Dog,breed,Cardigan Welsh Corgi/Border Collie,1,5188,0.019275
+Dog,breed,Tibetan Spaniel,1,5188,0.019275
+Dog,breed,Norwegian Elkhound,1,5188,0.019275
+Dog,breed,Shih Tzu/Standard Poodle,1,5188,0.019275
+Dog,breed,Labrador Retriever/Bluetick Hound,1,5188,0.019275
+Dog,breed,Basset Hound/Cocker Spaniel,1,5188,0.019275
+Dog,breed,West Highland/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Chihuahua Longhair/Pomeranian,1,5188,0.019275
+Dog,breed,Pit Bull/Cane Corso,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/American Foxhound,1,5188,0.019275
+Dog,breed,Shiba Inu/Labrador Retriever,1,5188,0.019275
+Dog,breed,Dachshund/Chinese Crested,1,5188,0.019275
+Dog,breed,Cane Corso Mix,1,5188,0.019275
+Dog,breed,Chinese Crested,1,5188,0.019275
+Dog,breed,Dogo Argentino Mix,1,5188,0.019275
+Dog,breed,Pit Bull/Neapolitan Mastiff,1,5188,0.019275
+Dog,breed,Basenji/Labrador Retriever,1,5188,0.019275
+Dog,breed,German Shepherd/Great Dane,1,5188,0.019275
+Dog,breed,Boerboel Mix,1,5188,0.019275
+Dog,breed,Anatol Shepherd/Labrador Retriever,1,5188,0.019275
+Dog,breed,Australian Shepherd/Belgian Tervuren,1,5188,0.019275
+Dog,breed,Chow Chow/German Shepherd,1,5188,0.019275
+Dog,breed,Lhasa Apso/Toy Poodle,1,5188,0.019275
+Dog,breed,Doberman Pinsch/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Brittany Mix,1,5188,0.019275
+Dog,breed,English Pointer/Black Mouth Cur,1,5188,0.019275
+Dog,breed,Black Mouth Cur/English Pointer,1,5188,0.019275
+Dog,breed,Doberman Pinsch/German Shepherd,1,5188,0.019275
+Dog,breed,Collie Smooth,1,5188,0.019275
+Dog,breed,Treeing Tennesse Brindle/Labrador Retriever,1,5188,0.019275
+Dog,breed,Chihuahua Longhair/Papillon,1,5188,0.019275
+Dog,breed,Miniature Pinscher/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Akita/German Shepherd,1,5188,0.019275
+Dog,breed,Shih Tzu/Cocker Spaniel,1,5188,0.019275
+Dog,breed,Chihuahua Longhair/Wire Hair Fox Terrier,1,5188,0.019275
+Dog,breed,Patterdale Terr,1,5188,0.019275
+Dog,breed,Plott Hound/Mastiff,1,5188,0.019275
+Dog,breed,English Setter/Labrador Retriever,1,5188,0.019275
+Dog,breed,Pembroke Welsh Corgi/Akita,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Bull Terrier/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Dachshund Longhair/Standard Schnauzer,1,5188,0.019275
+Dog,breed,Whippet/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Miniature Schnauzer/Chihuahua Longhair,1,5188,0.019275
+Dog,breed,Anatol Shepherd/Basset Hound,1,5188,0.019275
+Dog,breed,Border Collie/Collie Rough,1,5188,0.019275
+Dog,breed,Patterdale Terr Mix,1,5188,0.019275
+Dog,breed,Belgian Tervuren Mix,1,5188,0.019275
+Dog,breed,Labrador Retriever/Golden Retriever,1,5188,0.019275
+Dog,breed,Pointer/Great Pyrenees,1,5188,0.019275
+Dog,breed,Carolina Dog/Labrador Retriever,1,5188,0.019275
+Dog,breed,Chinese Sharpei/American Bulldog,1,5188,0.019275
+Dog,breed,Miniature Poodle/Lhasa Apso,1,5188,0.019275
+Dog,breed,Patterdale Terr/Cardigan Welsh Corgi,1,5188,0.019275
+Dog,breed,Mastiff/Labrador Retriever,1,5188,0.019275
+Dog,breed,Samoyed/Alaskan Husky,1,5188,0.019275
+Dog,breed,Labrador Retriever/Greyhound,1,5188,0.019275
+Dog,breed,Pbgv,1,5188,0.019275
+Dog,breed,Leonberger Mix,1,5188,0.019275
+Dog,breed,Cocker Spaniel,1,5188,0.019275
+Dog,breed,Cavalier Span Mix,1,5188,0.019275
+Dog,breed,Rat Terrier/Whippet,1,5188,0.019275
+Dog,breed,Black Mouth Cur/Carolina Dog,1,5188,0.019275
+Dog,breed,Tibetan Terrier,1,5188,0.019275
+Dog,breed,French Bulldog/Dachshund,1,5188,0.019275
+Dog,breed,Pug/Border Collie,1,5188,0.019275
+Dog,breed,Chihuahua Longhair/Dachshund Wirehair,1,5188,0.019275
+Dog,breed,Australian Shepherd/Wire Hair Fox Terrier,1,5188,0.019275
+Dog,breed,Rat Terrier/Cairn Terrier,1,5188,0.019275
+Dog,breed,Coton De Tulear,1,5188,0.019275
+Dog,breed,Pit Bull/Alaskan Husky,1,5188,0.019275
+Dog,breed,Alaskan Malamute,1,5188,0.019275
+Dog,breed,Rat Terrier/Pointer,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Pointer,1,5188,0.019275
+Dog,breed,Black Mouth Cur/Pit Bull,1,5188,0.019275
+Dog,breed,Black Mouth Cur/Bulldog,1,5188,0.019275
+Dog,breed,Basenji/Dachshund,1,5188,0.019275
+Dog,breed,Black/Tan Hound,1,5188,0.019275
+Dog,breed,Carolina Dog/Collie Smooth,1,5188,0.019275
+Dog,breed,Cardigan Welsh Corgi/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Belgian Malinois/Belgian Tervuren,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/French Bulldog,1,5188,0.019275
+Dog,breed,Boston Terrier/Pit Bull,1,5188,0.019275
+Dog,breed,Labrador Retriever/Dutch Shepherd,1,5188,0.019275
+Dog,breed,Catahoula/German Shepherd,1,5188,0.019275
+Dog,breed,Shiba Inu Mix,1,5188,0.019275
+Dog,breed,Black Mouth Cur/Black Mouth Cur,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Great Pyrenees,1,5188,0.019275
+Dog,breed,German Shepherd/German Shepherd,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/Pomeranian,1,5188,0.019275
+Dog,breed,Finnish Spitz Mix,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Blue Lacy,1,5188,0.019275
+Dog,breed,Plott Hound/Boxer,1,5188,0.019275
+Dog,breed,Bulldog/Pit Bull,1,5188,0.019275
+Dog,breed,Australian Shepherd/Alaskan Husky,1,5188,0.019275
+Dog,breed,Bulldog/American Pit Bull Terrier,1,5188,0.019275
+Dog,breed,Staffordshire/Labrador Retriever,1,5188,0.019275
+Dog,breed,German Shepherd/Beauceron,1,5188,0.019275
+Dog,breed,Miniature Poodle/Labrador Retriever,1,5188,0.019275
+Dog,breed,Bernese Hound/Standard Poodle,1,5188,0.019275
+Dog,breed,St. Bernard Smooth Coat Mix,1,5188,0.019275
+Dog,breed,Treeing Walker Coonhound/Labrador Retriever,1,5188,0.019275
+Dog,breed,Belgian Malinois/Great Pyrenees,1,5188,0.019275
+Dog,breed,Great Dane/American Pit Bull Terrier,1,5188,0.019275
+Dog,breed,Kangal/Great Dane,1,5188,0.019275
+Dog,breed,Pit Bull/Basset Hound,1,5188,0.019275
+Dog,breed,Blue Lacy/Pit Bull,1,5188,0.019275
+Dog,breed,American Eskimo Mix,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/Pembroke Welsh Corgi,1,5188,0.019275
+Dog,breed,Bearded Collie Mix,1,5188,0.019275
+Dog,breed,Swedish Vallhund/Siberian Husky,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Carolina Dog/Canaan Dog,1,5188,0.019275
+Dog,breed,Carolina Dog/Beagle,1,5188,0.019275
+Dog,breed,Black Mouth Cur/American Pit Bull Terrier,1,5188,0.019275
+Dog,breed,Keeshond Mix,1,5188,0.019275
+Dog,breed,Miniature Poodle/Yorkshire Terrier,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/Beagle,1,5188,0.019275
+Dog,breed,Beagle/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Anatol Shepherd/American Bulldog,1,5188,0.019275
+Dog,breed,Siberian Husky/Pit Bull,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/Maltese,1,5188,0.019275
+Dog,breed,German Shorthair Pointer,1,5188,0.019275
+Dog,breed,Standard Schnauzer/Standard Poodle,1,5188,0.019275
+Dog,breed,Black/Tan Hound/German Shepherd,1,5188,0.019275
+Dog,breed,English Foxhound Mix,1,5188,0.019275
+Dog,breed,Yorkshire Terrier/Standard Schnauzer,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/Cardigan Welsh Corgi,1,5188,0.019275
+Dog,breed,English Setter,1,5188,0.019275
+Dog,breed,Irish Terrier Mix,1,5188,0.019275
+Dog,breed,Irish Terrier,1,5188,0.019275
+Dog,breed,Whippet/Beagle,1,5188,0.019275
+Dog,breed,Miniature Schnauzer/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Whippet,1,5188,0.019275
+Dog,breed,Dachshund Wirehair/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Miniature Poodle/Pomeranian,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Border Collie,1,5188,0.019275
+Dog,breed,Treeing Walker Coonhound,1,5188,0.019275
+Dog,breed,Australian Cattle Dog/Australian Shepherd,1,5188,0.019275
+Dog,breed,Dachshund Longhair/Cairn Terrier,1,5188,0.019275
+Dog,breed,Greyhound,1,5188,0.019275
+Dog,breed,German Shepherd/Doberman Pinsch,1,5188,0.019275
+Dog,breed,Bichon Frise,1,5188,0.019275
+Dog,breed,Border Terrier/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,American Staffordshire Terrier/Siberian Husky,1,5188,0.019275
+Dog,breed,Labrador Retriever/Collie Smooth,1,5188,0.019275
+Dog,breed,Jack Russell Terrier/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/Yorkshire Terrier,1,5188,0.019275
+Dog,breed,Rottweiler/German Shepherd,1,5188,0.019275
+Dog,breed,Jack Russell Terrier/Wire Hair Fox Terrier,1,5188,0.019275
+Dog,breed,Beagle/Rat Terrier,1,5188,0.019275
+Dog,breed,Great Pyrenees/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Dachshund/Pug,1,5188,0.019275
+Dog,breed,Australian Shepherd/Collie Rough,1,5188,0.019275
+Dog,breed,Dogo Argentino,1,5188,0.019275
+Dog,breed,Curly Coat Retriever,1,5188,0.019275
+Dog,breed,Siberian Husky/Pomeranian,1,5188,0.019275
+Dog,breed,Dachshund Wirehair/Bruss Griffon,1,5188,0.019275
+Dog,breed,Tosa,1,5188,0.019275
+Dog,breed,Toy Poodle/Standard Schnauzer,1,5188,0.019275
+Dog,breed,Brittany/Australian Shepherd,1,5188,0.019275
+Dog,breed,Beagle/Pug,1,5188,0.019275
+Dog,breed,German Shepherd/Chow Chow,1,5188,0.019275
+Dog,breed,Rhod Ridgeback/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,German Shorthair Pointer/English Shepherd,1,5188,0.019275
+Dog,breed,Boston Terrier Mix,1,5188,0.019275
+Dog,breed,Labrador Retriever/Carolina Dog,1,5188,0.019275
+Dog,breed,Newfoundland Mix,1,5188,0.019275
+Dog,breed,Plott Hound/Labrador Retriever,1,5188,0.019275
+Dog,breed,Carolina Dog/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,English Coonhound Mix,1,5188,0.019275
+Dog,breed,Shih Tzu/Maltese,1,5188,0.019275
+Dog,breed,Rhod Ridgeback/Black Mouth Cur,1,5188,0.019275
+Dog,breed,Kangal,1,5188,0.019275
+Dog,breed,Australian Shepherd/Great Pyrenees,1,5188,0.019275
+Dog,breed,Bull Terrier/Bulldog,1,5188,0.019275
+Dog,breed,Bruss Griffon/Chihuahua Shorthair,1,5188,0.019275
+Dog,breed,Bullmastiff/Boxer,1,5188,0.019275
+Dog,breed,Basset Hound/Labrador Retriever,1,5188,0.019275
+Dog,breed,German Wirehaired Pointer/German Wirehaired Pointer,1,5188,0.019275
+Dog,breed,Mastiff/Pit Bull,1,5188,0.019275
+Dog,breed,Miniature Schnauzer/Pug,1,5188,0.019275
+Dog,breed,Treeing Cur Mix,1,5188,0.019275
+Dog,breed,English Bulldog/American Staffordshire Terrier,1,5188,0.019275
+Dog,breed,Border Collie/American Eskimo,1,5188,0.019275
+Dog,breed,Akbash,1,5188,0.019275
+Dog,breed,Belgian Malinois/German Shepherd,1,5188,0.019275
+Dog,breed,Labrador Retriever/Black Mouth Cur,1,5188,0.019275
+Dog,breed,Italian Greyhound Mix,1,5188,0.019275
+Dog,breed,Bullmastiff,1,5188,0.019275
+Dog,breed,Siberian Husky/Akita,1,5188,0.019275
+Dog,breed,Staffordshire/Bull Terrier,1,5188,0.019275
+Dog,breed,Norfolk Terrier,1,5188,0.019275
+Dog,breed,Pit Bull/Pointer,1,5188,0.019275
+Dog,breed,Mastiff/Boxer,1,5188,0.019275
+Dog,breed,Smooth Fox Terrier Mix,1,5188,0.019275
+Dog,breed,English Bulldog/Pit Bull,1,5188,0.019275
+Dog,breed,Bull Terrier/Pit Bull,1,5188,0.019275
+Dog,breed,Ibizan Hound/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,American Bulldog/Dalmatian,1,5188,0.019275
+Dog,breed,Affenpinscher Mix,1,5188,0.019275
+Dog,breed,Chow Chow/Alaskan Husky,1,5188,0.019275
+Dog,breed,English Pointer Mix,1,5188,0.019275
+Dog,breed,Newfoundland/Labrador Retriever,1,5188,0.019275
+Dog,breed,Redbone Hound/Bloodhound,1,5188,0.019275
+Dog,breed,Great Pyrenees/Akbash,1,5188,0.019275
+Dog,breed,Border Collie/Siberian Husky,1,5188,0.019275
+Dog,breed,German Wirehaired Pointer,1,5188,0.019275
+Dog,breed,Pug/Boxer,1,5188,0.019275
+Dog,breed,Chow Chow/Chinese Sharpei,1,5188,0.019275
+Dog,breed,Yorkshire Terrier/Cairn Terrier,1,5188,0.019275
+Dog,breed,Cane Corso/Pit Bull,1,5188,0.019275
+Dog,breed,Bloodhound Mix,1,5188,0.019275
+Dog,breed,Pit Bull/American Bulldog,1,5188,0.019275
+Dog,breed,Labrador Retriever/Mastiff,1,5188,0.019275
+Dog,breed,St. Bernard Rough Coat,1,5188,0.019275
+Dog,breed,English Springer Spaniel Mix,1,5188,0.019275
+Dog,breed,Chihuahua Shorthair/Australian Cattle Dog,1,5188,0.019275
+Dog,breed,Kangal/Great Pyrenees,1,5188,0.019275

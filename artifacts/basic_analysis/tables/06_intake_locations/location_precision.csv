@@ -1,0 +1,10 @@
+animal_type,location_precision,geocoded_records,geocoded_denominator,percent
+All animals,address_point,5385,7545,71.37176938369781
+All animals,street_address_interpolated,1426,7545,18.899933730947648
+All animals,street_intersection,734,7545,9.72829688535454
+Cat,address_point,3224,4113,78.38560661317773
+Cat,street_address_interpolated,632,4113,15.365912958910771
+Cat,street_intersection,257,4113,6.2484804279115
+Dog,address_point,1883,3036,62.02239789196311
+Dog,street_address_interpolated,688,3036,22.66139657444005
+Dog,street_intersection,465,3036,15.316205533596838
