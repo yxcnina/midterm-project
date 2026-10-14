@@ -129,9 +129,16 @@ within_90_days = (
 )
 
 set_plot_style()
+
 # Figure 1: Share of repeat-intake episodes
 
-figure_1 = pd.Series(
+figure_1, axes = plt.subplots(
+    nrows=1,
+    ncols=2,
+    figsize=(12, 6),
+)
+
+pd.Series(
     {
         "Repeat intakes":
             repeat_episode_count,
@@ -139,14 +146,49 @@ figure_1 = pd.Series(
             total_intake_episodes
             - repeat_episode_count,
     }
-).plot(kind="pie",
+).plot(
+    kind="pie",
+    ax=axes[0],
     autopct="%1.1f%%",
     colors=[
+        SECONDARY_COLOR,
         MAIN_COLOR,
-        NEUTRAL_COLOR,
     ],
     ylabel="",
-    title="Share of Repeat Intakes in 2024",)
+    title="Share of Repeat-Intake Episodes",
+)
+for text in axes[0].texts:
+    if text.get_text() == "Other intakes":
+        text.set_position((-0.45, -0.25))
+        text.set_horizontalalignment("center")
+
+pd.Series(
+    {
+        "Repeat-intake animals":
+            repeat_animal_count,
+        "Other animals":
+            total_animals
+            - repeat_animal_count,
+    }
+).plot(
+    kind="pie",
+    ax=axes[1],
+    autopct="%1.1f%%",
+    colors=[
+        ACCENT_COLOR,
+        MAIN_COLOR,
+    ],
+    ylabel="",
+    title="Share of Animals with Repeat Intakes",
+)
+for text in axes[1].texts:
+    if text.get_text() == "Other animals":
+        text.set_position((-0.45, -0.25))
+        text.set_horizontalalignment("center")
+
+figure_1.suptitle(
+    "Repeat Intakes at Austin Animal Center in 2024"
+)
 
 plt.savefig(
     os.path.join(
@@ -157,42 +199,7 @@ plt.savefig(
 
 plt.close()
 
-
-# Figure 2: Repeat-intake scale
-figure_2 = pd.Series(
-    {
-        "Repeat-intake episodes":
-            repeat_episode_count,
-        "Animals involved":
-            repeat_animal_count,
-    }
-).plot(
-    kind="bar",
-    color=[
-        MAIN_COLOR,
-        SECONDARY_COLOR,
-    ],
-    xlabel="Measure",
-    ylabel="Count",
-    title="Repeat Intakes at Austin Animal Center in 2024",
-    rot=0,
-)
-
-figure_2.bar_label(
-    figure_2.containers[0],
-    fmt="%d",
-)
-
-plt.savefig(
-    os.path.join(
-        FIGURE_DIR,
-        "02_repeat_intake_scale.png",
-    )
-)
-
-plt.close()
-
-#Figure 3: Return-time distribution
+#Figure 2: Return-time distribution
 return_time_labels = [
     "0-7 days",
     "8-30 days",
@@ -220,7 +227,7 @@ return_time_distribution = (
     .mul(100)
 )
 
-figure_3 = return_time_distribution.plot(
+figure_2 = return_time_distribution.plot(
     kind="bar",
     color=MAIN_COLOR,
     xlabel="Time until return",
@@ -229,21 +236,21 @@ figure_3 = return_time_distribution.plot(
     rot=0,
 )
 
-figure_3.bar_label(
-    figure_3.containers[0],
+figure_2.bar_label(
+    figure_2.containers[0],
     fmt="%.1f%%",
 )
 
 plt.savefig(
     os.path.join(
         FIGURE_DIR,
-        "03_return_time_distribution.png",
+        "02_return_time_distribution.png",
     )
 )
 
 plt.close()
 
-#Figure 4: Return pathways
+#Figure 3: Return pathways
 repeat_intakes["Return Pathway"] = (
     repeat_intakes["Previous Outcome Type"]
     + " → "
@@ -275,7 +282,7 @@ legend_labels = [
     in return_pathway_distribution.items()
 ]
 
-figure_4 = return_pathway_distribution.plot(
+figure_3 = return_pathway_distribution.plot(
     kind="pie",
     labels=[
         ""
@@ -298,8 +305,8 @@ figure_4 = return_pathway_distribution.plot(
     },
 )
 
-figure_4.legend(
-    figure_4.patches,
+figure_3.legend(
+    figure_3.patches,
     return_pathway_distribution.index,
     title="Return pathway",
     loc="center left",
@@ -310,14 +317,14 @@ figure_4.legend(
 plt.savefig(
     os.path.join(
         FIGURE_DIR,
-        "04_return_pathways.png",
+        "03_return_pathways.png",
     ),
     bbox_inches="tight",
 )
 
 plt.close()
 
-#Figure 5: Outcomes after repeat intake
+#Figure 4: Outcomes after repeat intake
 outcome_distribution = (
     repeat_intakes["Outcome Type"]
     .fillna("No recorded outcome")
@@ -326,7 +333,7 @@ outcome_distribution = (
     .sort_values()
 )
 
-figure_5 = outcome_distribution.plot(
+figure_4 = outcome_distribution.plot(
     kind="barh",
     color=ACCENT_COLOR,
     xlabel="Percent of repeat intakes",
@@ -334,22 +341,22 @@ figure_5 = outcome_distribution.plot(
     title="Outcomes After a Repeat Intake",
 )
 
-figure_5.bar_label(
-    figure_5.containers[0],
+figure_4.bar_label(
+    figure_4.containers[0],
     fmt="%.1f%%",
 )
 
 plt.savefig(
     os.path.join(
         FIGURE_DIR,
-        "05_outcomes_after_repeat_intake.png",
+        "04_outcomes_after_repeat_intake.png",
     ),
     bbox_inches="tight"
 )
 
 plt.close()
 
-#Figure 6: Intake-frequency distribution
+#Figure 5: Intake-frequency distribution
 intake_frequency = (
     repeat_animal_episodes
     .groupby("Animal ID")
@@ -358,7 +365,7 @@ intake_frequency = (
     .sort_index()
 )
 
-figure_6 = intake_frequency.plot(
+figure_5 = intake_frequency.plot(
     kind="bar",
     color=MAIN_COLOR,
     xlabel="Total intakes per animal in 2024",
@@ -367,15 +374,15 @@ figure_6 = intake_frequency.plot(
     rot=0,
 )
 
-figure_6.bar_label(
-    figure_6.containers[0],
+figure_5.bar_label(
+    figure_5.containers[0],
     fmt="%d",
 )
 
 plt.savefig(
     os.path.join(
         FIGURE_DIR,
-        "06_repeat_intake_frequency.png",
+        "05_repeat_intake_frequency.png",
     ),
     bbox_inches="tight",
 )
