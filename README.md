@@ -46,7 +46,7 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 <td><code>Animal ID</code>, <code>DateTime</code>, <code>Outcome Type</code>, <code>Outcome Subtype</code></td>
 </tr>
 <tr>
-<td rowspan="2"><strong>Animal Characteristics</strong></td>
+<td rowspan="2"><strong><mark>Animal Characteristics</mark></strong></td>
 <td>Austin Animal Center Intakes</td>
 <td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
 <td><code>Animal ID</code>, <code>Animal Type</code>, <code>Age upon Intake</code>, <code>Color</code>, <code>Breed</code>, <code>Sex upon Intake</code>, <code>Intake Condition</code></td>
@@ -57,7 +57,7 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 <td><code>Animal ID</code>, <code>DateTime</code>, <code>Outcome Type</code>, <code>Outcome Subtype</code></td>
 </tr>
 <tr>
-<td rowspan="3"><strong>Income &amp; Found Location</strong></td>
+<td rowspan="3"><strong><mark>Income &amp; Found Location</strong></td>
 <td>Austin Animal Center Intakes</td>
 <td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
 <td><code>Animal ID</code>, <code>Found Location</code>, <code>DateTime</code>, <code>Intake Type</code></td>
@@ -73,7 +73,7 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 <td><code>Population</code>, <code>Median Household Income</code>, Census geographic identifiers, and other socioeconomic variables used in the analysis</td>
 </tr>
 <tr>
-<td rowspan="2"><strong>Weather</strong></td>
+<td rowspan="2"><strong><mark>Weather</strong></td>
 <td>Austin Animal Center Intakes</td>
 <td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
 <td><code>Animal ID</code>, <code>DateTime</code>, <code>Intake Type</code>, <code>Animal Type</code></td>
