@@ -1,0 +1,5 @@
+animal_type,wet_day,days,total_intakes,mean_daily_intakes,median_daily_intakes,std_daily_intakes
+Cat,0,293,4863,16.6,15.0,11.41
+Cat,1,72,1183,16.43,14.5,10.08
+Dog,0,293,4194,14.31,13.0,7.64
+Dog,1,72,994,13.81,14.0,6.86

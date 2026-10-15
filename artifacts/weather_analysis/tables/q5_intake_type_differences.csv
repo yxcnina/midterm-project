@@ -1,0 +1,7 @@
+intake_type,dry_events,wet_events,dry_proportion_pct,wet_proportion_pct,wet_minus_dry_pp
+Stray,6575,1636,68.8987,72.007,3.1084
+Owner Surrender,1728,400,18.1075,17.6056,-0.5019
+Public Assist,590,120,6.1825,5.2817,-0.9009
+Abandoned,342,62,3.5838,2.7289,-0.8549
+Wildlife,306,54,3.2065,2.3768,-0.8298
+Euthanasia Request,2,0,0.021,0.0,-0.021
