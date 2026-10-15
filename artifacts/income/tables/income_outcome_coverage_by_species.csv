@@ -1,0 +1,7 @@
+income_group,Animal Type,intake_events,episode_rows_matched,with_outcome_time,usable_outcomes,coverage_pct,status_usable,status_no_episode_row,status_no_recorded_outcome_time,status_invalid_outcome_time,status_outcome_before_intake,status_outside_2024_window,status_missing_outcome_type
+Low,Cat,1655,1655,1564,1563,94.44108761329305,1563,0,91,0,0,0,1
+Low,Dog,803,803,725,725,90.28642590286425,725,0,78,0,0,0,0
+Middle,Cat,1549,1549,1478,1477,95.35183989670756,1477,0,71,0,0,0,1
+Middle,Dog,979,979,885,885,90.39836567926456,885,0,94,0,0,0,0
+High,Cat,614,614,592,592,96.41693811074919,592,0,22,0,0,0,0
+High,Dog,390,390,347,347,88.97435897435896,347,0,43,0,0,0,0

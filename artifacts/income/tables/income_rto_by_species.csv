@@ -1,0 +1,7 @@
+income_group,Animal Type,outcome,count,denominator,percent
+Low,Cat,Return to Owner,23,1563,1.471529110684581
+Low,Dog,Return to Owner,69,725,9.517241379310343
+Middle,Cat,Return to Owner,41,1477,2.775897088693297
+Middle,Dog,Return to Owner,131,885,14.80225988700565
+High,Cat,Return to Owner,18,592,3.040540540540541
+High,Dog,Return to Owner,43,347,12.39193083573487

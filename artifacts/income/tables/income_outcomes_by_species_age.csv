@@ -1,0 +1,262 @@
+income_group,Animal Type,age_group,outcome,count,denominator,percent
+Low,Cat,3 to <7 years,Adoption,196,445,44.04494382022472
+Low,Cat,3 to <7 years,Return to Owner,16,445,3.5955056179775284
+Low,Cat,3 to <7 years,Transfer,203,445,45.61797752808989
+Low,Cat,3 to <7 years,Rto-Adopt,5,445,1.1235955056179776
+Low,Cat,3 to <7 years,Euthanasia,12,445,2.696629213483146
+Low,Cat,3 to <7 years,Died,7,445,1.5730337078651686
+Low,Cat,3 to <7 years,Disposal,4,445,0.8988764044943821
+Low,Cat,3 to <7 years,Missing,2,445,0.44943820224719105
+Low,Cat,3 to <7 years,Lost,0,445,0.0
+Low,Cat,6 to <12 months,Adoption,39,61,63.934426229508205
+Low,Cat,6 to <12 months,Return to Owner,3,61,4.918032786885246
+Low,Cat,6 to <12 months,Transfer,17,61,27.86885245901639
+Low,Cat,6 to <12 months,Rto-Adopt,0,61,0.0
+Low,Cat,6 to <12 months,Euthanasia,0,61,0.0
+Low,Cat,6 to <12 months,Died,0,61,0.0
+Low,Cat,6 to <12 months,Disposal,2,61,3.278688524590164
+Low,Cat,6 to <12 months,Missing,0,61,0.0
+Low,Cat,6 to <12 months,Lost,0,61,0.0
+Low,Cat,7+ years,Adoption,9,37,24.324324324324326
+Low,Cat,7+ years,Return to Owner,3,37,8.108108108108109
+Low,Cat,7+ years,Transfer,12,37,32.432432432432435
+Low,Cat,7+ years,Rto-Adopt,0,37,0.0
+Low,Cat,7+ years,Euthanasia,9,37,24.324324324324326
+Low,Cat,7+ years,Died,3,37,8.108108108108109
+Low,Cat,7+ years,Disposal,1,37,2.7027027027027026
+Low,Cat,7+ years,Missing,0,37,0.0
+Low,Cat,7+ years,Lost,0,37,0.0
+Low,Cat,<6 months,Adoption,621,1011,61.42433234421365
+Low,Cat,<6 months,Return to Owner,1,1011,0.09891196834817012
+Low,Cat,<6 months,Transfer,344,1011,34.025717111770525
+Low,Cat,<6 months,Rto-Adopt,0,1011,0.0
+Low,Cat,<6 months,Euthanasia,19,1011,1.8793273986152326
+Low,Cat,<6 months,Died,20,1011,1.9782393669634024
+Low,Cat,<6 months,Disposal,5,1011,0.4945598417408506
+Low,Cat,<6 months,Missing,1,1011,0.09891196834817012
+Low,Cat,<6 months,Lost,0,1011,0.0
+Low,Cat,Recorded as 0 years,Adoption,5,9,55.55555555555556
+Low,Cat,Recorded as 0 years,Return to Owner,0,9,0.0
+Low,Cat,Recorded as 0 years,Transfer,4,9,44.44444444444444
+Low,Cat,Recorded as 0 years,Rto-Adopt,0,9,0.0
+Low,Cat,Recorded as 0 years,Euthanasia,0,9,0.0
+Low,Cat,Recorded as 0 years,Died,0,9,0.0
+Low,Cat,Recorded as 0 years,Disposal,0,9,0.0
+Low,Cat,Recorded as 0 years,Missing,0,9,0.0
+Low,Cat,Recorded as 0 years,Lost,0,9,0.0
+Low,Dog,3 to <7 years,Adoption,200,332,60.24096385542169
+Low,Dog,3 to <7 years,Return to Owner,45,332,13.55421686746988
+Low,Dog,3 to <7 years,Transfer,64,332,19.27710843373494
+Low,Dog,3 to <7 years,Rto-Adopt,8,332,2.4096385542168677
+Low,Dog,3 to <7 years,Euthanasia,11,332,3.313253012048193
+Low,Dog,3 to <7 years,Died,4,332,1.2048192771084338
+Low,Dog,3 to <7 years,Disposal,0,332,0.0
+Low,Dog,3 to <7 years,Missing,0,332,0.0
+Low,Dog,3 to <7 years,Lost,0,332,0.0
+Low,Dog,6 to <12 months,Adoption,55,65,84.61538461538461
+Low,Dog,6 to <12 months,Return to Owner,1,65,1.5384615384615385
+Low,Dog,6 to <12 months,Transfer,8,65,12.307692307692308
+Low,Dog,6 to <12 months,Rto-Adopt,1,65,1.5384615384615385
+Low,Dog,6 to <12 months,Euthanasia,0,65,0.0
+Low,Dog,6 to <12 months,Died,0,65,0.0
+Low,Dog,6 to <12 months,Disposal,0,65,0.0
+Low,Dog,6 to <12 months,Missing,0,65,0.0
+Low,Dog,6 to <12 months,Lost,0,65,0.0
+Low,Dog,7+ years,Adoption,27,63,42.857142857142854
+Low,Dog,7+ years,Return to Owner,20,63,31.746031746031743
+Low,Dog,7+ years,Transfer,8,63,12.698412698412698
+Low,Dog,7+ years,Rto-Adopt,4,63,6.349206349206349
+Low,Dog,7+ years,Euthanasia,4,63,6.349206349206349
+Low,Dog,7+ years,Died,0,63,0.0
+Low,Dog,7+ years,Disposal,0,63,0.0
+Low,Dog,7+ years,Missing,0,63,0.0
+Low,Dog,7+ years,Lost,0,63,0.0
+Low,Dog,<6 months,Adoption,197,260,75.76923076923077
+Low,Dog,<6 months,Return to Owner,3,260,1.153846153846154
+Low,Dog,<6 months,Transfer,50,260,19.230769230769234
+Low,Dog,<6 months,Rto-Adopt,0,260,0.0
+Low,Dog,<6 months,Euthanasia,2,260,0.7692307692307693
+Low,Dog,<6 months,Died,5,260,1.9230769230769231
+Low,Dog,<6 months,Disposal,2,260,0.7692307692307693
+Low,Dog,<6 months,Missing,0,260,0.0
+Low,Dog,<6 months,Lost,1,260,0.38461538461538464
+Low,Dog,Recorded as 0 years,Adoption,1,5,20.0
+Low,Dog,Recorded as 0 years,Return to Owner,0,5,0.0
+Low,Dog,Recorded as 0 years,Transfer,4,5,80.0
+Low,Dog,Recorded as 0 years,Rto-Adopt,0,5,0.0
+Low,Dog,Recorded as 0 years,Euthanasia,0,5,0.0
+Low,Dog,Recorded as 0 years,Died,0,5,0.0
+Low,Dog,Recorded as 0 years,Disposal,0,5,0.0
+Low,Dog,Recorded as 0 years,Missing,0,5,0.0
+Low,Dog,Recorded as 0 years,Lost,0,5,0.0
+Middle,Cat,3 to <7 years,Adoption,196,417,47.00239808153477
+Middle,Cat,3 to <7 years,Return to Owner,27,417,6.474820143884892
+Middle,Cat,3 to <7 years,Transfer,172,417,41.247002398081534
+Middle,Cat,3 to <7 years,Rto-Adopt,2,417,0.4796163069544364
+Middle,Cat,3 to <7 years,Euthanasia,10,417,2.3980815347721824
+Middle,Cat,3 to <7 years,Died,8,417,1.9184652278177456
+Middle,Cat,3 to <7 years,Disposal,2,417,0.4796163069544364
+Middle,Cat,3 to <7 years,Missing,0,417,0.0
+Middle,Cat,3 to <7 years,Lost,0,417,0.0
+Middle,Cat,6 to <12 months,Adoption,35,46,76.08695652173914
+Middle,Cat,6 to <12 months,Return to Owner,0,46,0.0
+Middle,Cat,6 to <12 months,Transfer,11,46,23.91304347826087
+Middle,Cat,6 to <12 months,Rto-Adopt,0,46,0.0
+Middle,Cat,6 to <12 months,Euthanasia,0,46,0.0
+Middle,Cat,6 to <12 months,Died,0,46,0.0
+Middle,Cat,6 to <12 months,Disposal,0,46,0.0
+Middle,Cat,6 to <12 months,Missing,0,46,0.0
+Middle,Cat,6 to <12 months,Lost,0,46,0.0
+Middle,Cat,7+ years,Adoption,15,32,46.875
+Middle,Cat,7+ years,Return to Owner,3,32,9.375
+Middle,Cat,7+ years,Transfer,6,32,18.75
+Middle,Cat,7+ years,Rto-Adopt,0,32,0.0
+Middle,Cat,7+ years,Euthanasia,7,32,21.875
+Middle,Cat,7+ years,Died,0,32,0.0
+Middle,Cat,7+ years,Disposal,1,32,3.125
+Middle,Cat,7+ years,Missing,0,32,0.0
+Middle,Cat,7+ years,Lost,0,32,0.0
+Middle,Cat,<6 months,Adoption,667,975,68.41025641025641
+Middle,Cat,<6 months,Return to Owner,11,975,1.1282051282051282
+Middle,Cat,<6 months,Transfer,259,975,26.564102564102566
+Middle,Cat,<6 months,Rto-Adopt,0,975,0.0
+Middle,Cat,<6 months,Euthanasia,15,975,1.5384615384615385
+Middle,Cat,<6 months,Died,20,975,2.051282051282051
+Middle,Cat,<6 months,Disposal,2,975,0.20512820512820512
+Middle,Cat,<6 months,Missing,1,975,0.10256410256410256
+Middle,Cat,<6 months,Lost,0,975,0.0
+Middle,Cat,Recorded as 0 years,Adoption,6,7,85.71428571428571
+Middle,Cat,Recorded as 0 years,Return to Owner,0,7,0.0
+Middle,Cat,Recorded as 0 years,Transfer,0,7,0.0
+Middle,Cat,Recorded as 0 years,Rto-Adopt,0,7,0.0
+Middle,Cat,Recorded as 0 years,Euthanasia,0,7,0.0
+Middle,Cat,Recorded as 0 years,Died,1,7,14.285714285714285
+Middle,Cat,Recorded as 0 years,Disposal,0,7,0.0
+Middle,Cat,Recorded as 0 years,Missing,0,7,0.0
+Middle,Cat,Recorded as 0 years,Lost,0,7,0.0
+Middle,Dog,3 to <7 years,Adoption,256,423,60.520094562647756
+Middle,Dog,3 to <7 years,Return to Owner,79,423,18.67612293144208
+Middle,Dog,3 to <7 years,Transfer,64,423,15.130023640661939
+Middle,Dog,3 to <7 years,Rto-Adopt,13,423,3.0732860520094563
+Middle,Dog,3 to <7 years,Euthanasia,10,423,2.3640661938534278
+Middle,Dog,3 to <7 years,Died,0,423,0.0
+Middle,Dog,3 to <7 years,Disposal,1,423,0.2364066193853428
+Middle,Dog,3 to <7 years,Missing,0,423,0.0
+Middle,Dog,3 to <7 years,Lost,0,423,0.0
+Middle,Dog,6 to <12 months,Adoption,55,75,73.33333333333333
+Middle,Dog,6 to <12 months,Return to Owner,13,75,17.333333333333336
+Middle,Dog,6 to <12 months,Transfer,7,75,9.333333333333334
+Middle,Dog,6 to <12 months,Rto-Adopt,0,75,0.0
+Middle,Dog,6 to <12 months,Euthanasia,0,75,0.0
+Middle,Dog,6 to <12 months,Died,0,75,0.0
+Middle,Dog,6 to <12 months,Disposal,0,75,0.0
+Middle,Dog,6 to <12 months,Missing,0,75,0.0
+Middle,Dog,6 to <12 months,Lost,0,75,0.0
+Middle,Dog,7+ years,Adoption,25,79,31.645569620253166
+Middle,Dog,7+ years,Return to Owner,36,79,45.56962025316456
+Middle,Dog,7+ years,Transfer,13,79,16.455696202531644
+Middle,Dog,7+ years,Rto-Adopt,2,79,2.5316455696202533
+Middle,Dog,7+ years,Euthanasia,0,79,0.0
+Middle,Dog,7+ years,Died,2,79,2.5316455696202533
+Middle,Dog,7+ years,Disposal,1,79,1.2658227848101267
+Middle,Dog,7+ years,Missing,0,79,0.0
+Middle,Dog,7+ years,Lost,0,79,0.0
+Middle,Dog,<6 months,Adoption,237,303,78.21782178217822
+Middle,Dog,<6 months,Return to Owner,3,303,0.9900990099009901
+Middle,Dog,<6 months,Transfer,49,303,16.17161716171617
+Middle,Dog,<6 months,Rto-Adopt,3,303,0.9900990099009901
+Middle,Dog,<6 months,Euthanasia,2,303,0.6600660066006601
+Middle,Dog,<6 months,Died,7,303,2.31023102310231
+Middle,Dog,<6 months,Disposal,2,303,0.6600660066006601
+Middle,Dog,<6 months,Missing,0,303,0.0
+Middle,Dog,<6 months,Lost,0,303,0.0
+Middle,Dog,Recorded as 0 years,Adoption,4,5,80.0
+Middle,Dog,Recorded as 0 years,Return to Owner,0,5,0.0
+Middle,Dog,Recorded as 0 years,Transfer,0,5,0.0
+Middle,Dog,Recorded as 0 years,Rto-Adopt,0,5,0.0
+Middle,Dog,Recorded as 0 years,Euthanasia,0,5,0.0
+Middle,Dog,Recorded as 0 years,Died,1,5,20.0
+Middle,Dog,Recorded as 0 years,Disposal,0,5,0.0
+Middle,Dog,Recorded as 0 years,Missing,0,5,0.0
+Middle,Dog,Recorded as 0 years,Lost,0,5,0.0
+High,Cat,3 to <7 years,Adoption,78,164,47.5609756097561
+High,Cat,3 to <7 years,Return to Owner,11,164,6.707317073170732
+High,Cat,3 to <7 years,Transfer,68,164,41.46341463414634
+High,Cat,3 to <7 years,Rto-Adopt,1,164,0.6097560975609756
+High,Cat,3 to <7 years,Euthanasia,4,164,2.4390243902439024
+High,Cat,3 to <7 years,Died,1,164,0.6097560975609756
+High,Cat,3 to <7 years,Disposal,1,164,0.6097560975609756
+High,Cat,3 to <7 years,Missing,0,164,0.0
+High,Cat,3 to <7 years,Lost,0,164,0.0
+High,Cat,6 to <12 months,Adoption,23,29,79.3103448275862
+High,Cat,6 to <12 months,Return to Owner,1,29,3.4482758620689653
+High,Cat,6 to <12 months,Transfer,5,29,17.24137931034483
+High,Cat,6 to <12 months,Rto-Adopt,0,29,0.0
+High,Cat,6 to <12 months,Euthanasia,0,29,0.0
+High,Cat,6 to <12 months,Died,0,29,0.0
+High,Cat,6 to <12 months,Disposal,0,29,0.0
+High,Cat,6 to <12 months,Missing,0,29,0.0
+High,Cat,6 to <12 months,Lost,0,29,0.0
+High,Cat,7+ years,Adoption,3,19,15.789473684210526
+High,Cat,7+ years,Return to Owner,6,19,31.57894736842105
+High,Cat,7+ years,Transfer,6,19,31.57894736842105
+High,Cat,7+ years,Rto-Adopt,0,19,0.0
+High,Cat,7+ years,Euthanasia,3,19,15.789473684210526
+High,Cat,7+ years,Died,0,19,0.0
+High,Cat,7+ years,Disposal,1,19,5.263157894736842
+High,Cat,7+ years,Missing,0,19,0.0
+High,Cat,7+ years,Lost,0,19,0.0
+High,Cat,<6 months,Adoption,239,371,64.42048517520216
+High,Cat,<6 months,Return to Owner,0,371,0.0
+High,Cat,<6 months,Transfer,115,371,30.997304582210244
+High,Cat,<6 months,Rto-Adopt,0,371,0.0
+High,Cat,<6 months,Euthanasia,11,371,2.964959568733154
+High,Cat,<6 months,Died,6,371,1.6172506738544474
+High,Cat,<6 months,Disposal,0,371,0.0
+High,Cat,<6 months,Missing,0,371,0.0
+High,Cat,<6 months,Lost,0,371,0.0
+High,Cat,Recorded as 0 years,Adoption,0,9,0.0
+High,Cat,Recorded as 0 years,Return to Owner,0,9,0.0
+High,Cat,Recorded as 0 years,Transfer,9,9,100.0
+High,Cat,Recorded as 0 years,Rto-Adopt,0,9,0.0
+High,Cat,Recorded as 0 years,Euthanasia,0,9,0.0
+High,Cat,Recorded as 0 years,Died,0,9,0.0
+High,Cat,Recorded as 0 years,Disposal,0,9,0.0
+High,Cat,Recorded as 0 years,Missing,0,9,0.0
+High,Cat,Recorded as 0 years,Lost,0,9,0.0
+High,Dog,3 to <7 years,Adoption,102,164,62.19512195121951
+High,Dog,3 to <7 years,Return to Owner,28,164,17.073170731707318
+High,Dog,3 to <7 years,Transfer,25,164,15.24390243902439
+High,Dog,3 to <7 years,Rto-Adopt,6,164,3.6585365853658534
+High,Dog,3 to <7 years,Euthanasia,3,164,1.8292682926829267
+High,Dog,3 to <7 years,Died,0,164,0.0
+High,Dog,3 to <7 years,Disposal,0,164,0.0
+High,Dog,3 to <7 years,Missing,0,164,0.0
+High,Dog,3 to <7 years,Lost,0,164,0.0
+High,Dog,6 to <12 months,Adoption,20,28,71.42857142857143
+High,Dog,6 to <12 months,Return to Owner,0,28,0.0
+High,Dog,6 to <12 months,Transfer,7,28,25.0
+High,Dog,6 to <12 months,Rto-Adopt,1,28,3.571428571428571
+High,Dog,6 to <12 months,Euthanasia,0,28,0.0
+High,Dog,6 to <12 months,Died,0,28,0.0
+High,Dog,6 to <12 months,Disposal,0,28,0.0
+High,Dog,6 to <12 months,Missing,0,28,0.0
+High,Dog,6 to <12 months,Lost,0,28,0.0
+High,Dog,7+ years,Adoption,9,33,27.27272727272727
+High,Dog,7+ years,Return to Owner,15,33,45.45454545454545
+High,Dog,7+ years,Transfer,5,33,15.151515151515152
+High,Dog,7+ years,Rto-Adopt,1,33,3.0303030303030303
+High,Dog,7+ years,Euthanasia,3,33,9.090909090909092
+High,Dog,7+ years,Died,0,33,0.0
+High,Dog,7+ years,Disposal,0,33,0.0
+High,Dog,7+ years,Missing,0,33,0.0
+High,Dog,7+ years,Lost,0,33,0.0
+High,Dog,<6 months,Adoption,74,122,60.65573770491803
+High,Dog,<6 months,Return to Owner,0,122,0.0
+High,Dog,<6 months,Transfer,45,122,36.885245901639344
+High,Dog,<6 months,Rto-Adopt,0,122,0.0
+High,Dog,<6 months,Euthanasia,1,122,0.819672131147541
+High,Dog,<6 months,Died,2,122,1.639344262295082
+High,Dog,<6 months,Disposal,0,122,0.0
+High,Dog,<6 months,Missing,0,122,0.0
+High,Dog,<6 months,Lost,0,122,0.0
