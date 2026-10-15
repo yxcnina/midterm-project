@@ -73,15 +73,25 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 <td><code>Population</code>, <code>Median Household Income</code>, Census geographic identifiers, and other socioeconomic variables used in the analysis</td>
 </tr>
 <tr>
-<td rowspan="2"><strong><mark>Weather</strong></td>
+<td rowspan="4"><strong>Weather</strong></td>
 <td>Austin Animal Center Intakes</td>
 <td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>DateTime</code>, <code>Intake Type</code>, <code>Animal Type</code></td>
+<td><code>Animal ID</code>, <code>DateTime</code>, <code>Intake Type</code>, <code>Intake Condition</code>, <code>Animal Type</code></td>
 </tr>
 <tr>
-<td>Weather Data</td>
-<td><a href="https://www.ncei.noaa.gov/access/search/data-search/daily-summaries">NOAA / National Centers for Environmental Information</a></td>
-<td><code>Date</code>, <code>Temperature</code>, <code>Precipitation</code>, and other weather measures used in the final analysis</td>
+<td>Austin Animal Center Outcomes</td>
+<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes-10-01-2013-to-05-05-/9t4d-g238/about_data">City of Austin Open Data</a></td>
+<td><code>Animal ID</code>, <code>DateTime</code>, <code>Outcome Type</code>, <code>Animal Type</code></td>
+</tr>
+<tr>
+<td>NOAA Daily Weather Observations</td>
+<td><a href="https://www.ncei.noaa.gov/access/services/data/v1">NOAA / National Centers for Environmental Information</a></td>
+<td><code>TMAX</code> (daily maximum temperature), <code>TMIN</code> (daily minimum temperature), <code>PRCP</code> (daily precipitation)</td>
+</tr>
+<tr>
+<td>Open-Meteo Historical Weather Data</td>
+<td><a href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo Historical Weather API</a></td>
+<td><code>relative_humidity_2m_mean</code>, <code>cloud_cover_mean</code>, <code>wind_speed_10m_max</code></td>
 </tr>
 <tr>
 <td rowspan="3"><strong>Crime &amp; Found Location</strong></td>
