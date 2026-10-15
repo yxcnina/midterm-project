@@ -1,0 +1,4 @@
+income_group,tract_count,lower_cutpoint,upper_cutpoint,lower_inclusive,upper_inclusive,observed_min_income,observed_max_income
+Low,90,18286.0,82838.66666666666,True,True,18286.0,82625.0
+Middle,89,82838.66666666666,106573.66666666667,False,True,83266.0,106445.0
+High,90,106573.66666666667,249063.0,False,True,106638.0,249063.0
