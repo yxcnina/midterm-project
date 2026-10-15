@@ -1,0 +1,33 @@
+weather_group,intake_condition,events,total_group_events,proportion_pct
+Non-Hot Days,Aged,16,8585,0.1864
+Non-Hot Days,Agonal,1,8585,0.0116
+Non-Hot Days,Behavior,9,8585,0.1048
+Non-Hot Days,Feral,5,8585,0.0582
+Non-Hot Days,Injured,683,8585,7.9557
+Non-Hot Days,Med Attn,36,8585,0.4193
+Non-Hot Days,Med Urgent,4,8585,0.0466
+Non-Hot Days,Medical,151,8585,1.7589
+Non-Hot Days,Neonatal,401,8585,4.6709
+Non-Hot Days,Neurologic,2,8585,0.0233
+Non-Hot Days,Normal,6761,8585,78.7536
+Non-Hot Days,Other,8,8585,0.0932
+Non-Hot Days,Parvo,2,8585,0.0233
+Non-Hot Days,Pregnant,21,8585,0.2446
+Non-Hot Days,Sick,473,8585,5.5096
+Non-Hot Days,Unknown,12,8585,0.1398
+Hot Days,Aged,3,3230,0.0929
+Hot Days,Agonal,0,3230,0.0
+Hot Days,Behavior,4,3230,0.1238
+Hot Days,Feral,3,3230,0.0929
+Hot Days,Injured,289,3230,8.9474
+Hot Days,Med Attn,10,3230,0.3096
+Hot Days,Med Urgent,3,3230,0.0929
+Hot Days,Medical,75,3230,2.322
+Hot Days,Neonatal,225,3230,6.9659
+Hot Days,Neurologic,2,3230,0.0619
+Hot Days,Normal,2346,3230,72.6316
+Hot Days,Other,3,3230,0.0929
+Hot Days,Parvo,1,3230,0.031
+Hot Days,Pregnant,3,3230,0.0929
+Hot Days,Sick,260,3230,8.0495
+Hot Days,Unknown,3,3230,0.0929

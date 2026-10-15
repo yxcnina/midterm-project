@@ -1,0 +1,33 @@
+weather_group,intake_condition,events,total_group_events,proportion_pct
+Non-Freezing Days,Aged,18,11635,0.1547
+Non-Freezing Days,Agonal,1,11635,0.0086
+Non-Freezing Days,Behavior,13,11635,0.1117
+Non-Freezing Days,Feral,8,11635,0.0688
+Non-Freezing Days,Injured,952,11635,8.1822
+Non-Freezing Days,Med Attn,46,11635,0.3954
+Non-Freezing Days,Med Urgent,7,11635,0.0602
+Non-Freezing Days,Medical,224,11635,1.9252
+Non-Freezing Days,Neonatal,622,11635,5.3459
+Non-Freezing Days,Neurologic,4,11635,0.0344
+Non-Freezing Days,Normal,8959,11635,77.0004
+Non-Freezing Days,Other,11,11635,0.0945
+Non-Freezing Days,Parvo,3,11635,0.0258
+Non-Freezing Days,Pregnant,24,11635,0.2063
+Non-Freezing Days,Sick,728,11635,6.257
+Non-Freezing Days,Unknown,15,11635,0.1289
+Freezing Days,Aged,1,180,0.5556
+Freezing Days,Agonal,0,180,0.0
+Freezing Days,Behavior,0,180,0.0
+Freezing Days,Feral,0,180,0.0
+Freezing Days,Injured,20,180,11.1111
+Freezing Days,Med Attn,0,180,0.0
+Freezing Days,Med Urgent,0,180,0.0
+Freezing Days,Medical,2,180,1.1111
+Freezing Days,Neonatal,4,180,2.2222
+Freezing Days,Neurologic,0,180,0.0
+Freezing Days,Normal,148,180,82.2222
+Freezing Days,Other,0,180,0.0
+Freezing Days,Parvo,0,180,0.0
+Freezing Days,Pregnant,0,180,0.0
+Freezing Days,Sick,5,180,2.7778
+Freezing Days,Unknown,0,180,0.0

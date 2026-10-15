@@ -1,0 +1,33 @@
+weather_group,intake_condition,events,total_group_events,proportion_pct
+Dry Days,Aged,18,9543,0.1886
+Dry Days,Agonal,1,9543,0.0105
+Dry Days,Behavior,10,9543,0.1048
+Dry Days,Feral,6,9543,0.0629
+Dry Days,Injured,788,9543,8.2574
+Dry Days,Med Attn,38,9543,0.3982
+Dry Days,Med Urgent,7,9543,0.0734
+Dry Days,Medical,172,9543,1.8024
+Dry Days,Neonatal,496,9543,5.1975
+Dry Days,Neurologic,4,9543,0.0419
+Dry Days,Normal,7366,9543,77.1875
+Dry Days,Other,8,9543,0.0838
+Dry Days,Parvo,1,9543,0.0105
+Dry Days,Pregnant,21,9543,0.2201
+Dry Days,Sick,593,9543,6.214
+Dry Days,Unknown,14,9543,0.1467
+Wet Days,Aged,1,2272,0.044
+Wet Days,Agonal,0,2272,0.0
+Wet Days,Behavior,3,2272,0.132
+Wet Days,Feral,2,2272,0.088
+Wet Days,Injured,184,2272,8.0986
+Wet Days,Med Attn,8,2272,0.3521
+Wet Days,Med Urgent,0,2272,0.0
+Wet Days,Medical,54,2272,2.3768
+Wet Days,Neonatal,130,2272,5.7218
+Wet Days,Neurologic,0,2272,0.0
+Wet Days,Normal,1741,2272,76.6285
+Wet Days,Other,3,2272,0.132
+Wet Days,Parvo,2,2272,0.088
+Wet Days,Pregnant,3,2272,0.132
+Wet Days,Sick,140,2272,6.162
+Wet Days,Unknown,1,2272,0.044

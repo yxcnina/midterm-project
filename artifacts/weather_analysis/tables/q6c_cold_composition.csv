@@ -1,0 +1,33 @@
+weather_group,intake_condition,events,total_group_events,proportion_pct
+Non-Cold Days,Aged,17,11107,0.1531
+Non-Cold Days,Agonal,1,11107,0.009
+Non-Cold Days,Behavior,13,11107,0.117
+Non-Cold Days,Feral,8,11107,0.072
+Non-Cold Days,Injured,904,11107,8.139
+Non-Cold Days,Med Attn,46,11107,0.4142
+Non-Cold Days,Med Urgent,7,11107,0.063
+Non-Cold Days,Medical,208,11107,1.8727
+Non-Cold Days,Neonatal,614,11107,5.528
+Non-Cold Days,Neurologic,4,11107,0.036
+Non-Cold Days,Normal,8541,11107,76.8975
+Non-Cold Days,Other,11,11107,0.099
+Non-Cold Days,Parvo,3,11107,0.027
+Non-Cold Days,Pregnant,11,11107,0.099
+Non-Cold Days,Sick,704,11107,6.3383
+Non-Cold Days,Unknown,15,11107,0.135
+Cold Days,Aged,2,708,0.2825
+Cold Days,Agonal,0,708,0.0
+Cold Days,Behavior,0,708,0.0
+Cold Days,Feral,0,708,0.0
+Cold Days,Injured,68,708,9.6045
+Cold Days,Med Attn,0,708,0.0
+Cold Days,Med Urgent,0,708,0.0
+Cold Days,Medical,18,708,2.5424
+Cold Days,Neonatal,12,708,1.6949
+Cold Days,Neurologic,0,708,0.0
+Cold Days,Normal,566,708,79.9435
+Cold Days,Other,0,708,0.0
+Cold Days,Parvo,0,708,0.0
+Cold Days,Pregnant,13,708,1.8362
+Cold Days,Sick,29,708,4.096
+Cold Days,Unknown,0,708,0.0

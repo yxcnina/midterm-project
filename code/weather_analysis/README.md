@@ -1086,3 +1086,354 @@ The additional figures are:
 All statistics and visualizations are generated programmatically from the cleaned datasets using project-relative paths.
 
 The script preserves all six original intake type categories, verifies event totals, and calculates within-group shares and percentage-point differences without manually changing the data.
+
+
+## Research Question 6: Weather Conditions and Animal Health Status at Intake
+
+### Research Objectives 
+
+The preceding analyses examined how weather conditions are associated with animal intake volumes, intake types, and adoption outcomes. This analysis extends the investigation by focusing on the recorded conditions of animals when they enter the Austin Animal Center (AAC).
+
+The central research question is:
+
+**Does the composition of animal intake conditions differ across rainfall, extreme heat, and cold-weather conditions?**
+
+We investigate three related questions and one sensitivity analysis:
+
+- **Q6a:** How does intake condition composition differ between wet and dry days?
+- **Q6b:** How does intake condition composition differ between hot and non-hot days?
+- **Q6c:** How does intake condition composition differ between cold and non-cold days?
+- **Q6c Sensitivity:** Are the cold-weather patterns similar when a stricter freezing threshold is used?
+
+Particular attention is given to the `Normal`, `Injured`, `Sick`, `Neonatal`, and `Medical` categories.
+
+All comparisons are descriptive. They document the composition of recorded intake events rather than estimating the causal effects of weather on animal health.
+
+### Data and Methodology
+
+We use the cleaned 2024 AAC intake dataset and the processed daily Austin weather dataset used in Q1–Q5.
+
+The analysis includes **11,815 recorded intake events**, covering 16 distinct values of the `Intake Condition` variable. There are no missing intake condition classifications, and all events are successfully matched to daily weather observations using their intake dates.
+
+The most frequent recorded conditions are:
+
+| Intake Condition | Events | Share |
+|---|---:|---:|
+| Normal | 9,107 | 77.08% |
+| Injured | 972 | 8.23% |
+| Sick | 733 | 6.20% |
+| Neonatal | 626 | 5.30% |
+| Medical | 226 | 1.91% |
+| Other 11 categories combined | 151 | 1.28% |
+| **Total** | **11,815** | **100.00%** |
+
+*Note: Percentages are rounded to two decimal places. The combined category is used only for this overview; the underlying analysis retains all 16 original classifications.*
+
+#### Weather Definitions
+
+We use the same weather thresholds as the preceding analyses:
+
+- **Wet day:** Daily precipitation greater than 0 mm.
+- **Dry day:** Daily precipitation equal to 0 mm.
+- **Hot day:** Daily maximum temperature at least 35°C.
+- **Non-hot day:** Daily maximum temperature below 35°C.
+- **Cold day:** Daily minimum temperature at most 5°C.
+- **Non-cold day:** Daily minimum temperature above 5°C.
+- **Freezing day:** Daily minimum temperature at most 0°C.
+- **Non-freezing day:** Daily minimum temperature above 0°C.
+
+The freezing-day comparison serves as a sensitivity analysis for the main cold-weather results.
+
+#### Measurement and Calculation
+
+For each weather group, intake condition proportions are calculated as:
+
+**Intake condition share (%) = (Number of intake events in a particular condition category / Total intake events in the weather group) × 100.**
+
+The difference between weather groups is measured in percentage points:
+
+**Percentage-point difference = Exposed-weather share − Reference-weather share.**
+
+For example, Q6b measures the hot-day share minus the non-hot-day share for each intake condition.
+
+The analysis retains all 16 original condition categories in the output CSV files. To improve graphical readability, the figures display six groups:
+
+1. Normal
+2. Injured
+3. Sick
+4. Neonatal
+5. Medical
+6. Other Conditions
+
+`Other Conditions` combines the remaining 11 categories for visualization only. The original observations and classifications are not modified.
+
+Two visualizations are produced for each comparison: a 100% stacked bar chart of the condition composition and a horizontal bar chart of the percentage-point differences.
+
+### Findings
+
+#### Q6a: Rainfall and Intake Condition Composition
+
+The rainfall comparison includes 9,543 intake events on dry days and 2,272 events on wet days.
+
+| Intake Condition | Dry-Day Share | Wet-Day Share | Wet − Dry (pp) |
+|---|---:|---:|---:|
+| Normal | 77.19% | 76.63% | −0.56 |
+| Injured | 8.26% | 8.10% | −0.16 |
+| Sick | 6.21% | 6.16% | −0.05 |
+| Neonatal | 5.20% | 5.72% | +0.52 |
+| Medical | 1.80% | 2.38% | +0.57 |
+
+*Note: These are selected major categories. The complete 16-category results are available in the generated CSV tables.*
+
+The composition of recorded intake conditions is broadly similar between wet and dry days.
+
+The `Normal` share decreases slightly from 77.19% on dry days to 76.63% on wet days, a difference of approximately −0.56 percentage points.
+
+The `Injured` and `Sick` categories exhibit particularly small differences, at approximately −0.16 and −0.05 percentage points, respectively.
+
+In contrast, the `Neonatal` and `Medical` categories account for slightly larger shares of intake events on wet days, increasing by approximately 0.52 and 0.57 percentage points.
+
+**Figure 6a. Intake Condition Composition on Dry and Wet Days (2024)**
+
+![Q6a Rainfall Composition](../../artifacts/weather_analysis/figures/06_intake_condition/q6a_rainfall_composition.png)
+
+**Figure 6b. Wet-Minus-Dry Differences in Intake Condition Shares (2024)**
+
+![Q6a Rainfall Differences](../../artifacts/weather_analysis/figures/06_intake_condition/q6a_rainfall_differences.png)
+
+**Interpretation**
+
+Rainfall is associated with relatively modest differences in recorded intake condition composition.
+
+Although the shares of `Neonatal` and `Medical` conditions are somewhat higher on wet days, the descriptive comparisons do not indicate a substantial shift toward `Injured` or `Sick` classifications.
+
+The results should not be interpreted as evidence that rainfall has no effect on animal health, since the analysis does not examine delayed weather effects, severity of conditions, or unrecorded animal experiences.
+
+#### Q6b: Extreme Heat and Intake Condition Composition
+
+The extreme heat comparison includes 8,585 intake events on non-hot days and 3,230 events on hot days.
+
+| Intake Condition | Non-Hot Share | Hot Share | Hot − Non-Hot (pp) |
+|---|---:|---:|---:|
+| Normal | 78.75% | 72.63% | −6.12 |
+| Injured | 7.96% | 8.95% | +0.99 |
+| Sick | 5.51% | 8.05% | +2.54 |
+| Neonatal | 4.67% | 6.97% | +2.30 |
+| Medical | 1.76% | 2.32% | +0.56 |
+
+Extreme heat is associated with more pronounced differences in recorded intake condition composition than rainfall.
+
+The `Normal` share decreases from approximately 78.75% on non-hot days to 72.63% on hot days, a difference of −6.12 percentage points.
+
+Meanwhile, the `Sick` share rises from 5.51% to 8.05%, an increase of approximately +2.54 percentage points.
+
+The `Neonatal` share also increases, from 4.67% to 6.97%, representing a difference of approximately +2.30 percentage points.
+
+The `Injured` and `Medical` categories exhibit smaller positive differences of approximately +0.99 and +0.56 percentage points, respectively.
+
+**Figure 6c. Intake Condition Composition on Hot and Non-Hot Days (2024)**
+
+![Q6b Heat Composition](../../artifacts/weather_analysis/figures/06_intake_condition/q6b_heat_composition.png)
+
+**Figure 6d. Hot-Minus-Non-Hot Differences in Intake Condition Shares (2024)**
+
+![Q6b Heat Differences](../../artifacts/weather_analysis/figures/06_intake_condition/q6b_heat_differences.png)
+
+**Interpretation**
+
+Among the weather comparisons examined in Q6, extreme heat reveals one of the clearest descriptive shifts in intake condition composition.
+
+Compared with non-hot days, hot days are characterized by a smaller proportion of `Normal` intake events and larger proportions of `Sick`, `Neonatal`, `Injured`, and `Medical` events.
+
+However, these differences do not establish that high temperatures directly cause animals to become sick or injured.
+
+In particular, the higher `Neonatal` share may reflect seasonal differences in animal births and shelter intake patterns. Since hot days are concentrated in warmer months, seasonal variation may contribute to the observed association.
+
+Furthermore, a higher share of a particular condition does not necessarily imply a higher absolute daily number of such intake events.
+
+#### Q6c: Cold Weather and Intake Condition Composition
+
+For the main cold-weather analysis, a cold day is defined as a day with a minimum temperature at or below 5°C.
+
+The analysis includes 11,107 intake events on non-cold days and 708 events on cold days. The cold group covers 29 calendar days.
+
+| Intake Condition | Non-Cold Share | Cold Share | Cold − Non-Cold (pp) |
+|---|---:|---:|---:|
+| Normal | 76.90% | 79.94% | +3.05 |
+| Injured | 8.14% | 9.60% | +1.47 |
+| Sick | 6.34% | 4.10% | −2.24 |
+| Neonatal | 5.53% | 1.69% | −3.83 |
+| Medical | 1.87% | 2.54% | +0.67 |
+
+The cold-weather comparison reveals a different pattern from the extreme heat comparison.
+
+The `Normal` share is approximately 3.05 percentage points higher on cold days.
+
+The `Injured` share is also higher, increasing from approximately 8.14% to 9.60%.
+
+In contrast, the `Sick` share decreases by approximately 2.24 percentage points, while the `Neonatal` share decreases by approximately 3.83 percentage points.
+
+The `Medical` category shows a smaller positive difference of approximately 0.67 percentage points.
+
+**Figure 6e. Intake Condition Composition on Cold and Non-Cold Days (2024)**
+
+![Q6c Cold Composition](../../artifacts/weather_analysis/figures/06_intake_condition/q6c_cold_composition.png)
+
+**Figure 6f. Cold-Minus-Non-Cold Differences in Intake Condition Shares (2024)**
+
+![Q6c Cold Differences](../../artifacts/weather_analysis/figures/06_intake_condition/q6c_cold_differences.png)
+
+**Interpretation**
+
+Cold days are associated with a higher relative share of `Normal` and `Injured` intake classifications, but lower shares of `Sick` and `Neonatal` classifications.
+
+The decrease in the `Neonatal` share is particularly notable when compared with the higher neonatal share observed on hot days.
+
+This contrast may partly reflect the seasonality of neonatal animal intakes rather than the immediate physiological effects of temperature.
+
+The cold-day sample is substantially smaller than the non-cold sample, so these descriptive differences should be interpreted cautiously.
+
+#### Q6c Sensitivity Analysis: Freezing Weather
+
+To investigate whether the main cold-weather findings depend on the selected temperature threshold, we repeat the comparison using a stricter definition of freezing weather.
+
+A freezing day is defined as a day with a minimum temperature at or below 0°C.
+
+The sample contains 180 intake events recorded on seven freezing days and 11,635 intake events recorded on non-freezing days.
+
+| Intake Condition | Non-Freezing Share | Freezing Share | Freezing − Non-Freezing (pp) |
+|---|---:|---:|---:|
+| Normal | 77.00% | 82.22% | +5.22 |
+| Injured | 8.18% | 11.11% | +2.93 |
+| Sick | 6.26% | 2.78% | −3.48 |
+| Neonatal | 5.35% | 2.22% | −3.12 |
+| Medical | 1.93% | 1.11% | −0.81 |
+
+The freezing-day comparison preserves the directions of several key differences from the main 5°C cold-weather analysis.
+
+The `Normal` share is approximately 5.22 percentage points higher on freezing days, while the `Injured` share is approximately 2.93 percentage points higher.
+
+The `Sick` and `Neonatal` shares are lower by approximately 3.48 and 3.12 percentage points, respectively.
+
+However, the `Medical` category changes direction: its share is slightly higher under the 5°C definition but lower under the 0°C definition.
+
+**Figure 6g. Intake Condition Composition on Freezing and Non-Freezing Days (2024)**
+
+![Q6c Freezing Composition](../../artifacts/weather_analysis/figures/06_intake_condition/q6c_freezing_sensitivity_composition.png)
+
+**Figure 6h. Freezing-Minus-Non-Freezing Differences in Intake Condition Shares (2024)**
+
+![Q6c Freezing Differences](../../artifacts/weather_analysis/figures/06_intake_condition/q6c_freezing_sensitivity_differences.png)
+
+**Sensitivity Analysis Interpretation**
+
+The findings for `Normal`, `Injured`, `Sick`, and `Neonatal` are directionally consistent across the 5°C and 0°C cold-weather definitions.
+
+Nevertheless, the magnitudes of the differences vary, and the `Medical` category does not preserve the same directional pattern.
+
+Importantly, the freezing-day comparison is based on only seven calendar days and 180 intake events. Consequently, the estimates may be sensitive to unusual daily circumstances, seasonal patterns, and the relatively small exposed sample.
+
+This sensitivity analysis provides a useful robustness check for the descriptive direction of selected findings but does not establish statistical robustness or causal relationships.
+
+### Overall Interpretation
+
+Q6 reveals that the composition of recorded animal intake conditions differs across weather categories, but the patterns vary considerably depending on the weather condition examined.
+
+Rainfall is associated with relatively small compositional differences, while extreme heat is associated with lower `Normal` shares and higher `Sick` and `Neonatal` shares.
+
+Cold-weather comparisons exhibit a contrasting pattern: the shares of `Sick` and `Neonatal` intakes are lower, while `Injured` and `Normal` shares are higher.
+
+These differences demonstrate the importance of examining specific intake condition categories rather than relying exclusively on the total number of animal intake events.
+
+The findings also suggest that weather-related patterns in shelter records may reflect a combination of animal characteristics, seasonal variation, reporting behavior, and shelter operations.
+
+The analysis is descriptive and does not identify the independent causal impact of weather conditions on animal health.
+
+### Limitations
+
+Several limitations should be considered when interpreting Q6.
+
+First, the analysis uses recorded shelter intake events rather than a representative sample of all animals in Austin. Animals that never enter the shelter are not observed.
+
+Second, `Intake Condition` is an administrative classification recorded when an animal enters the shelter. Categories such as `Sick`, `Injured`, and `Medical` do not necessarily represent comparable clinical diagnoses or levels of medical severity.
+
+Third, an animal may contribute more than one intake event to the dataset. Therefore, the observations do not necessarily represent unique animals or statistically independent events.
+
+Fourth, weather is matched to the date of recorded intake. The animal's condition may have developed before that date, meaning that same-day weather may not correspond to the relevant period of exposure.
+
+Fifth, the analysis does not control for seasonality, animal type, weekdays, holidays, neighborhood characteristics, or changes in shelter operations. These factors may contribute to the observed differences.
+
+Sixth, the weather indicators summarize daily conditions and may not capture the actual environmental exposure of each animal. Weather measurements represent the broader Austin area rather than each animal's precise location and intake time.
+
+Seventh, the cold and freezing samples are relatively small. The freezing comparison in particular includes only seven days and 180 intake events, making the corresponding proportions sensitive to individual observations and daily variation.
+
+Eighth, condition categories are mutually exclusive administrative labels. A higher share of one category necessarily affects the relative shares of other categories, even without changes in their absolute counts.
+
+Finally, the results have not been subjected to formal statistical significance testing or causal identification. Observed percentage-point differences should therefore not be interpreted as statistically significant weather effects.
+
+### Possible Extensions
+
+Future research could extend this analysis in several directions.
+
+First, separating dogs and cats may reveal whether weather-related intake condition patterns differ across animal types.
+
+Second, examining intake counts by condition, in addition to condition proportions, would help distinguish changes in the volume of affected intake events from changes in their relative composition.
+
+Third, using multi-year data could increase the sample size for rare cold-weather events and help determine whether the patterns persist across years.
+
+Fourth, regression models incorporating month, season, weekdays, and other relevant characteristics could help assess whether the descriptive differences remain after accounting for observable confounding factors.
+
+Fifth, analyzing lagged weather conditions could provide a more informative comparison between animal health classifications and the timing of potential environmental exposure.
+
+Sixth, richer medical records or standardized clinical assessments would be needed to evaluate actual injury severity, illness diagnoses, and health outcomes more accurately.
+
+Finally, linking intake and outcome histories at the individual-animal level could help investigate whether recorded health conditions at intake are associated with subsequent adoption, transfer, treatment, or length of shelter stay.
+
+### Reproducibility
+
+All Q6 analyses are implemented in:
+
+`code/weather_analysis/analyze_intake_conditions.py`
+
+From the project root directory, run:
+
+```bash
+python3 code/weather_analysis/analyze_intake_conditions.py
+```
+
+The script reads the following processed datasets:
+
+- `data/processed/aac_intakes_clean.csv`
+- `data/processed/austin_weather_2024.csv`
+
+The script validates that all 11,815 intake events are retained, the original 16 intake condition categories are preserved, no intake conditions are missing, and all intake events are successfully matched to weather observations.
+
+It produces eight CSV tables:
+
+- `artifacts/weather_analysis/tables/q6a_rainfall_composition.csv`
+- `artifacts/weather_analysis/tables/q6a_rainfall_differences.csv`
+- `artifacts/weather_analysis/tables/q6b_heat_composition.csv`
+- `artifacts/weather_analysis/tables/q6b_heat_differences.csv`
+- `artifacts/weather_analysis/tables/q6c_cold_composition.csv`
+- `artifacts/weather_analysis/tables/q6c_cold_differences.csv`
+- `artifacts/weather_analysis/tables/q6c_freezing_sensitivity_composition.csv`
+- `artifacts/weather_analysis/tables/q6c_freezing_sensitivity_differences.csv`
+
+It also produces eight figures in:
+
+`artifacts/weather_analysis/figures/06_intake_condition/`
+
+The figure files are:
+
+- `q6a_rainfall_composition.png`
+- `q6a_rainfall_differences.png`
+- `q6b_heat_composition.png`
+- `q6b_heat_differences.png`
+- `q6c_cold_composition.png`
+- `q6c_cold_differences.png`
+- `q6c_freezing_sensitivity_composition.png`
+- `q6c_freezing_sensitivity_differences.png`
+
+All input and output paths are resolved relative to the project directory. The analysis generates the statistics and figures programmatically without requiring manual modifications to the datasets.
+
+The required Python packages are listed in the project's root `requirements.txt` file.
