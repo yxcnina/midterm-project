@@ -19,7 +19,7 @@ January 1 through December 31, 2024. <br>The raw CSV files are placed in data/ra
 * Austin Animal Center Outcomes: https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes-10-01-2013-to-05-05-/9t4d-g238/about_data
 ## Data Preparation and Methodology
 ### 1. Cleaning the Intake and Outcome Data
-The raw intake and outcome data are cleaned by `src/clean_aac_intake.py` and `src/clean_aac_outcomes.py`. 
+The raw intake and outcome data are cleaned by `code/data_cleaning/clean_aac_intake.py` and `code/data_cleaning/clean_aac_outcomes.py`. 
 
 The cleaning process includes the following steps:
 
@@ -51,7 +51,7 @@ outcome dataset.
 ### 2. Building the Episode-Level Dataset
 
 The cleaned intake and outcome datasets are then combined into an
-episode-level dataset using `src/aac_in-out-episodes_2024.py`.
+episode-level dataset using `code/repeat_intakes_analysis/aac_in-out-episodes_2024.py`.
 
 The episode-level dataset is constructed through the following steps:
 
@@ -81,7 +81,7 @@ The episode-level dataset is constructed through the following steps:
    `Intake Event Number` and saved as:
 
 ``` 
-data/processed/aac_repeat-animal-intakes_2024.csv
+data/processed/aac_in-out-espisodes_2024.csv
 ```
 ### 3. Defining Repeat Intakes
 We count an intake as a **repeat-intake episode** when an animal returns
@@ -112,10 +112,10 @@ The analysis uses the following measures:
 ## Visualization and Findings
 ### 1. Scale of Repeat Intakes
 Repeat-intake episodes accounted for about **4.4%** of all intake episodes in 2024. <br> At the animal level, about **4.1%** of unique animals experienced at least one qualifying repeat intake. 
-![Scale of repeat intakes](../figures/01_repeat_intake_share.png)
+![Scale of repeat intakes](../repeat-intake-analysis/figures/01_repeat_intake_share.png)
 ### 2. Time Until Return
 About **86.9%**  of qualifying repeat intakes occurred within 90 days of the previous outcome. <br> More than **72%** occurred within the first 30 days, suggesting that most observed returns happened relatively soon after the animal left the shelter.
-![Time until return](../figures/02_return_time_distribution.png)
+![Time until return](../repeat-intake-analysis/figures/02_return_time_distribution.png)
 ### 3. Common Return Pathways
 
 The most common return pathway was:
@@ -128,7 +128,7 @@ This pathway accounted for approximately **71.0%** of qualifying
 repeat-intake episodes. <br> It means that the animal was later surrendered to AAC by a legal owner. However, because the dataset does not include owner identity, we cannot determine whether that owner was the same person who originally adopted the animal.
 
 
-![Common return pathways](../figures/03_return_pathways.png)
+![Common return pathways](../repeat-intake-analysis/figures/03_return_pathways.png)
 ### 4. Outcomes After Repeat Intake
 
 Adoption was recorded after approximately **70.6%** of qualifying
@@ -141,14 +141,14 @@ Episodes without a recorded outcome are kept in the calculation. These
 records may represent animals that were still at the shelter at the end
 of 2024 or whose outcomes occurred after the study period.
 
-![Outcomes after repeat intake](../figures/04_outcomes_after_repeat_intake.png)
+![Outcomes after repeat intake](../repeat-intake-analysis/figures/04_outcomes_after_repeat_intake.png)
 ### 5. Number of Intake Episodes per Animal
 Most animals with repeat intakes returned only once during 2024. Of the repeat-intake animals, **417** had two total intakes, compared with only **46** animals with three intakes and **4** animals with four intakes.
 
 This means that about **89% of repeat-intake animals had exactly two observed intakes**, while repeated returns beyond a second intake were relatively uncommon.
 
 
-![Number of intake episodes](../figures/05_repeat_intake_frequency.png)
+![Number of intake episodes](../repeat-intake-analysis/figures/05_repeat_intake_frequency.png)
 
 
 ## limitation
@@ -188,8 +188,8 @@ For the required file locations and download links, see the
 ### 2. Clean the Intake and Outcome Data
 Run the two cleaning scripts:
 ``` 
-python src/clean_aac_intake.py
-python src/clean_aac_outcomes.py
+python code/data_cleaning/clean_aac_intake.py
+python code/data_cleaning/clean_aac_outcomes.py
 ```
 These scripts create:
 ``` 
@@ -199,7 +199,7 @@ data/processed/aac_outcomes_clean.csv
 ### 3. Build the Episode-Level Dataset
 Match each intake with its corresponding outcome:
 ```
-python src/aac_in-out-episodes_2024.py
+python code/repeat_intakes_analysis/aac_in-out-episodes_2024.py
 ```
 This script creates:
 ```
@@ -208,7 +208,7 @@ data/processed/aac_in-out-episodes_2024.csv
 ### 4. Run the Repeat-Intake Analysis
 Run the analysis and generate the figures:
 ```
-python src/repeat-intakes-analysis.py
+python code/repeat_intakes_analysis/repeat-intakes-analysis.py
 ```
 The figures are saved in:
 ```
