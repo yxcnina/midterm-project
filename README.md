@@ -179,6 +179,7 @@ A repeat intake is defined as a new intake that occurs after the animal previous
 - `Adoption`
 - `Return to Owner`
 - `Rto-Adopt`
+> Notes: Rto-Adopt is an AAC outcome category related to returning an animal to its owner through an adoption process. AAC reports it together with Return to Owner, but we keep it as a separate recorded category in our analysis.
 
 Returns following `Transfer` or other outcome types are excluded from the main repeat-intake definition because those records may represent movement between organizations rather than a return from the community.
 
