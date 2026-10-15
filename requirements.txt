@@ -2,4 +2,6 @@ pandas
 requests
 matplotlib
 shapely>=2.0,<3
-geopandas==1.2.0
+numpy
+scipy
+statsmodels
