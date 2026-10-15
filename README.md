@@ -354,18 +354,24 @@ Return-to-owner patterns also differed strongly by species. Dogs had substantial
 
 Overall, the income analysis shows clear differences in the composition and outcomes of AAC stray-intake records across income groups, but the patterns are not consistently increasing or decreasing with income. The results should therefore be interpreted as descriptive neighborhood differences rather than a direct income effect.
 
+
 ### 4.4 Crime
-Across Austin's 10 council districts, districts with higher annual reported crime counts also tended to have more matched stray-animal intakes. The annual Pearson correlation between crime counts and stray-intake counts was **r = 0.6183**.
+### Crime and Stray Animal Intakes (Austin, 2024)
 
-![Annual crime and stray-intake relationship](artifacts/crime/analysis/annual_district_scatter.png)
+We combined Austin's 2024 reported crime data with geocoded **Austin Animal Center (AAC) stray intakes** at the City Council district level. Our district-by-month panel contains **120 observations** (10 districts × 12 months), covering **85,437 crime reports assigned to a council district** and **4,664 geocoded stray intakes matched to those districts**.
 
-In the unadjusted district-month regression, an additional **100 reported crimes** was associated with approximately **6.09 additional geocoded stray intakes**.
+**Finding 1 — Positive cross-district association.** Across the 10 council districts, annual crime counts and stray intake counts are positively correlated (**Pearson r = 0.618; p = 0.057**). This relationship does **not** meet the conventional 5% statistical significance threshold.
 
-However, the relationship became substantially weaker after controlling for persistent differences across districts and common monthly patterns. The adjusted estimate fell to approximately **3.54 additional stray intakes per 100 crimes**, with a district-clustered **p-value of 0.4029** and an approximate 95% confidence interval of **[-5.58, 12.66]**.
+![Annual crime reports versus stray animal intakes across Austin council districts](artifacts/crime/analysis/annual_district_scatter.png)
 
-![Adjusted crime and stray-intake relationship](artifacts/crime/analysis/adjusted_within_district_month.png)
+*Figure 1. Annual crime reports and matched stray intakes across Austin's 10 City Council districts.*
 
-Overall, the raw data show a positive relationship between crime counts and stray-animal intakes across districts, but the evidence becomes much weaker after accounting for district and month differences. The results therefore do not support a causal interpretation that crime increases stray-animal intake.
+**Finding 2 — The association weakens after accounting for district and month differences.** In a district-month OLS regression with **district and month fixed effects** and standard errors clustered by district, an additional 100 reported crimes is associated with an estimated **3.54 additional stray intakes** (**p = 0.403; 95% CI: -5.58 to 12.66**). The estimate is not statistically distinguishable from zero.
+
+![Crime and stray intake association after accounting for district and month effects](artifacts/crime/analysis/adjusted_within_district_month.png)
+
+*Figure 2. Crime and stray-intake relationship after adjusting for district and month effects.*
+
 
 ### 4.5 Weather
 The weather analysis reveals several descriptive differences in Austin Animal Center (AAC) intake and outcome patterns across rainfall and temperature conditions during 2024. The findings cover daily intake volume, stray intake and adoption outcome proportions, differences between dogs and cats, and the broader composition of intake and outcome events.
