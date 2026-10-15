@@ -23,94 +23,143 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 | **Income & Found Location** | How do stray-animal intake patterns vary across areas with different income levels, and are animals found in different socioeconomic areas associated with different intake or outcome patterns? | [Income and Location Analysis](artifacts/README/README-income-analysis.md) |
 | **Weather** | How are precipitation and temperature associated with AAC intake volume, intake and outcome composition, and differences between dogs and cats? | [Weather Analysis](artifacts/README/README-weather-analysis.md) |
 | **Crime & Found Location** | Do areas with higher reported crime counts also tend to have more stray-animal intakes, and does this relationship remain after accounting for geographic and monthly differences? | [Crime and Location Analysis](artifacts/README/README-crime.md) |
-## 2. Data Resource
-<table>
-<thead>
-<tr>
-<th>Analysis Module</th>
-<th>Data Source</th>
-<th>Source</th>
-<th>Important Fields</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2"><strong>Repeat Intakes</strong></td>
-<td>Austin Animal Center Intakes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>DateTime</code>, <code>Intake Type</code>, <code>Intake Condition</code>, <code>Animal Type</code>, <code>Age upon Intake</code></td>
-</tr>
-<tr>
-<td>Austin Animal Center Outcomes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes-10-01-2013-to-05-05-/9t4d-g238/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>DateTime</code>, <code>Outcome Type</code>, <code>Outcome Subtype</code></td>
-</tr>
-<tr>
-<td rowspan="2"><strong><mark>Animal Characteristics</mark></strong></td>
-<td>Austin Animal Center Intakes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>Animal Type</code>, <code>Age upon Intake</code>, <code>Color</code>, <code>Breed</code>, <code>Sex upon Intake</code>, <code>Intake Condition</code></td>
-</tr>
-<tr>
-<td>Austin Animal Center Outcomes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes-10-01-2013-to-05-05-/9t4d-g238/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>DateTime</code>, <code>Outcome Type</code>, <code>Outcome Subtype</code></td>
-</tr>
-<tr>
-<td rowspan="3"><strong><mark>Income &amp; Found Location</strong></td>
-<td>Austin Animal Center Intakes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>Found Location</code>, <code>DateTime</code>, <code>Intake Type</code></td>
-</tr>
-<tr>
-<td>U.S. Census Geocoder</td>
-<td><a href="https://geocoding.geo.census.gov/geocoder/">U.S. Census Bureau</a></td>
-<td><code>Latitude</code>, <code>Longitude</code>, <code>Census Tract</code>, <code>Census Block Group</code></td>
-</tr>
-<tr>
-<td>American Community Survey (ACS)</td>
-<td><a href="https://api.census.gov/data/2024/acs/acs5">U.S. Census Bureau ACS API</a></td>
-<td><code>Population</code>, <code>Median Household Income</code>, Census geographic identifiers, and other socioeconomic variables used in the analysis</td>
-</tr>
-<tr>
-<td rowspan="4"><strong>Weather</strong></td>
-<td>Austin Animal Center Intakes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>DateTime</code>, <code>Intake Type</code>, <code>Intake Condition</code>, <code>Animal Type</code></td>
-</tr>
-<tr>
-<td>Austin Animal Center Outcomes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes-10-01-2013-to-05-05-/9t4d-g238/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>DateTime</code>, <code>Outcome Type</code>, <code>Animal Type</code></td>
-</tr>
-<tr>
-<td>NOAA Daily Weather Observations</td>
-<td><a href="https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation">NOAA NCEI Daily Summaries API</a></td>
-<td><code>TMAX</code> (daily maximum temperature), <code>TMIN</code> (daily minimum temperature), <code>PRCP</code> (daily precipitation)</td>
-</tr>
-<tr>
-<td>Open-Meteo Historical Weather Data</td>
-<td><a href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo Historical Weather API</a></td>
-<td><code>relative_humidity_2m_mean</code>, <code>cloud_cover_mean</code>, <code>wind_speed_10m_max</code></td>
-</tr>
-<tr>
-<td rowspan="3"><strong>Crime &amp; Found Location</strong></td>
-<td>Austin Animal Center Intakes</td>
-<td><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data">City of Austin Open Data</a></td>
-<td><code>Animal ID</code>, <code>Found Location</code>, <code>DateTime</code>, <code>Intake Type</code></td>
-</tr>
-<tr>
-<td>Austin Crime Reports</td>
-<td><a href="https://data.austintexas.gov/Public-Safety/Crime-Reports/fdj4-gpfu/about_data">City of Austin Open Data</a></td>
-<td><code>Report Date</code>, <code>Offense</code>, <code>Census Block Group</code>, and other geographic or crime-category fields used in the analysis</td>
-</tr>
-<tr>
-<td>American Community Survey (ACS)</td>
-<td><a href="https://api.census.gov/data/2024/acs/acs5">U.S. Census Bureau ACS API</a></td>
-<td><code>Population</code> and Census geographic identifiers used to construct population-adjusted crime measures</td>
-</tr>
-</tbody>
-</table>
+> **Note:** This README is a condensed summary of the overall project.  
+More detailed methods, results, figures, limitations, and reproduction steps are available in the README for each analysis module.
+## 2. Data Source
+The project uses Austin Animal Center intake and outcome records as the core data for all analysis modules. Additional external datasets are introduced only when needed for the income, weather, and crime analyses.
+
+### 2.1 Core Austin Animal Center Data
+
+#### 2.1.1 Austin Animal Center Intakes
+
+**Source:** [City of Austin Open Data](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data)
+
+The intake dataset records individual animal intake events at Austin Animal Center. It serves as the primary dataset for all five analysis modules.
+
+**Important fields include:**
+
+- Animal ID
+- DateTime
+- Found Location
+- Intake Type
+- Intake Condition
+- Animal Type
+- Sex upon Intake
+- Age upon Intake
+- Breed
+- Color
+
+#### 2.1.2 Austin Animal Center Outcomes
+
+**Source:** [City of Austin Open Data](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes-10-01-2013-to-05-05-/9t4d-g238/about_data)
+
+The outcome dataset records how and when animals leave Austin Animal Center. It is used together with the intake data to study shelter outcomes and repeat-intake histories.
+
+**Important fields include:**
+
+- Animal ID
+- DateTime
+- Outcome Type
+- Outcome Subtype
+- Animal Type
+- Sex upon Outcome
+
+The intake and outcome datasets are linked using `Animal ID` and `DateTime` when an analysis requires intake–outcome matching.
+
+### <mark>2.2 Additional Data for Income & Found Location
+
+#### U.S. Census Geocoder
+
+**Source:** [U.S. Census Bureau Geocoder](https://geocoding.geo.census.gov/geocoder/)
+
+The Census Geocoder is used to convert usable AAC `Found Location` records into geographic information that can be connected with neighborhood-level socioeconomic data.
+
+**Important outputs include:**
+
+- Latitude
+- Longitude
+- Census Tract
+- Census Block Group
+
+#### American Community Survey (ACS)
+
+**Source:** [2024 ACS 5-Year API](https://api.census.gov/data/2024/acs/acs5)
+
+The American Community Survey provides socioeconomic information for Census geographic areas.
+
+**Important variables include:**
+
+- Population
+- Median Household Income
+- Census geographic identifiers
+- Other socioeconomic variables used in the final analysis
+
+These data are combined with geocoded AAC intake locations to study how stray-animal intake patterns vary across areas with different income levels.
+
+
+---
+
+### 2.3 Additional Data for Weather Analysis
+
+#### NOAA Daily Weather Observations
+
+**Source:** [NOAA NCEI Daily Summaries API](https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation)
+
+NOAA provides daily weather observations for Austin. The current analysis uses observations from station `USW00013958`.
+
+**Important variables include:**
+
+- TMAX — daily maximum temperature
+- TMIN — daily minimum temperature
+- PRCP — daily precipitation
+
+#### Open-Meteo Historical Weather Data
+
+**Source:** [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api)
+
+Open-Meteo provides additional daily weather measures used in the analysis.
+
+**Important variables include:**
+
+- relative_humidity_2m_mean
+- cloud_cover_mean
+- wind_speed_10m_max
+
+The NOAA and Open-Meteo datasets are standardized and merged by calendar date, then matched with AAC intake and outcome records by event date. :chatgpt-content-reference{index="1"}
+
+
+
+---
+
+### 2.4 Additional Data for Crime & Found Location
+
+#### Austin Police Department Crime Reports 2024
+
+**Source:** [City of Austin Open Data](https://data.austintexas.gov/d/hbc5-hmey)
+
+Reported crime incidents are obtained through the City of Austin Socrata API.
+
+**Important fields include:**
+
+- incident_report_number
+- occ_date
+- council_district
+
+Each incident ID is counted once in the crime analysis.
+
+#### City of Austin Council District Boundaries
+
+**Source:** [City of Austin ArcGIS REST Service](https://maps.austintexas.gov/arcgis/rest/services/Shared/BoundariesGrids_2/MapServer/0)
+
+Official council-district polygons are used to assign geocoded AAC stray-animal locations to one of Austin's ten council districts.
+
+**Important geographic information includes:**
+
+- Council District identifier
+- District polygon geometry
+
+The crime and AAC data are aggregated by council district and month to construct the district-month dataset used in the analysis. :chatgpt-content-reference{index="2"} :chatgpt-content-reference{index="3"}
+
 
 ## 3. Methodology
 
@@ -129,7 +178,6 @@ Returns following `Transfer` or other outcome types are excluded from the main r
 
 The analysis measures the share of repeat-intake episodes, time until return, return pathways, outcomes after return, and the number of observed intake episodes per animal.
 
-[Read the full Repeat Intake Methodology →](artifacts/README/README-repeat-intake-analysis.md)
 ### <mark>3.2 Basic</mark>
 ### 3.3 Crime
 The crime analysis combines 2024 Austin crime reports with geocoded AAC stray-intake records at the council-district level.
@@ -147,7 +195,6 @@ The analysis compares crime and stray-intake counts using:
 
 These results are interpreted as descriptive associations rather than causal effects.
 
-[Read the full Crime Analysis Methodology →](artifacts/README/README-crime.md)
 ### <mark>3.4 Income-Level
 ### <mark>3.5 Weather
 The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations from NOAA and Open-Meteo. NOAA provides daily maximum temperature, minimum temperature, and precipitation observations from station `USW00013958`, while Open-Meteo provides daily mean relative humidity, mean cloud cover, and maximum wind speed for the selected Austin coordinates.
@@ -177,7 +224,6 @@ Differences in category shares are reported in **percentage points**, calculated
 
 All weather-event matches are validated, and the analyses distinguish daily intake counts from event-level proportions. The results describe observed associations rather than causal effects, since weather conditions may coincide with seasonal variation, shelter operations, and other factors affecting recorded shelter activity.
 
-[Read the full Weather Analysis Methodology →](code/weather_analysis/README.md)
 
 ## 4. Main Findings
 ### 4.1 Repeat Intakes
@@ -194,7 +240,7 @@ The most common return pathway was **Adoption → Owner Surrender**, which accou
 
 Most repeat-intake animals returned only once during 2024: about **89%** had exactly two observed intake episodes.
 
-[Read the full Repeat Intake Findings →](artifacts/README/README-repeat-intake-analysis.md)
+
 ### <mark>4.2 Basic
 ### 4.3 Crime
 Across Austin's 10 council districts, districts with higher annual reported crime counts also tended to have more matched stray-animal intakes. The annual Pearson correlation between crime counts and stray-intake counts was **r = 0.6183**.
@@ -244,7 +290,6 @@ These findings suggest that aggregate weather comparisons can conceal meaningful
 
 All findings are **descriptive rather than causal**. Seasonal variation, shelter operations, differences in weather-group sample sizes, and other unobserved factors may contribute to the observed patterns.
 
-[Read the full Weather Analysis Findings →](code/weather_analysis/README.md)
 
 ## 5. Limitations
 This project has several important limitations.
@@ -304,5 +349,3 @@ Repeat Intake Analysis
 python code/repeat_intakes_analysis/aac_in-out-episodes_2024.py
 python code/repeat_intakes_analysis/repeat-intakes-analysis.py
 ```
-Detailed instructions:
-[Repeat Intake README](artifacts/README/README-repeat-intake-analysis.md)
