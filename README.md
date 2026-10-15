@@ -5,7 +5,7 @@ This project studies stray-animal intakes at the Austin Animal Center (AAC) duri
 
 ## Table of Contents
 - [1. Research Questions and Analysis Modules](#1-research-questions-and-analysis-modules)
-- [2. Data Resource](#2-data-resource)
+- [2. Data Source](#2-data-Source)
 - [3. Methodology](#3-methodology)
 - [4. Main Findings](#4-main-findings)
 - [5. Limitations](#5-limitations)
@@ -21,8 +21,8 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 | **Repeat Intakes** | How common are repeat intakes, how quickly do animals return, what are the most common return pathways, and what happens after they return? | [Repeat Intake Analysis](artifacts/README/README-repeat-intake-analysis.md) |
 | **Animal Characteristics** | How are animal characteristics such as age, color, animal type, sex, breed, and intake condition associated with shelter outcomes? | [Animal Characteristics Analysis](artifacts/README/README-basic-analysis.md) |
 | **Income & Found Location** | How do stray-animal intake patterns vary across areas with different income levels, and are animals found in different socioeconomic areas associated with different intake or outcome patterns? | [Income and Location Analysis](artifacts/README/README-income-analysis.md) |
-| **Weather** | How are precipitation and temperature associated with AAC intake volume, intake and outcome composition, and differences between dogs and cats? | [Weather Analysis](artifacts/README/README-weather-analysis.md) |
 | **Crime & Found Location** | Do areas with higher reported crime counts also tend to have more stray-animal intakes, and does this relationship remain after accounting for geographic and monthly differences? | [Crime and Location Analysis](artifacts/README/README-crime.md) |
+| **Weather** | How are precipitation and temperature associated with AAC intake volume, intake and outcome composition, and differences between dogs and cats? | [Weather Analysis](artifacts/README/README-weather-analysis.md) |
 > **Note:** This README is a condensed summary of the overall project.  
 More detailed methods, results, figures, limitations, and reproduction steps are available in the README for each analysis module.
 ## 2. Data Source
@@ -66,26 +66,28 @@ The outcome dataset records how and when animals leave Austin Animal Center. It 
 
 The intake and outcome datasets are linked using `Animal ID` and `DateTime` when an analysis requires intake–outcome matching.
 
-### <mark>2.2 Additional Data for Income & Found Location
-
-#### U.S. Census Geocoder
+#### 2.1.3 Geocoded Found Locations
 
 **Source:** [U.S. Census Bureau Geocoder](https://geocoding.geo.census.gov/geocoder/)
 
-The Census Geocoder is used to convert usable AAC `Found Location` records into geographic information that can be connected with neighborhood-level socioeconomic data.
+AAC `Found Location` values are cleaned and geocoded into geographic coordinates.
 
-**Important outputs include:**
+The shared geographic fields include:
 
 - Latitude
 - Longitude
-- Census Tract
-- Census Block Group
+- Geocoding status
+- Census geographic identifiers when available
+
+These coordinates are used as the common geographic input for the income and crime analyses. Each module then converts the coordinates into the geographic unit required for that specific analysis.
+
+### 2.2 Additional Data for Income
 
 #### American Community Survey (ACS)
 
 **Source:** [2024 ACS 5-Year API](https://api.census.gov/data/2024/acs/acs5)
 
-The American Community Survey provides socioeconomic information for Census geographic areas.
+The American Community Survey provides neighborhood-level socioeconomic information.
 
 **Important variables include:**
 
@@ -94,12 +96,61 @@ The American Community Survey provides socioeconomic information for Census geog
 - Census geographic identifiers
 - Other socioeconomic variables used in the final analysis
 
-These data are combined with geocoded AAC intake locations to study how stray-animal intake patterns vary across areas with different income levels.
+For this analysis, geocoded AAC intake locations are assigned to a Census geographic area, such as a Census tract. The corresponding ACS socioeconomic variables are then joined using the Census geographic identifier.
+
+Conceptually:
+
+```text
+AAC Found Location
+        ↓
+Latitude / Longitude
+        ↓
+Census Tract
+        ↓
+ACS Income and Population Data
+```
+
+
 
 
 ---
 
-### 2.3 Additional Data for Weather Analysis
+### 2.3 Additional Data for Crime
+
+#### Austin Police Department Crime Reports 2024
+
+**Source:** [City of Austin Open Data](https://data.austintexas.gov/d/hbc5-hmey)
+
+Reported crime incidents are obtained through the City of Austin Socrata API.
+
+**Important fields include:**
+
+- incident_report_number
+- occ_date
+- council_district
+
+Each incident ID is counted once in the analysis.
+
+#### City of Austin Council District Boundaries
+
+**Source:** [City of Austin ArcGIS REST Service](https://maps.austintexas.gov/arcgis/rest/services/Shared/BoundariesGrids_2/MapServer/0)
+
+Official council-district polygons are used to convert the geocoded AAC intake locations into the geographic unit used by the crime analysis.
+
+Conceptually:
+
+```text
+AAC Found Location
+        ↓
+Latitude / Longitude
+        ↓
+Council District
+        ↓
+Crime Count by District and Month
+```
+
+
+### 2.4 Additional Data for Weather Analysis
 
 #### NOAA Daily Weather Observations
 
@@ -126,41 +177,6 @@ Open-Meteo provides additional daily weather measures used in the analysis.
 - wind_speed_10m_max
 
 The NOAA and Open-Meteo datasets are standardized and merged by calendar date, then matched with AAC intake and outcome records by event date. :chatgpt-content-reference{index="1"}
-
-
-
----
-
-### 2.4 Additional Data for Crime & Found Location
-
-#### Austin Police Department Crime Reports 2024
-
-**Source:** [City of Austin Open Data](https://data.austintexas.gov/d/hbc5-hmey)
-
-Reported crime incidents are obtained through the City of Austin Socrata API.
-
-**Important fields include:**
-
-- incident_report_number
-- occ_date
-- council_district
-
-Each incident ID is counted once in the crime analysis.
-
-#### City of Austin Council District Boundaries
-
-**Source:** [City of Austin ArcGIS REST Service](https://maps.austintexas.gov/arcgis/rest/services/Shared/BoundariesGrids_2/MapServer/0)
-
-Official council-district polygons are used to assign geocoded AAC stray-animal locations to one of Austin's ten council districts.
-
-**Important geographic information includes:**
-
-- Council District identifier
-- District polygon geometry
-
-The crime and AAC data are aggregated by council district and month to construct the district-month dataset used in the analysis. :chatgpt-content-reference{index="2"} :chatgpt-content-reference{index="3"}
-
-
 ## 3. Methodology
 
 ### 3.1 Repeat-Intake Analysis
@@ -179,7 +195,8 @@ Returns following `Transfer` or other outcome types are excluded from the main r
 The analysis measures the share of repeat-intake episodes, time until return, return pathways, outcomes after return, and the number of observed intake episodes per animal.
 
 ### <mark>3.2 Basic</mark>
-### 3.3 Crime
+### <mark>3.3 Income-Level
+### 3.4 Crime
 The crime analysis combines 2024 Austin crime reports with geocoded AAC stray-intake records at the council-district level.
 
 Reported crime incidents are obtained through the City of Austin Socrata API, while official council-district boundaries are downloaded through the City of Austin ArcGIS REST API. AAC records are restricted to `Stray` intakes, and observations referring to the shelter's own `7201 Levander` address are removed.
@@ -195,7 +212,7 @@ The analysis compares crime and stray-intake counts using:
 
 These results are interpreted as descriptive associations rather than causal effects.
 
-### <mark>3.4 Income-Level
+
 ### <mark>3.5 Weather
 The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations from NOAA and Open-Meteo. NOAA provides daily maximum temperature, minimum temperature, and precipitation observations from station `USW00013958`, while Open-Meteo provides daily mean relative humidity, mean cloud cover, and maximum wind speed for the selected Austin coordinates.
 
@@ -242,7 +259,8 @@ Most repeat-intake animals returned only once during 2024: about **89%** had exa
 
 
 ### <mark>4.2 Basic
-### 4.3 Crime
+### <mark>4.3 Income
+### 4.4 Crime
 Across Austin's 10 council districts, districts with higher annual reported crime counts also tended to have more matched stray-animal intakes. The annual Pearson correlation between crime counts and stray-intake counts was **r = 0.6183**.
 
 ![Annual crime and stray-intake relationship](artifacts/crime/analysis/annual_district_scatter.png)
@@ -254,7 +272,7 @@ However, the relationship became substantially weaker after controlling for pers
 ![Adjusted crime and stray-intake relationship](artifacts/crime/analysis/adjusted_within_district_month.png)
 
 Overall, the raw data show a positive relationship between crime counts and stray-animal intakes across districts, but the evidence becomes much weaker after accounting for district and month differences. The results therefore do not support a causal interpretation that crime increases stray-animal intake.
-### <mark>4.4 Income-Level
+
 ### <mark>4.5 Weather
 The weather analysis reveals several descriptive differences in Austin Animal Center (AAC) intake and outcome patterns across rainfall and temperature conditions during 2024. The findings cover daily intake volume, stray intake and adoption outcome proportions, differences between dogs and cats, and the broader composition of intake and outcome events.
 
@@ -329,11 +347,13 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 ### 7.3 Obtain the Raw Data
-The raw CSV files of intakes and outcomes are placed in data/raw folder, and the websites for downloading the raw data are listed below:
-* Austin Animal Center Intakes: https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes-10-01-2013-to-05-05-2/wter-evkm/about_data
-* Austin Animal Center Outcomes: https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes-10-01-2013-to-05-05-/9t4d-g238/about_data
-### <mark>7.4 Clean the AAC Data and 
-Run the two cleaning scripts:
+Place the raw AAC intake and outcome CSV files in:
+```
+data/raw
+```
+> Note: The raw data can be downloaded from the links above in [2.1 Core Austin Animal Center Data](#21-core-austin-animal-center-data), or you can use the copies already included in the `data/raw` folder.
+### 7.4 Prepare the Shared AAC Data and Geocode Data
+**Step 1:** Run the two cleaning scripts:
 ``` 
 python code/data_cleaning/clean_aac_intake.py
 python code/data_cleaning/clean_aac_outcomes.py
@@ -343,9 +363,25 @@ These scripts create:
 data/processed/aac_intakes_clean.csv
 data/processed/aac_outcomes_clean.csv
 ```
+**Step 2:** Run the geocode scripts:
+```
+python code/data_cleaning/geocode_aac_intakes.py
+```
+This step converts usable `Found Location` records into geographic coordinates, and is used as the shared geographic input for the income and crime analyses.
 ### 7.5 Run the Analysis Modules
-Repeat Intake Analysis
+After the shared AAC datasets have been prepared, each analysis module can be run independently.
+#### 7.5.1 Repeat Intake Analysis
+Build the intake–outcome episode dataset and run the repeat-intake analysis:
 ```
 python code/repeat_intakes_analysis/aac_in-out-episodes_2024.py
 python code/repeat_intakes_analysis/repeat-intakes-analysis.py
 ```
+These scripts create:
+```
+data/processed/aac_in-out-episodes_2024.csv
+artifacts/repeat-intake-analysis/figures
+```
+#### 7.5.2 Animal Characteristics Analysis
+#### 7.5.3 Income Analysis
+#### 7.5.4 Crime Analysis
+#### 7.5.5 Weather Analysis
