@@ -60,6 +60,15 @@ def shelter_address_mask(data):
     )
 
 
+def shelter_coordinates(locations):
+    """Return the unique geocode of the exact shelter address, or raise."""
+    exact_address = locations["Found Location"].eq("7201 Levander Loop in Austin (TX)")
+    shelter = locations.loc[exact_address, ["longitude", "latitude"]].drop_duplicates()
+    if len(shelter) != 1:
+        raise ValueError("Check the shelter reference geocode before plotting.")
+    return tuple(shelter.iloc[0])
+
+
 def summarize_locations(intakes, locations, table_folder):
     """Save aggregate coverage/precision tables; return the shelter coordinates."""
     coverage_rows = []
@@ -111,11 +120,7 @@ def summarize_locations(intakes, locations, table_folder):
         pd.DataFrame(rows).to_csv(table_folder / filename, index=False)
 
     # Use the existing geocodes of the exact address, not a guessed GPS location.
-    exact_address = locations["Found Location"].eq("7201 Levander Loop in Austin (TX)")
-    shelter = locations.loc[exact_address, ["longitude", "latitude"]].drop_duplicates()
-    if len(shelter) != 1:
-        raise ValueError("Check the shelter reference geocode before plotting.")
-    longitude, latitude = shelter.iloc[0]
+    longitude, latitude = shelter_coordinates(locations)
     reference = pd.DataFrame(
         [
             {

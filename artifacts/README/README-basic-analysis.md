@@ -187,16 +187,40 @@ Run these commands from the repository root with Python 3:
 
 ```bash
 python -m pip install -r requirements.txt
-python code/basic_analysis/01_intake_profile.py
-python code/basic_analysis/02_intake_timing.py
-python code/basic_analysis/03_intake_context.py
-python code/basic_analysis/04_outcome_profile.py
-python code/basic_analysis/05_trait_comparisons.py
+python code/basic_analysis/run_analysis.py
+```
+
+The runner first checks all three input files, their required columns, and the
+2024 dates. It reuses the themes' data readers and checks the geocoded event
+keys, shared fields, coordinates, and shelter reference before any theme runs.
+Both cats and dogs must be present in the full tables and in the maps without
+shelter-address records. If a check fails, the runner stops before writing
+figures or tables and reports the problem.
+
+To check the inputs without running the analysis:
+
+```bash
+python code/basic_analysis/run_analysis.py --check-only
+```
+
+After the checks pass, the runner executes the six themes in order and stops
+if one fails. A later plotting or file-writing error can still leave results
+from earlier themes; the precheck does not make the full run atomic. It uses
+the processed CSVs already in the repository, so no new downloads or geocoding
+requests are needed. Each numbered script can also run on its own, for example:
+
+```bash
 python code/basic_analysis/06_intake_locations.py
 ```
 
-Each script can run on its own using the processed CSVs already in the
-repository. No new downloads or geocoding requests are needed.
+For the coordinate matching rules and optional geocoding rebuild, see the
+[geocoding instructions](../../code/data_cleaning/README-geocoding.md).
+
+Run the input-check tests with:
+
+```bash
+python -m unittest discover -s code/basic_analysis -p "test_*.py"
+```
 
 The scripts save **14 PNG figures** in
 [figures](../basic_analysis/figures/) and **12 CSV tables** in

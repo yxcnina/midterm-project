@@ -494,18 +494,15 @@ artifacts/repeat-intake-analysis/figures
 ```
 #### 7.5.2 Basic Analysis
 
-Run the six scripts from the repository root:
+Run all six themes from the repository root:
 
 ```bash
-python code/basic_analysis/01_intake_profile.py
-python code/basic_analysis/02_intake_timing.py
-python code/basic_analysis/03_intake_context.py
-python code/basic_analysis/04_outcome_profile.py
-python code/basic_analysis/05_trait_comparisons.py
-python code/basic_analysis/06_intake_locations.py
+python code/basic_analysis/run_analysis.py
 ```
 
-The scripts use the three processed intake, outcome, and geocoded intake CSVs already in the repository. They save 14 PNG figures and 12 CSV tables under `artifacts/basic_analysis/`, with a separate folder for each theme.
+The runner checks the three processed intake, outcome, and geocoded intake CSVs before starting any theme. Run `python code/basic_analysis/run_analysis.py --check-only` to check the inputs without writing figures or tables. The checks include required columns, 2024 dates, geocoded event correspondence, coordinates, and the shelter reference.
+
+After the checks pass, the runner executes the themes in order and stops if one fails. It saves 14 PNG figures and 12 CSV tables under `artifacts/basic_analysis/`, with a separate folder for each theme. The numbered scripts can also be run individually.
 
 Detailed instructions:
 [Basic Analysis README](artifacts/README/README-basic-analysis.md#reproducing-the-analysis)
