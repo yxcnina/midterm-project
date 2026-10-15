@@ -183,3 +183,105 @@ The analysis uses cleaned intake data from `data/processed/aac_intakes_clean.csv
 
 Python package dependencies are listed in the project's root `requirements.txt` file. 
 
+
+## Research Question 3: Extreme Heat and Adoption Outcome Proportions
+
+### Data and Methodology
+
+This analysis examines whether the proportion of adoption outcomes differs between hot and non-hot days in Austin during 2024.
+
+We use the cleaned Austin Animal Center outcome dataset together with the daily weather dataset constructed from NOAA and Open-Meteo data. Daily maximum temperature is measured using NOAA observations.
+
+The analysis uses individual outcome events as the unit of observation. Each event is matched to the corresponding daily weather record using its outcome date. Because multiple outcome events may occur on the same day, a many-to-one merge is used.
+
+Hot days are defined as days when the daily maximum temperature is at least 35°C. Non-hot days are defined as days when the maximum temperature is below 35°C.
+
+A binary indicator, `is_adoption`, is created:
+
+- `is_adoption = 1` when `Outcome Type` is `Adoption`.
+- `is_adoption = 0` for other known outcome types.
+
+The `Rto-Adopt` category is treated separately from `Adoption` and is classified as non-adoption in the main analysis.
+
+The cleaned dataset contains 11,822 outcome events. All events were successfully matched to weather records, and no invalid outcome dates or duplicate weather dates were identified.
+
+Ten records with missing `Outcome Type` were excluded because their adoption status could not be determined. This leaves **11,812 valid outcome events**, including 7,431 adoption events.
+
+For each weather category, the adoption outcome proportion is calculated by dividing the number of adoption events by the total number of outcome events with a known outcome type.
+
+### Findings
+
+The event-level descriptive analysis produces the following results:
+
+| Statistic | Non-Hot Days | Hot Days |
+|---|---:|---:|
+| Total outcome events | 8,221 | 3,591 |
+| Adoption outcomes | 5,093 | 2,338 |
+| Non-adoption outcomes | 3,128 | 1,253 |
+| Adoption proportion | 61.95% | 65.11% |
+
+The adoption outcome proportion was approximately **61.95% on non-hot days** and **65.11% on hot days**.
+
+The hot-minus-non-hot difference was approximately **3.16 percentage points**.
+
+Thus, adoption accounted for a slightly larger share of recorded outcome events on hot days than on non-hot days.
+
+**Figure 3. Adoption Outcome Proportions on Non-Hot and Hot Days (2024)**
+
+![Adoption Outcome Proportions on Non-Hot and Hot Days](../../artifacts/weather_analysis/figures/03_adoption_outcomes/adoption_proportion_hot_vs_nonhot.png)
+
+The figure compares the percentage of recorded outcome events classified as adoption under the two weather conditions. The vertical axis ranges from 0% to 100%, and the comparison is conducted at the event level.
+
+### Interpretation
+
+The observed difference indicates that the composition of recorded outcome events varied across temperature categories in 2024.
+
+However, the adoption outcome proportion measures the share of adoption events among recorded outcomes. It does not represent the probability that an individual animal entering the shelter will eventually be adopted.
+
+The results are descriptive and do not establish that extreme heat increases adoption activity or causes changes in adoption outcomes.
+
+### Limitations
+
+This analysis is descriptive and cannot establish a causal relationship between temperature and adoption outcomes.
+
+Seasonality may be particularly important because hot days are concentrated in warmer months, when shelter intake and adoption patterns may differ for reasons unrelated to temperature.
+
+Weekdays, holidays, shelter operations, and animal characteristics may also influence observed outcome patterns.
+
+The binary hot-day indicator does not distinguish between moderately hot days and periods of prolonged extreme heat. Weather measurements from a selected Austin station may not represent conditions at every location relevant to animal intake or adoption.
+
+The analysis treats outcome events as observations rather than tracking individual animals from intake to final outcome. Consequently, the adoption proportion should not be interpreted as an animal-level adoption success rate.
+
+In addition, outcome events occurring on the same date may be correlated, and the analysis does not adjust for this dependence or perform statistical significance testing.
+
+Finally, the primary analysis excludes ten records with missing outcome types and treats `Rto-Adopt` as distinct from `Adoption`. Alternative classification choices could slightly change the reported proportions.
+
+### Possible Extensions
+
+Future research could examine temperature intensity rather than only a binary hot-day classification.
+
+Additional analyses could account for seasonal patterns, weekdays, animal characteristics, and shelter operations.
+
+Linking individual intake and outcome records could also support an investigation of adoption probabilities or time to adoption, rather than only the composition of recorded outcome events.
+
+### Reproducibility
+
+Run the Q3 analysis from the project root directory:
+
+```bash
+python3 code/weather_analysis/analyze_adoption_outcomes.py
+```
+
+The script loads the cleaned outcome and processed weather datasets, validates date matching, excludes records with missing outcome types, and calculates adoption proportions for hot and non-hot days.
+
+The generated outputs are:
+
+- `artifacts/weather_analysis/tables/q3_adoption_outcomes_summary.csv`
+- `artifacts/weather_analysis/figures/03_adoption_outcomes/adoption_proportion_hot_vs_nonhot.png`
+
+The input datasets are:
+
+- `data/processed/aac_outcomes_clean.csv`
+- `data/processed/austin_weather_2024.csv`
+
+Required Python packages are listed in the project's root `requirements.txt` file. 
