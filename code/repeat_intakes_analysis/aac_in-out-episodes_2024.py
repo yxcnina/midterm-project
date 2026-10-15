@@ -16,7 +16,7 @@ OUTCOME_PATH = os.path.join(
 OUTPUT_PATH = os.path.join(
     "data",
     "processed",
-    "aac_repeat-animal-intakes_2024.csv"
+    "aac_in-out-episodes_2024.csv"
 )
 
 start_date = "2024-01-01"

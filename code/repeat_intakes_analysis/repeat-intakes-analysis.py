@@ -6,7 +6,6 @@ import pandas as pd
 from plot_style import (
     CATEGORY_PALETTE,
     MAIN_COLOR,
-    NEUTRAL_COLOR,
     ACCENT_COLOR,
     SECONDARY_COLOR,
     set_plot_style,
@@ -21,6 +20,7 @@ DATA_PATH = os.path.join(
 
 FIGURE_DIR = os.path.join(
     "artifacts",
+    "repeat-intake-analysis",
     "figures",
 )
 
