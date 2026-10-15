@@ -1,8 +1,7 @@
 # Austin Animal Center Intakes in 2024
 ## Research Goal
-This project studies stray-animal intakes at the Austin Animal Center (AAC) during 2024 by examining animal characteristics and shelter outcomes, repeat-intake patterns, neighborhood income and crime conditions, and weather-related intake patterns.
-
-
+This project uses 2024 Austin Animal Center (AAC) intake and outcome records to study patterns in stray-animal intake and shelter outcomes. 
+We examine whether these patterns differ by animal characteristics, whether stray intakes vary across found locations with different income and crime conditions, and whether weather is associated with intake and outcome patterns. During the analysis, we also identified animals that entered AAC more than once, so we further examined how repeat intakes occur and what happens afterward.
 ## Table of Contents
 - [1. Research Questions and Analysis Modules](#1-research-questions-and-analysis-modules)
 - [2. Data Source](#2-data-source)
