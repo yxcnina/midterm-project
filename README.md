@@ -550,3 +550,45 @@ artifacts/crime/analysis/
 ```
 
 #### 7.5.5 Weather Analysis
+The weather analysis uses daily NOAA and Open-Meteo observations for Austin, Texas, covering January 1 through December 31, 2024. The two sources are combined into a processed daily weather dataset for subsequent analysis of Austin Animal Center intake and outcome events.
+
+**Retrieve the raw weather data**
+
+From the project root directory, run:
+
+```bash
+python3 code/weather/fetch_noaa.py
+python3 code/weather/fetch_open_meteo.py
+```
+
+These scripts retrieve NOAA daily temperature and precipitation observations and Open-Meteo daily humidity, cloud cover, and wind speed data.
+
+The raw data are saved to:
+
+```text
+data/raw/noaa_austin_2024.json
+data/raw/open_meteo_austin_2024.json
+```
+
+**Process and validate the weather data**
+
+After retrieving both datasets, run:
+
+```bash
+python3 code/weather/process_weather.py
+```
+
+The processing script standardizes the weather variables, merges the two sources by calendar date, constructs indicators for hot, freezing, and wet days, and validates the resulting dataset.
+
+The processed dataset is saved to:
+
+```text
+data/processed/austin_weather_2024.csv
+```
+
+The resulting dataset contains 366 daily observations for 2024 and is used in the subsequent weather analysis.
+
+If the processed weather dataset is already available, the data collection and processing steps can be skipped.
+
+For further details on the data sources, variables, processing workflow, and validation procedures, see the [Weather Data README](code/weather/README.md).
+
