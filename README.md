@@ -140,8 +140,6 @@ These results are interpreted as descriptive associations rather than causal eff
 [Read the full Crime Analysis Methodology →](artifacts/README/README-crime.md)
 ### <mark>3.4 Income-Level
 ### <mark>3.5 Weather
-### 3.5 Weather
-### 3.5 Weather
 The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations. Shelter events are matched to weather conditions by calendar date to examine how precipitation and temperature are associated with animal intake and outcome patterns.
 
 The analysis addresses seven research questions:
