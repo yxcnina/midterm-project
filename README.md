@@ -284,6 +284,7 @@ Most observed returns happened relatively quickly. About **86.9% of qualifying r
 ![Time until return](artifacts/repeat-intake-analysis/figures/02_return_time_distribution.png)
 
 The most common return pathway was **Adoption → Owner Surrender**, which accounted for approximately **71.0% of qualifying repeat-intake episodes**. After a repeat intake, **70.6%** of episodes were followed by another adoption.
+(artifacts/repeat-intake-analysis/figures/03_return_pathways.png)
 
 Most repeat-intake animals returned only once during 2024: about **89%** had exactly two observed intake episodes.
 
