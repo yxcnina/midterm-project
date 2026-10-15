@@ -1,0 +1,4 @@
+income_group,intake_events,episode_rows_matched,with_outcome_time,usable_outcomes,coverage_pct,status_usable,status_no_episode_row,status_no_recorded_outcome_time,status_invalid_outcome_time,status_outcome_before_intake,status_outside_2024_window,status_missing_outcome_type
+Low,2458,2458,2289,2288,93.08380797396258,2288,0,169,0,0,0,1
+Middle,2528,2528,2363,2362,93.43354430379746,2362,0,165,0,0,0,1
+High,1004,1004,939,939,93.52589641434263,939,0,65,0,0,0,0
