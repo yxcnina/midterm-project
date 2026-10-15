@@ -88,35 +88,21 @@ These coordinates are used by the Basic Analysis maps and the income and crime a
 
 #### American Community Survey (ACS)
 
-**Source:** [2024 ACS 5-Year API](https://api.census.gov/data/2024/acs/acs5)
+**Source:** [2024 ACS 5-Year, Table B19013](https://data.census.gov/table/ACSDT5Y2024.B19013)
 
-The American Community Survey provides neighborhood-level socioeconomic information.
+The analysis uses Census-tract median household income from Table B19013.
 
 **Important variables include:**
 
-- Population
-- Median Household Income
-- Census geographic identifiers
-- Other socioeconomic variables used in the final analysis
+- `B19013_001E` — Median Household Income
+- `B19013_001M` — Margin of Error
+- Census tract `GEOID`
 
-For this analysis, geocoded AAC intake locations are assigned to a Census geographic area, such as a Census tract. The corresponding ACS socioeconomic variables are then joined using the Census geographic identifier.
+#### 2024 TIGER/Line Census Tract Boundaries
 
-Conceptually:
+**Source:** [2024 TIGER/Line Texas Census Tracts](https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_48_tract.zip)
 
-```text
-AAC Found Location
-        ↓
-Latitude / Longitude
-        ↓
-Census Tract
-        ↓
-ACS Income and Population Data
-```
-
-
-
-
----
+The tract polygons are used to assign geocoded AAC intake locations to Census tracts before joining income data.
 
 ### 2.3 Additional Data for Crime
 
@@ -212,7 +198,33 @@ Composition percentages use all intake or outcome records for each species. Adop
 
 [Read the full Basic Analysis Methodology →](artifacts/README/README-basic-analysis.md#data-preparation-and-methodology)
 
-### <mark>3.3 Income-Level
+### 3.3 Income-Level
+The income analysis combines geocoded 2024 AAC stray cat and dog intake records with Census-tract household-income data.
+
+The team's existing latitude and longitude coordinates are spatially matched to 2024 TIGER/Line Census tract boundaries. Median household income is obtained from the 2024 ACS 5-Year Table B19013 and joined using each tract's 11-digit `GEOID`.
+
+The analysis uses **one intake event as the observation unit**. It keeps records that:
+
+- occurred in 2024,
+- have `Intake Type == "Stray"`,
+- are cats or dogs,
+- can be matched to a Census tract with numeric income information,
+- are not records referring to the AAC shelter address at `7201 Levander`.
+
+After these filters, the analysis contains **5,990 intake events across 269 observed Census tracts**. :chatgpt-content-reference{index="1"}
+
+The 269 observed tracts are divided into **Low, Middle, and High income groups** using tract-level median household income. Each tract receives equal weight when the income cutoffs are created, rather than weighting tracts by their number of AAC intake events. :chatgpt-content-reference{index="2"}
+
+The analysis then compares:
+
+- stray-intake counts,
+- cat and dog composition,
+- age composition within species,
+- recorded shelter outcomes,
+- return-to-owner shares for cats and dogs.
+
+These comparisons are descriptive and do not estimate the causal effect of neighborhood income on animal intake or shelter outcomes.
+
 ### 3.4 Crime
 The crime analysis combines 2024 Austin crime reports with geocoded AAC stray-intake records at the council-district level.
 
@@ -230,7 +242,7 @@ The analysis compares crime and stray-intake counts using:
 These results are interpreted as descriptive associations rather than causal effects.
 
 
-### <mark>3.5 Weather
+### 3.5 Weather
 The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations from NOAA and Open-Meteo. NOAA provides daily maximum temperature, minimum temperature, and precipitation observations from station `USW00013958`, while Open-Meteo provides daily mean relative humidity, mean cloud cover, and maximum wind speed for the selected Austin coordinates.
 
 The two weather datasets are standardized and merged one-to-one by calendar date to construct `austin_weather_2024.csv`. The processed dataset is validated for complete 2024 date coverage, duplicate dates, missing values, and consistency of weather measurements and indicators. AAC intake and outcome events are subsequently matched to the corresponding daily weather observations using their event dates.
@@ -322,7 +334,25 @@ These comparisons describe recorded events, not causal effects or an individual 
 
 [Read the full Basic Analysis Findings →](artifacts/README/README-basic-analysis.md#visualization-and-findings)
 
-### <mark>4.3 Income
+### 4.3 Income
+The income analysis includes **5,990 eligible stray cat and dog intake events across 269 observed Census tracts**.
+
+The Low- and Middle-income groups had similar numbers of recorded stray intakes, with **2,458** and **2,528** events, respectively, while the High-income group had substantially fewer, with **1,004** events.
+
+![Intake counts by income group](artifacts/income/figures/01_income_intake_counts.png)
+
+However, these are **raw intake counts rather than population-adjusted rates**, so the lower count in higher-income tracts should not be interpreted as evidence that higher-income areas necessarily have fewer stray animals. :chatgpt-content-reference{index="3"}
+
+Species composition also differed across income groups. Cats accounted for **67.33%** of eligible intakes in the Low-income group, compared with about **61%** in both the Middle- and High-income groups. Age composition, however, showed relatively small differences across income groups within each species. :chatgpt-content-reference{index="4"}
+
+Recorded outcomes did not show a simple monotonic relationship with income. Adoption was the most common outcome in every income group, but its share was highest in the Middle-income group at **63.34%**, compared with **59.00%** in Low-income tracts and **58.36%** in High-income tracts.
+
+![Recorded outcomes by income group](artifacts/income/figures/03_income_recorded_outcomes.png)
+
+Return-to-owner patterns also differed strongly by species. Dogs had substantially higher RTO shares than cats in every income group. For dogs, the RTO share was **9.52%**, **14.80%**, and **12.39%** across the Low-, Middle-, and High-income groups, while the corresponding cat shares were **1.47%**, **2.78%**, and **3.04%**. :chatgpt-content-reference{index="5"}
+
+Overall, the income analysis shows clear differences in the composition and outcomes of AAC stray-intake records across income groups, but the patterns are not consistently increasing or decreasing with income. The results should therefore be interpreted as descriptive neighborhood differences rather than a direct income effect.
+
 ### 4.4 Crime
 Across Austin's 10 council districts, districts with higher annual reported crime counts also tended to have more matched stray-animal intakes. The annual Pearson correlation between crime counts and stray-intake counts was **r = 0.6183**.
 
@@ -475,6 +505,25 @@ Detailed instructions:
 [Basic Analysis README](artifacts/README/README-basic-analysis.md#reproducing-the-analysis)
 
 #### 7.5.3 Income Analysis
+The income analysis uses the shared cleaned, geocoded, and episode-level AAC datasets together with the saved Census tract income and boundary files.
+
+To rebuild the income-specific processed datasets and run the full analysis:
+
+```
+python code/income/clean_income.py
+python code/income/merge_income.py
+python code/income/analyze_income.py
+python code/income/test_income.py
+```
+The analysis script generates the Income summary tables and figures under:
+```
+artifacts/income/
+```
+If the committed Income processed datasets are already available, the analysis can be reproduced directly with:
+```
+python code/income/analyze_income.py
+python code/income/test_income.py
+```
 #### 7.5.4 Crime Analysis
 Build the council-district-level crime and stray-intake datasets:
 ```
