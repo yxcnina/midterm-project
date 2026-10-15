@@ -198,6 +198,42 @@ However, the relationship became substantially weaker after controlling for pers
 Overall, the raw data show a positive relationship between crime counts and stray-animal intakes across districts, but the evidence becomes much weaker after accounting for district and month differences. The results therefore do not support a causal interpretation that crime increases stray-animal intake.
 ### <mark>4.4 Income-Level
 ### <mark>4.5 Weather
+The weather analysis reveals several descriptive differences in Austin Animal Center (AAC) intake and outcome patterns across rainfall and temperature conditions during 2024. The findings cover daily intake volume, stray intake and adoption outcome proportions, differences between dogs and cats, and the broader composition of intake and outcome events.
+
+**Rainfall and Daily Intake Volume (Q1).** Average daily intake counts were **32.57 on dry days** and **31.56 on wet days**, a difference of approximately **1.01 fewer intake events per day on wet days**. The difference was relatively small compared with the variation in daily intake counts within each group. Treating the one date without recorded intakes as a zero-intake day did not change the direction of this comparison.
+
+**Rainfall and Stray Intake Proportions (Q2).** Stray intakes represented **68.90% of intake events on dry days**, compared with **72.01% on wet days**, a **3.11-percentage-point increase**. Thus, although the average daily intake count was slightly lower on wet days, stray animals accounted for a larger share of recorded intakes.
+
+**Extreme Heat and Adoption Outcome Proportions (Q3).** Adoptions represented **61.95% of valid outcome events on non-hot days** and **65.11% on hot days**, a **3.16-percentage-point increase**. This measures the composition of recorded shelter outcomes, not the probability that an individual animal entering AAC will eventually be adopted.
+
+**Animal-Type Heterogeneity (Q4).** Separate comparisons for dogs and cats reveal that the aggregate weather-related patterns are not uniform across animal types.
+
+- **Daily intake volume (Q4a):** Average daily dog intakes decreased from **14.31 on dry days to 13.81 on wet days**, while average daily cat intakes decreased from **16.60 to 16.43**. Both differences were modest.
+- **Stray intake proportions (Q4b):** The stray share increased from **60.01% to 64.19% for dogs** (**+4.18 percentage points**) but from **81.72% to 82.33% for cats** (**+0.61 percentage points**). The wet-day increase was therefore more pronounced among dogs, although cats had a higher stray intake share under both weather conditions.
+- **Adoption outcome proportions (Q4c):** The adoption share increased from **65.83% to 67.28% for dogs** (**+1.45 percentage points**) and from **61.65% to 67.20% for cats** (**+5.55 percentage points**) between non-hot and hot days. The hot-day difference was substantially larger among cats.
+
+![Adoption outcome proportions for dogs and cats](artifacts/weather_analysis/figures/04_animal_type/q4c_adoption_proportions_by_animal_type.png)
+
+These findings suggest that aggregate weather comparisons can conceal meaningful descriptive differences between animal groups.
+
+**Intake Type Composition (Q5).** Extending the analysis to all six intake types reveals differences across rainfall, heat, cold, and freezing conditions. The `Stray` share was **3.11 percentage points higher on wet days** but **11.12 percentage points lower on cold days**. On cold days, `Owner Surrender` and `Public Assist` represented larger shares of intake events, increasing by **6.53** and **3.22 percentage points**, respectively. In contrast, the stray intake share was nearly identical between hot and non-hot days.
+
+![Weather-related differences in intake type composition](artifacts/weather_analysis/figures/summary_heatmaps/q5_intake_type_summary_heatmap.png)
+
+**Intake Condition Composition (Q6).** The distribution of recorded intake conditions was broadly similar between wet and dry days, but more noticeable differences appeared under extreme heat. On hot days, the share of intakes classified as `Normal` was **6.12 percentage points lower**, while the shares classified as `Sick` and `Neonatal` were **2.54** and **2.30 percentage points higher**, respectively, compared with non-hot days.
+
+![Weather-related differences in intake condition composition](artifacts/weather_analysis/figures/summary_heatmaps/q6_intake_condition_summary_heatmap.png)
+
+**Outcome Type Composition (Q7).** Across the nine non-missing outcome categories, the adoption share was higher in the weather-exposed group in all four comparisons: **+1.21 percentage points on wet days**, **+3.16 on hot days**, **+4.02 on cold days**, and **+6.38 on freezing days**, relative to their respective reference groups. On cold days, the `Transfer` share was also **5.63 percentage points lower** than on non-cold days. The freezing-day results require particular caution because they are based on only **185 valid outcome events**.
+
+![Weather-related differences in outcome type composition](artifacts/weather_analysis/figures/summary_heatmaps/q7_outcome_type_summary_heatmap.png)
+
+**Overall Interpretation.** Weather conditions are associated with differences in AAC intake volume, intake composition, recorded intake conditions, and outcome composition. These relationships vary across weather indicators and animal types. Rainfall-related differences in daily intake volume were modest, while some temperature-related differences in event composition were more pronounced.
+
+All findings are **descriptive rather than causal**. Seasonal variation, shelter operations, differences in weather-group sample sizes, and other unobserved factors may contribute to the observed patterns.
+
+[Read the full Weather Analysis Findings →](code/weather_analysis/README.md)
+
 ## 5. Limitations
 This project has several important limitations.
 1. The main analysis is limited to 2024.
