@@ -421,6 +421,8 @@ This project has several important limitations.
    Some Found Location records cannot be reliably mapped to a specific Census geography, reducing the sample available for neighborhood-level analysis.
 5. Neighborhood-level relationships are descriptive.
    Associations between income, crime, weather, and animal intake patterns should not be interpreted as causal effects.
+6. Weather conditions are classified using binary thresholds, which simplify continuous variation in temperature and precipitation. The hot, cold,       and freezing indicators are evaluated in separate comparisons rather than as mutually exclusive weather categories. In the 2024 data, no days are     classified as both hot and cold or as both hot and freezing. However, all seven freezing days are also classified as cold days because the            freezing threshold is more restrictive. Therefore, the freezing-day results should be interpreted as a sensitivity analysis of the cold-weather       findings rather than independent evidence.
+7. Weather comparisons do not fully account for seasonal variation, concurrent weather conditions, or differences in the timing and location of          animal exposure. Daily weather observations may not reflect the conditions experienced by individual animals before intake or outcome events. In      addition, the small number of freezing days limits the reliability and generalizability of comparisons involving freezing conditions.
 ## 6. Extensions
 This project could be extended in several directions:
 1. Use multiple years of AAC intake and outcome data.
