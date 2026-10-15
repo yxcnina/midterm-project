@@ -5,3 +5,4 @@ shapely>=2.0,<3
 numpy
 scipy
 statsmodels
+geopandas==1.2.0
