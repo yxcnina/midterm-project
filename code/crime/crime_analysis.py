@@ -54,13 +54,33 @@ def load_and_validate():
         raise ValueError("Input files contain missing values")
     if monthly.duplicated(keys).any() or annual.duplicated("district").any():
         raise ValueError("Repeated geography/month combinations")
-    if any((monthly[measurements] < 0).any()) or any((annual[measurements] < 0).any()):
-        raise ValueError("Counts cannot be negative")
-    if not (monthly[measurements] % 1 == 0).all().all():
-        raise ValueError("Monthly counts must be integers")
 
-    monthly["district"] = monthly["district"].astype(int)
-    annual["district"] = annual["district"].astype(int)
+    # Reject malformed identifiers and fractional/non-numeric counts before
+    # converting types: astype(int) alone would silently truncate values.
+    for label, frame, columns in (
+        ("Monthly", monthly, keys + measurements),
+        ("Annual", annual, ["district"] + measurements),
+    ):
+        for column in columns:
+            try:
+                values = pd.to_numeric(frame[column], errors="raise")
+            except (TypeError, ValueError) as exc:
+                raise ValueError(f"{label} {column} must be numeric") from exc
+            if not np.isfinite(values.to_numpy(dtype=float)).all():
+                raise ValueError(f"{label} {column} contains non-finite values")
+            if not (values % 1 == 0).all():
+                raise ValueError(f"{label} {column} must contain whole numbers")
+            if column in measurements and (values < 0).any():
+                raise ValueError("Counts cannot be negative")
+            frame[column] = values.astype("int64")
+
+    if not monthly["district"].between(1, 10).all():
+        raise ValueError("Monthly districts must be from 1 through 10")
+    if not monthly["month"].between(1, 12).all():
+        raise ValueError("Monthly months must be from 1 through 12")
+    if not annual["district"].between(1, 10).all():
+        raise ValueError("Annual districts must be from 1 through 10")
+
     expected = pd.MultiIndex.from_product(
         [range(1, 11), range(1, 13)], names=keys
     )

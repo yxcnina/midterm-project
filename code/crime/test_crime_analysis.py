@@ -104,6 +104,33 @@ class TestCrimeAnalysis(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Annual totals disagree"):
             crime_analysis.load_and_validate()
 
+    def test_fractional_annual_count_is_rejected(self):
+        self.annual["crime_count"] = self.annual["crime_count"].astype(float)
+        self.annual.loc[0, "crime_count"] += 0.5
+        self._save_inputs()
+        with self.assertRaisesRegex(ValueError, "whole numbers"):
+            crime_analysis.load_and_validate()
+
+    def test_fractional_month_identifier_is_rejected(self):
+        self.monthly["month"] = self.monthly["month"].astype(float)
+        self.monthly.loc[0, "month"] = 1.5
+        self._save_inputs()
+        with self.assertRaisesRegex(ValueError, "whole numbers"):
+            crime_analysis.load_and_validate()
+
+    def test_text_in_count_is_rejected(self):
+        self.monthly["crime_count"] = self.monthly["crime_count"].astype(object)
+        self.monthly.loc[0, "crime_count"] = "not-a-count"
+        self._save_inputs()
+        with self.assertRaisesRegex(ValueError, "must be numeric"):
+            crime_analysis.load_and_validate()
+
+    def test_out_of_range_district_is_rejected(self):
+        self.monthly.loc[0, "district"] = 11
+        self._save_inputs()
+        with self.assertRaisesRegex(ValueError, "districts must be from 1 through 10"):
+            crime_analysis.load_and_validate()
+
     def test_missing_input_file_is_rejected(self):
         self.monthly_file.unlink()
         with self.assertRaises(FileNotFoundError):
