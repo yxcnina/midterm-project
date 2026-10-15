@@ -140,7 +140,9 @@ These results are interpreted as descriptive associations rather than causal eff
 [Read the full Crime Analysis Methodology →](artifacts/README/README-crime.md)
 ### <mark>3.4 Income-Level
 ### <mark>3.5 Weather
-The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations. Each shelter event is matched to the weather observation for its calendar date using a many-to-one merge. The analysis uses 11,815 intake events, 11,812 outcome events with non-missing outcome types, and weather observations covering all 366 days of 2024.
+The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations from NOAA and Open-Meteo. NOAA provides daily maximum temperature, minimum temperature, and precipitation observations from station `USW00013958`, while Open-Meteo provides daily mean relative humidity, mean cloud cover, and maximum wind speed for the selected Austin coordinates.
+
+The two weather datasets are standardized and merged one-to-one by calendar date to construct `austin_weather_2024.csv`. The processed dataset is validated for complete 2024 date coverage, duplicate dates, missing values, and consistency of weather measurements and indicators. AAC intake and outcome events are subsequently matched to the corresponding daily weather observations using their event dates.
 
 Weather conditions are classified using daily precipitation and temperature:
 
