@@ -140,6 +140,39 @@ These results are interpreted as descriptive associations rather than causal eff
 [Read the full Crime Analysis Methodology →](artifacts/README/README-crime.md)
 ### <mark>3.4 Income-Level
 ### <mark>3.5 Weather
+### 3.5 Weather
+### 3.5 Weather
+The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations. Shelter events are matched to weather conditions by calendar date to examine how precipitation and temperature are associated with animal intake and outcome patterns.
+
+The analysis addresses seven research questions:
+
+1. **Q1 — Rainfall and Daily Intake Volume:** Do average daily animal intake counts differ between wet and dry days?
+
+2. **Q2 — Rainfall and Stray Intake Proportions:** Does the proportion of stray intakes differ between wet and dry days?
+
+3. **Q3 — Extreme Heat and Adoption Outcome Proportions:** Does the proportion of adoption outcomes differ between extremely hot and non-hot days?
+
+4. **Q4 — Animal Type Heterogeneity:** Do weather-related intake and outcome patterns differ between dogs and cats? This question includes three comparisons:
+   - **Q4a:** Do average daily intake counts on wet and dry days differ between dogs and cats?
+   - **Q4b:** Do stray intake proportions on wet and dry days differ between dogs and cats?
+   - **Q4c:** Do adoption outcome proportions on hot and non-hot days differ between dogs and cats?
+
+5. **Q5 — Intake Type Composition:** How does the distribution of all recorded intake types differ across rainfall, extreme heat, cold weather, and freezing-day conditions?
+
+6. **Q6 — Intake Condition Composition:** How does the distribution of all recorded intake conditions differ across the same four weather comparisons?
+
+7. **Q7 — Outcome Type Composition:** How does the distribution of all recorded outcome types differ across the same four weather comparisons?
+
+The analysis uses **11,815 intake events**, **11,812 outcome events with non-missing outcome types**, and daily weather observations covering all **366 days of 2024**. The animal-type heterogeneity analysis focuses specifically on dogs and cats.
+
+Daily intake volume is examined using intake counts aggregated by date. Intake and outcome composition is measured using event-level category proportions. Weather-related differences in proportions are reported in percentage points, calculated as the share in the weather-exposed group minus the share in the corresponding reference group.
+
+The extended analyses compare all recorded intake types, intake conditions, and outcome types across four weather classifications. Three summary heatmaps consolidate these comparisons to highlight differences in event composition.
+
+All findings are interpreted as **descriptive associations rather than causal effects**, since weather conditions may coincide with seasonal patterns, shelter operations, and other unobserved factors.
+
+[Read the full Weather Analysis Methodology →](code/weather_analysis/README.md)
+
 ## 4. Main Findings
 ### 4.1 Repeat Intakes
 
