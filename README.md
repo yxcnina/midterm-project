@@ -85,7 +85,7 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 </tr>
 <tr>
 <td>NOAA Daily Weather Observations</td>
-<td><a href="https://www.ncei.noaa.gov/access/services/data/v1">NOAA NCEI Daily Summaries API</a></td>
+<td><a href="https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation">NOAA NCEI Daily Summaries API</a></td>
 <td><code>TMAX</code> (daily maximum temperature), <code>TMIN</code> (daily minimum temperature), <code>PRCP</code> (daily precipitation)</td>
 </tr>
 <tr>
