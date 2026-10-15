@@ -1437,3 +1437,452 @@ The figure files are:
 All input and output paths are resolved relative to the project directory. The analysis generates the statistics and figures programmatically without requiring manual modifications to the datasets.
 
 The required Python packages are listed in the project's root `requirements.txt` file.
+
+
+## Research Question 7: Outcome Type Composition Across Weather Conditions
+
+### Research Objectives
+
+The preceding analyses examine how weather conditions are associated with animal intake counts, intake types, intake conditions, and adoption outcome proportions.
+
+However, focusing only on adoption outcomes may conceal changes in other types of shelter exits.
+
+To investigate this possibility, Q7 examines the complete distribution of recorded outcome types under different weather conditions.
+
+Four related comparisons are conducted:
+
+- **Q7a:** Does the composition of animal outcome types differ between dry and wet days?
+- **Q7b:** Does the composition of animal outcome types differ between hot and non-hot days?
+- **Q7c:** Does the composition of animal outcome types differ between cold and non-cold days?
+- **Q7c Sensitivity Analysis:** Are the cold-weather patterns similar when a stricter freezing-day threshold is used?
+
+These comparisons extend Q3 by examining the full outcome distribution rather than adoption outcomes alone. They also parallel the intake type and intake condition composition analyses in Q5 and Q6.
+
+### Data and Methodology
+
+We use the same cleaned Austin Animal Center (AAC) outcome dataset and processed daily Austin weather dataset used in the preceding analyses.
+
+The input datasets are:
+
+- `data/processed/aac_outcomes_clean.csv`
+- `data/processed/austin_weather_2024.csv`
+
+The cleaned outcome dataset contains **11,822 outcome events** recorded in 2024.
+
+Of these events, ten have missing values in the `Outcome Type` column and are excluded from the analysis.
+
+The remaining **11,812 valid outcome events** are successfully matched to daily weather observations using their outcome dates. No valid outcome events remain unmatched.
+
+#### Outcome Type Classification
+
+The analysis retains all nine non-missing outcome type categories:
+
+1. `Adoption`
+2. `Transfer`
+3. `Return to Owner`
+4. `Euthanasia`
+5. `Died`
+6. `Rto-Adopt`
+7. `Disposal`
+8. `Missing`
+9. `Lost`
+
+The category `Missing` is a recorded outcome type and is distinct from an actual missing value (`NaN`) in the dataset.
+
+Consistent with Q3, `Rto-Adopt` remains separate from `Adoption`.
+
+No outcome categories are discarded from the statistical comparisons after excluding the ten records with missing outcome classifications.
+
+#### Weather Classifications
+
+Four weather comparisons are conducted.
+
+**Q7a — Rainfall**
+
+- Dry days: daily precipitation equals 0 mm.
+- Wet days: daily precipitation exceeds 0 mm.
+
+**Q7b — Extreme Heat**
+
+- Hot days: daily maximum temperature is at least 35°C.
+- Non-hot days: daily maximum temperature is below 35°C.
+
+**Q7c — Cold Weather**
+
+- Cold days: daily minimum temperature is at most 5°C.
+- Non-cold days: daily minimum temperature exceeds 5°C.
+
+**Q7c Sensitivity Analysis — Freezing Weather**
+
+- Freezing days: daily minimum temperature is at most 0°C.
+- Non-freezing days: daily minimum temperature exceeds 0°C.
+
+The 5°C threshold is used for the main cold-weather comparison because the stricter 0°C threshold produces a substantially smaller sample.
+
+#### Analytical Method
+
+Individual outcome events are matched to the weather conditions recorded on their outcome dates.
+
+For each weather group, the total number of valid outcome events is calculated.
+
+We then count the events belonging to each outcome type and calculate their proportions:
+
+**Outcome type proportion = (Outcome events of a given type / Total valid outcome events in the weather group) × 100%.**
+
+For each outcome category, we also calculate the percentage-point difference between the exposed and reference weather groups.
+
+The differences are defined as:
+
+- Q7a: Wet minus Dry.
+- Q7b: Hot minus Non-Hot.
+- Q7c: Cold minus Non-Cold.
+- Sensitivity analysis: Freezing minus Non-Freezing.
+
+Each comparison uses the same 11,812 valid outcome events, partitioned according to its respective weather indicator.
+
+The analysis is descriptive. It compares the composition of recorded outcome events and does not estimate causal effects or individual animals' probabilities of adoption.
+
+### Findings
+
+#### Q7a: Rainfall and Outcome Type Composition
+
+The rainfall comparison includes **9,437 outcome events on dry days** and **2,375 outcome events on wet days**.
+
+| Outcome Type | Dry Events | Dry Share | Wet Events | Wet Share | Wet − Dry (pp) |
+|---|---:|---:|---:|---:|---:|
+| Adoption | 5,914 | 62.67% | 1,517 | 63.87% | +1.21 |
+| Transfer | 2,096 | 22.21% | 524 | 22.06% | −0.15 |
+| Return to Owner | 664 | 7.04% | 170 | 7.16% | +0.12 |
+| Euthanasia | 466 | 4.94% | 100 | 4.21% | −0.73 |
+| Died | 123 | 1.30% | 26 | 1.09% | −0.21 |
+| Rto-Adopt | 100 | 1.06% | 25 | 1.05% | −0.01 |
+| Disposal | 66 | 0.70% | 12 | 0.51% | −0.19 |
+| Missing | 6 | 0.06% | 1 | 0.04% | −0.02 |
+| Lost | 2 | 0.02% | 0 | 0.00% | −0.02 |
+| **Total** | **9,437** | **100.00%** | **2,375** | **100.00%** | **0.00** |
+
+*Note: Percentages and percentage-point differences are rounded to two decimal places.*
+
+The overall outcome type distribution is broadly similar on dry and wet days.
+
+Adoption accounts for approximately **62.67%** of valid outcome events on dry days and **63.87%** on wet days, a wet-minus-dry difference of approximately **+1.21 percentage points**.
+
+Euthanasia represents a slightly smaller proportion on wet days, decreasing from **4.94%** to **4.21%**, a difference of approximately **−0.73 percentage points**.
+
+Transfer and Return to Owner exhibit relatively small changes.
+
+The remaining categories also show limited differences, although their smaller event counts require cautious interpretation.
+
+**Figure 7a. Outcome Type Composition on Dry and Wet Days (2024)**
+
+![Outcome Type Composition on Dry and Wet Days](../../artifacts/weather_analysis/figures/07_outcome_type/q7a_rainfall_composition.png)
+
+Figure 7a compares the outcome type distributions on dry and wet days.
+
+Adoption remains the dominant recorded outcome type in both groups, followed by Transfer and Return to Owner.
+
+The broad similarity between the two distributions suggests that rainfall is associated with relatively modest differences in recorded outcome composition.
+
+**Figure 7b. Wet-Minus-Dry Differences in Outcome Type Shares (2024)**
+
+![Wet-Minus-Dry Outcome Type Share Differences](../../artifacts/weather_analysis/figures/07_outcome_type/q7a_rainfall_differences.png)
+
+Figure 7b presents the percentage-point differences between wet and dry days.
+
+Positive values indicate a larger outcome type share on wet days, while negative values indicate a smaller share.
+
+The largest positive difference occurs in Adoption, while the most notable negative difference occurs in Euthanasia.
+
+**Interpretation**
+
+The results suggest that rainfall is associated with only small descriptive changes in AAC outcome composition.
+
+The higher Adoption share on wet days does not necessarily imply that rainfall increases adoption activity or improves an individual animal's chances of adoption.
+
+Instead, the result describes how adoption events are distributed relative to other recorded outcomes.
+
+---
+
+#### Q7b: Extreme Heat and Outcome Type Composition
+
+The extreme-heat comparison includes **8,221 outcome events on non-hot days** and **3,591 outcome events on hot days**.
+
+| Outcome Type | Non-Hot Events | Non-Hot Share | Hot Events | Hot Share | Hot − Non-Hot (pp) |
+|---|---:|---:|---:|---:|---:|
+| Adoption | 5,093 | 61.95% | 2,338 | 65.11% | +3.16 |
+| Transfer | 1,878 | 22.84% | 742 | 20.66% | −2.18 |
+| Return to Owner | 598 | 7.27% | 236 | 6.57% | −0.70 |
+| Euthanasia | 405 | 4.93% | 161 | 4.48% | −0.44 |
+| Died | 98 | 1.19% | 51 | 1.42% | +0.23 |
+| Rto-Adopt | 99 | 1.20% | 26 | 0.72% | −0.48 |
+| Disposal | 43 | 0.52% | 35 | 0.97% | +0.45 |
+| Missing | 5 | 0.06% | 2 | 0.06% | −0.01 |
+| Lost | 2 | 0.02% | 0 | 0.00% | −0.02 |
+| **Total** | **8,221** | **100.00%** | **3,591** | **100.00%** | **0.00** |
+
+*Note: Percentages and percentage-point differences are rounded to two decimal places.*
+
+The extreme-heat comparison shows larger differences in outcome composition than the rainfall comparison.
+
+The Adoption share increases from **61.95%** on non-hot days to **65.11%** on hot days, a difference of approximately **+3.16 percentage points**.
+
+In contrast, the Transfer share decreases from **22.84%** to **20.66%**, a difference of approximately **−2.18 percentage points**.
+
+Return to Owner and Euthanasia also represent somewhat smaller shares on hot days.
+
+Disposal and Died represent slightly larger shares, although their changes are relatively small and should not be interpreted as evidence of weather-induced mortality.
+
+**Figure 7c. Outcome Type Composition on Hot and Non-Hot Days (2024)**
+
+![Outcome Type Composition on Hot and Non-Hot Days](../../artifacts/weather_analysis/figures/07_outcome_type/q7b_heat_composition.png)
+
+Figure 7c presents the complete outcome type distribution under hot and non-hot conditions.
+
+Adoption remains the largest category under both weather conditions. However, it accounts for a larger share on hot days.
+
+Transfer accounts for a correspondingly smaller share.
+
+**Figure 7d. Hot-Minus-Non-Hot Differences in Outcome Type Shares (2024)**
+
+![Hot-Minus-Non-Hot Outcome Type Share Differences](../../artifacts/weather_analysis/figures/07_outcome_type/q7b_heat_differences.png)
+
+Figure 7d highlights the changes in outcome type shares associated with hot days.
+
+The largest positive difference is observed in Adoption, while the largest negative difference is observed in Transfer.
+
+**Interpretation**
+
+These findings extend Q3 by showing that the higher overall Adoption share on hot days is accompanied by changes in other outcome categories, particularly a lower Transfer share.
+
+Because the outcome categories collectively account for all valid outcome events, increases in the share of one category must be accompanied by decreases in the combined shares of other categories.
+
+The observed differences should therefore be interpreted as changes in the relative composition of shelter outcomes rather than direct evidence that hot weather causes more adoptions or fewer transfers.
+
+---
+
+#### Q7c: Cold Weather and Outcome Type Composition
+
+The main cold-weather comparison defines a cold day as one with a daily minimum temperature at or below 5°C.
+
+The analysis includes **10,928 outcome events on non-cold days** and **884 outcome events on cold days**.
+
+| Outcome Type | Non-Cold Events | Non-Cold Share | Cold Events | Cold Share | Cold − Non-Cold (pp) |
+|---|---:|---:|---:|---:|---:|
+| Adoption | 6,842 | 62.61% | 589 | 66.63% | +4.02 |
+| Transfer | 2,470 | 22.60% | 150 | 16.97% | −5.63 |
+| Return to Owner | 753 | 6.89% | 81 | 9.16% | +2.27 |
+| Euthanasia | 532 | 4.87% | 34 | 3.85% | −1.02 |
+| Died | 139 | 1.27% | 10 | 1.13% | −0.14 |
+| Rto-Adopt | 111 | 1.02% | 14 | 1.58% | +0.57 |
+| Disposal | 72 | 0.66% | 6 | 0.68% | +0.02 |
+| Missing | 7 | 0.06% | 0 | 0.00% | −0.06 |
+| Lost | 2 | 0.02% | 0 | 0.00% | −0.02 |
+| **Total** | **10,928** | **100.00%** | **884** | **100.00%** | **0.00** |
+
+*Note: Percentages and percentage-point differences are rounded to two decimal places.*
+
+Cold weather is associated with more pronounced descriptive differences in outcome composition than rainfall or extreme heat.
+
+Adoption accounts for **62.61%** of recorded outcomes on non-cold days and **66.63%** on cold days, representing an increase of approximately **+4.02 percentage points**.
+
+Transfer shows the largest negative difference, declining from **22.60%** to **16.97%**, or approximately **−5.63 percentage points**.
+
+Return to Owner increases from **6.89%** to **9.16%**, a difference of approximately **+2.27 percentage points**.
+
+Euthanasia decreases by approximately **1.02 percentage points**, while the remaining categories show smaller differences.
+
+**Figure 7e. Outcome Type Composition on Cold and Non-Cold Days (2024)**
+
+![Outcome Type Composition on Cold and Non-Cold Days](../../artifacts/weather_analysis/figures/07_outcome_type/q7c_cold_composition.png)
+
+Figure 7e compares the complete outcome type distributions on cold and non-cold days.
+
+The cold-day distribution contains relatively larger shares of Adoption and Return to Owner, together with a smaller Transfer share.
+
+**Figure 7f. Cold-Minus-Non-Cold Differences in Outcome Type Shares (2024)**
+
+![Cold-Minus-Non-Cold Outcome Type Share Differences](../../artifacts/weather_analysis/figures/07_outcome_type/q7c_cold_differences.png)
+
+Figure 7f displays the percentage-point differences between cold and non-cold days.
+
+Transfer exhibits the largest negative difference, while Adoption and Return to Owner exhibit the largest positive differences.
+
+**Interpretation**
+
+Compared with the rainfall and extreme-heat analyses, the cold-weather comparison reveals more substantial shifts in the distribution of recorded outcome types.
+
+These differences may reflect seasonal changes, shelter operations, adoption opportunities, or other factors that coincide with colder weather.
+
+Because the analysis does not control for these alternative explanations, the results should not be interpreted as causal weather effects.
+
+---
+
+#### Q7c Sensitivity Analysis: Freezing vs. Non-Freezing Days
+
+To investigate the sensitivity of the cold-weather findings to the temperature threshold, we repeat the analysis using a stricter freezing-day definition.
+
+A freezing day is defined as a day when the minimum temperature is at or below 0°C.
+
+The comparison includes **11,627 valid outcome events on non-freezing days** and **185 valid outcome events on freezing days**.
+
+| Outcome Type | Non-Freezing Events | Non-Freezing Share | Freezing Events | Freezing Share | Freezing − Non-Freezing (pp) |
+|---|---:|---:|---:|---:|---:|
+| Adoption | 7,303 | 62.81% | 128 | 69.19% | +6.38 |
+| Transfer | 2,588 | 22.26% | 32 | 17.30% | −4.96 |
+| Return to Owner | 817 | 7.03% | 17 | 9.19% | +2.16 |
+| Euthanasia | 560 | 4.82% | 6 | 3.24% | −1.57 |
+| Died | 149 | 1.28% | 0 | 0.00% | −1.28 |
+| Rto-Adopt | 124 | 1.07% | 1 | 0.54% | −0.53 |
+| Disposal | 77 | 0.66% | 1 | 0.54% | −0.12 |
+| Missing | 7 | 0.06% | 0 | 0.00% | −0.06 |
+| Lost | 2 | 0.02% | 0 | 0.00% | −0.02 |
+| **Total** | **11,627** | **100.00%** | **185** | **100.00%** | **0.00** |
+
+*Note: Percentages and percentage-point differences are rounded to two decimal places.*
+
+The freezing-day comparison produces several patterns that are consistent with the main cold-weather analysis.
+
+The Adoption share increases from **62.81%** on non-freezing days to **69.19%** on freezing days, a difference of approximately **+6.38 percentage points**.
+
+Transfer decreases from **22.26%** to **17.30%**, a difference of approximately **−4.96 percentage points**.
+
+Return to Owner increases by approximately **+2.16 percentage points**, while Euthanasia declines by approximately **−1.57 percentage points**.
+
+These four categories exhibit the same directions of differences as in the main 5°C cold-weather comparison.
+
+However, the magnitudes of the differences change under the stricter threshold, and not all smaller outcome categories retain the same direction.
+
+**Figure 7g. Outcome Type Composition on Freezing and Non-Freezing Days (2024)**
+
+![Outcome Type Composition on Freezing and Non-Freezing Days](../../artifacts/weather_analysis/figures/07_outcome_type/q7c_freezing_sensitivity_composition.png)
+
+Figure 7g compares outcome type composition under the stricter freezing-day definition.
+
+Adoption represents a larger share of outcomes on freezing days, while Transfer accounts for a smaller share.
+
+**Figure 7h. Freezing-Minus-Non-Freezing Differences in Outcome Type Shares (2024)**
+
+![Freezing-Minus-Non-Freezing Outcome Type Share Differences](../../artifacts/weather_analysis/figures/07_outcome_type/q7c_freezing_sensitivity_differences.png)
+
+Figure 7h presents the percentage-point differences under the freezing-day definition.
+
+The direction of the differences in Adoption, Transfer, and Return to Owner is consistent with the main cold-weather comparison.
+
+**Sensitivity Analysis Interpretation**
+
+The freezing-day results provide partial support for the descriptive patterns observed under the 5°C threshold.
+
+However, the freezing-day group contains only **185 outcome events**, substantially fewer than the **884 events** in the main cold-day group.
+
+Consequently, the observed proportions may be particularly sensitive to small changes in the number of recorded events.
+
+The 0°C results should therefore be interpreted as a supplementary sensitivity analysis rather than as independent confirmation of a causal or statistically significant relationship.
+
+---
+
+### Overall Interpretation
+
+Q7 examines whether the distribution of recorded AAC outcome types differs across weather conditions.
+
+Three main findings emerge from the analysis.
+
+First, **rainfall is associated with relatively small differences in outcome composition**. Adoption represents a slightly larger share of outcomes on wet days, while Euthanasia represents a slightly smaller share.
+
+Second, **extreme heat is associated with a larger Adoption share and a smaller Transfer share**. These differences extend the original Q3 finding by showing how the distribution of non-adoption outcomes changes alongside the Adoption category.
+
+Third, **cold weather is associated with the most pronounced descriptive differences among the three main comparisons**. Adoption and Return to Owner represent larger shares of outcomes on cold days, while Transfer represents a substantially smaller share.
+
+The freezing-day sensitivity analysis shows broadly similar directional patterns for these major outcome categories, although the smaller sample size makes the estimates less stable.
+
+Together, these findings demonstrate that examining adoption outcomes alone provides only a partial picture of weather-related variation in shelter outcome patterns.
+
+By considering all recorded outcome types, Q7 provides a more complete description of how shelter exit composition varies across rainfall and temperature conditions.
+
+Importantly, the direction and magnitude of the differences depend on the specific weather condition and outcome category being examined.
+
+The results do not demonstrate that any weather condition directly causes a particular outcome.
+
+### Limitations
+
+Several limitations apply to the Q7 analysis.
+
+First, all comparisons are descriptive. The analyses do not establish causal effects of rainfall, heat, or cold weather on animal outcomes.
+
+Second, the unit of observation is a recorded outcome event rather than a unique animal. Animals may contribute multiple records over time, and outcome events recorded on the same date may be correlated.
+
+Third, the analysis measures the composition of recorded outcome events. It does not measure the probability that an animal entering the shelter will eventually experience a particular outcome.
+
+Fourth, differences in outcome composition may be influenced by seasonal patterns, weekdays, holidays, shelter staffing, shelter capacity, adoption programs, and other operational factors.
+
+Fifth, the weather indicators simplify continuous weather conditions into binary categories. They do not directly measure temperature intensity, the duration of heat or cold events, or the effects of weather conditions on preceding days.
+
+Sixth, the main cold-weather comparison contains fewer outcome events than the rainfall and extreme-heat comparisons. The stricter freezing-day comparison contains only 185 outcome events, so its estimates are especially sensitive to small changes in event counts.
+
+Seventh, several outcome categories, including Lost, Missing, Disposal, and Rto-Adopt, have relatively small numbers of observations. Their percentage-point differences should be interpreted cautiously.
+
+Eighth, the analysis excludes ten records with missing outcome types. The recorded category `Missing` is retained because it is an explicit category in the dataset rather than a null value.
+
+Finally, the analysis does not conduct formal statistical significance tests or account for multiple comparisons across outcome categories and weather conditions.
+
+Therefore, the observed percentage-point differences should not be interpreted as evidence of statistically significant weather effects.
+
+### Possible Extensions
+
+Future research could examine whether the observed outcome composition differences persist after accounting for seasonality, weekdays, holidays, and shelter operational factors.
+
+Using a longer time series covering multiple years could also help determine whether the patterns observed in 2024 are persistent.
+
+Additional analyses could investigate continuous temperature and precipitation measures rather than relying exclusively on binary weather classifications.
+
+Lagged weather measures could be incorporated to examine whether shelter outcomes are associated with weather conditions during preceding days.
+
+Animal-level characteristics, including age, species, health condition, and previous shelter histories, could provide additional insight into differences in recorded outcome patterns.
+
+Finally, linking individual intake and outcome records could support analyses of time to adoption, transfer, or other outcomes. This would allow future research to investigate animal-level outcome probabilities rather than relying solely on the composition of recorded outcome events.
+
+### Reproducibility
+
+All Q7 analyses are implemented in:
+
+`code/weather_analysis/analyze_outcome_type_composition.py`
+
+From the project root directory, run:
+
+```bash
+python3 code/weather_analysis/analyze_outcome_type_composition.py
+```
+
+The script reads the following processed datasets:
+
+- `data/processed/aac_outcomes_clean.csv`
+- `data/processed/austin_weather_2024.csv`
+
+The script validates the outcome event counts, excludes ten records with missing outcome types, matches all valid outcome events to daily weather observations, and computes the outcome type distributions under four weather comparisons.
+
+It produces eight summary tables:
+
+- `artifacts/weather_analysis/tables/q7a_rainfall_composition.csv`
+- `artifacts/weather_analysis/tables/q7a_rainfall_differences.csv`
+- `artifacts/weather_analysis/tables/q7b_heat_composition.csv`
+- `artifacts/weather_analysis/tables/q7b_heat_differences.csv`
+- `artifacts/weather_analysis/tables/q7c_cold_composition.csv`
+- `artifacts/weather_analysis/tables/q7c_cold_differences.csv`
+- `artifacts/weather_analysis/tables/q7c_freezing_sensitivity_composition.csv`
+- `artifacts/weather_analysis/tables/q7c_freezing_sensitivity_differences.csv`
+
+It also produces eight figures:
+
+- `artifacts/weather_analysis/figures/07_outcome_type/q7a_rainfall_composition.png`
+- `artifacts/weather_analysis/figures/07_outcome_type/q7a_rainfall_differences.png`
+- `artifacts/weather_analysis/figures/07_outcome_type/q7b_heat_composition.png`
+- `artifacts/weather_analysis/figures/07_outcome_type/q7b_heat_differences.png`
+- `artifacts/weather_analysis/figures/07_outcome_type/q7c_cold_composition.png`
+- `artifacts/weather_analysis/figures/07_outcome_type/q7c_cold_differences.png`
+- `artifacts/weather_analysis/figures/07_outcome_type/q7c_freezing_sensitivity_composition.png`
+- `artifacts/weather_analysis/figures/07_outcome_type/q7c_freezing_sensitivity_differences.png`
+
+The analysis uses project-relative paths and generates all statistics, tables, and figures programmatically.
+
+Required Python packages are listed in the project's root `requirements.txt` file.
+
+

@@ -1,0 +1,19 @@
+weather_group,outcome_type,outcome_events,total_group_events,proportion_pct
+Non-Hot Days,Adoption,5093,8221,61.95110083931395
+Non-Hot Days,Transfer,1878,8221,22.843936260795523
+Non-Hot Days,Return to Owner,598,8221,7.274054251307627
+Non-Hot Days,Euthanasia,405,8221,4.92640797956453
+Non-Hot Days,Died,98,8221,1.1920690913514171
+Non-Hot Days,Rto-Adopt,99,8221,1.2042330616713295
+Non-Hot Days,Disposal,43,8221,0.5230507237562341
+Non-Hot Days,Missing,5,8221,0.0608198515995621
+Non-Hot Days,Lost,2,8221,0.024327940639824838
+Hot Days,Adoption,2338,3591,65.10721247563353
+Hot Days,Transfer,742,3591,20.66276803118908
+Hot Days,Return to Owner,236,3591,6.57198551935394
+Hot Days,Euthanasia,161,3591,4.483430799220272
+Hot Days,Died,51,3591,1.4202172096908938
+Hot Days,Rto-Adopt,26,3591,0.7240323029796714
+Hot Days,Disposal,35,3591,0.9746588693957114
+Hot Days,Missing,2,3591,0.0556947925368978
+Hot Days,Lost,0,3591,0.0
