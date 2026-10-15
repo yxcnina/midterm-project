@@ -136,6 +136,21 @@ class TestCrimeAnalysis(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             crime_analysis.load_and_validate()
 
+    def test_check_only_reports_counts_without_writing_results(self):
+        stdout = StringIO()
+        with redirect_stdout(stdout):
+            crime_analysis.main(check_only=True)
+        self.assertIn("DATA VERIFIED", stdout.getvalue())
+        self.assertIn("Validation only", stdout.getvalue())
+        self.assertFalse(self.output_dir.exists())
+
+    def test_check_only_rejects_invalid_data_without_writing_results(self):
+        self.annual.loc[0, "crime_count"] += 1
+        self._save_inputs()
+        with self.assertRaisesRegex(ValueError, "Annual totals disagree"):
+            crime_analysis.main(check_only=True)
+        self.assertFalse(self.output_dir.exists())
+
     def test_full_workflow_produces_all_six_outputs(self):
         with redirect_stdout(StringIO()):
             crime_analysis.main()

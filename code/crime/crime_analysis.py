@@ -15,6 +15,7 @@ Outputs (under artifacts/crime/analysis/):
 Run from repository root: python code/crime/crime_analysis.py
 """
 
+import argparse
 from calendar import monthrange
 from pathlib import Path
 
@@ -255,22 +256,37 @@ def regression_table(monthly):
     return result
 
 
-def main():
-    """Verify inputs, generate figures, save analysis and print key results."""
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+def print_data_summary(annual):
+    """Describe the validated analysis sample and matched record counts."""
+    print("DATA VERIFIED: 10 districts x 12 months; annual totals agree.")
+    print("TOTAL CRIME:", int(annual["crime_count"].sum()))
+    print("TOTAL GEOCODED STRAY INTAKES:", int(annual["stray_intake_count"].sum()))
+
+
+def main(check_only=False):
+    """Validate inputs; optionally stop without creating analysis artifacts."""
     monthly, annual = load_and_validate()
+    print_data_summary(annual)
+    if check_only:
+        print("Validation only: no analysis artifacts generated.")
+        return
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     save_annual_chart(annual)
     totals = monthly_table_and_chart(monthly)
     adjusted = save_adjusted_chart(monthly)
     correlations = correlation_table(monthly, annual, totals, adjusted)
     regressions = regression_table(monthly)
-    print("DATA VERIFIED: 10 districts x 12 months; annual totals agree.")
-    print("TOTAL CRIME:", int(annual["crime_count"].sum()))
-    print("TOTAL GEOCODED STRAY INTAKES:", int(annual["stray_intake_count"].sum()))
     print("\nCORRELATIONS\n", correlations.round(4).to_string(index=False))
     print("\nOLS WITH DISTRICT-CLUSTERED SE\n", regressions.round(4).to_string(index=False))
     print("\nResults saved to:", OUTPUT_DIR)
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--check-only", action="store_true",
+        help="Validate input datasets without generating charts or result CSVs.",
+    )
+    args = parser.parse_args()
+    main(check_only=args.check_only)
