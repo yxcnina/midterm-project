@@ -140,25 +140,30 @@ These results are interpreted as descriptive associations rather than causal eff
 [Read the full Crime Analysis Methodology →](artifacts/README/README-crime.md)
 ### <mark>3.4 Income-Level
 ### <mark>3.5 Weather
-The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily weather observations for Austin. Each intake or outcome event is matched to the corresponding weather observation using its calendar date.
+The weather analysis combines cleaned 2024 Austin Animal Center (AAC) intake and outcome records with daily Austin weather observations. Each shelter event is matched to the weather observation for its calendar date using a many-to-one merge. The analysis uses 11,815 intake events, 11,812 outcome events with non-missing outcome types, and weather observations covering all 366 days of 2024.
 
-The analysis constructs weather indicators to distinguish wet and dry days, extremely hot and non-hot days, cold and non-cold days, and freezing and non-freezing days. These indicators are used to compare AAC activity across different weather conditions.
+Weather conditions are classified using daily precipitation and temperature:
 
-The analysis proceeds in four stages:
+- **Wet days:** Daily precipitation greater than 0 mm; dry days have zero precipitation.
+- **Hot days:** Daily maximum temperature at least 35°C.
+- **Cold days:** Daily minimum temperature at most 5°C.
+- **Freezing days:** Daily minimum temperature at most 0°C.
 
-1. **Daily intake volume (Q1).** Intake events are aggregated by date to calculate daily intake counts. Average daily counts are then compared between wet and dry days.
+Days not meeting each temperature threshold form the corresponding reference group.
 
-2. **Intake and outcome proportions (Q2–Q3).** The proportion of `Stray` intake events is compared between wet and dry days, while the proportion of `Adoption` outcome events is compared between extremely hot and non-hot days.
+The analysis uses four complementary approaches:
 
-3. **Animal-type heterogeneity (Q4).** The first three comparisons are repeated separately for dogs and cats to examine whether weather-related patterns differ across the two major animal groups.
+1. **Daily intake volume (Q1).** Intake events are aggregated into daily counts, and mean daily intakes are compared between wet and dry days. The main comparison includes 365 days with recorded intake activity, excluding December 25, 2024, for which no intake records are available. A sensitivity analysis additionally treats this missing date as a zero-intake day.
 
-4. **Full event composition (Q5–Q7).** The analysis compares the distributions of all recorded intake types, intake conditions, and non-missing outcome types across rainfall, extreme heat, cold weather, and freezing-day classifications.
+2. **Selected intake and outcome proportions (Q2–Q3).** The proportion of `Stray` intakes is compared between wet and dry days, while the proportion of `Adoption` outcomes is compared between hot and non-hot days. Both proportions are calculated from event counts within each weather group.
 
-For event-composition comparisons, each category's share is calculated relative to the total number of eligible events within its weather group. Differences are expressed in percentage points, with the reference-group share subtracted from the weather-exposed group's share.
+3. **Animal-type heterogeneity (Q4).** The daily intake, stray intake, and adoption outcome comparisons are repeated separately for dogs and cats. For daily counts, both animal types are evaluated over the same 365 recorded intake dates, assigning zero to an animal type on dates when AAC recorded intakes but none for that type. Stray and adoption proportions are calculated separately within each animal-type and weather group.
 
-The analysis uses descriptive statistics and visualizations, including daily intake comparisons, category-level proportion charts, and three summary heatmaps that consolidate the extended weather comparisons.
+4. **Full event composition (Q5–Q7).** The analysis compares all six recorded intake types, all 16 intake conditions, and all nine non-missing outcome types across rainfall, extreme heat, cold weather, and freezing-day conditions. For each category, its share is calculated relative to all eligible intake or outcome events in the corresponding weather group.
 
-All comparisons are descriptive and do not establish causal relationships between weather conditions and AAC intake or outcome patterns.
+Differences in category shares are reported in **percentage points**, calculated as the weather-exposed group's percentage minus the reference group's percentage. The extended composition analyses produce category-level summary tables and visualizations, including three heatmaps consolidating the four weather comparisons.
+
+All weather-event matches are validated, and the analyses distinguish daily intake counts from event-level proportions. The results describe observed associations rather than causal effects, since weather conditions may coincide with seasonal variation, shelter operations, and other factors affecting recorded shelter activity.
 
 [Read the full Weather Analysis Methodology →](code/weather_analysis/README.md)
 
