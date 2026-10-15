@@ -197,7 +197,6 @@ The basic analysis compares cats and dogs using cleaned 2024 AAC records, coveri
 
 Composition percentages use all intake or outcome records for each species. Adoption shares use all outcome records within each species and trait group, including blank outcomes; `Rto-Adopt` is separate from `Adoption`. Intakes and outcomes are analyzed separately as events, not as a matched group of animals. Only the maps use the geocoded subset.
 
-[Read the full Basic Analysis Methodology →](artifacts/README/README-basic-analysis.md#data-preparation-and-methodology)
 
 ### 3.3 Income-Level
 The income analysis combines geocoded 2024 AAC stray cat and dog intake records with Census-tract household-income data.
@@ -212,9 +211,9 @@ The analysis uses **one intake event as the observation unit**. It keeps records
 - can be matched to a Census tract with numeric income information,
 - are not records referring to the AAC shelter address at `7201 Levander`.
 
-After these filters, the analysis contains **5,990 intake events across 269 observed Census tracts**. :chatgpt-content-reference{index="1"}
+After these filters, the analysis contains **5,990 intake events across 269 observed Census tracts**.
 
-The 269 observed tracts are divided into **Low, Middle, and High income groups** using tract-level median household income. Each tract receives equal weight when the income cutoffs are created, rather than weighting tracts by their number of AAC intake events. :chatgpt-content-reference{index="2"}
+The 269 observed tracts are divided into **Low, Middle, and High income groups** using tract-level median household income. Each tract receives equal weight when the income cutoffs are created, rather than weighting tracts by their number of AAC intake events.
 
 The analysis then compares:
 
@@ -259,13 +258,13 @@ Days not meeting each temperature threshold form the corresponding reference gro
 
 The analysis uses four complementary approaches:
 
-1. **Daily intake volume (Q1).** Intake events are aggregated into daily counts, and mean daily intakes are compared between wet and dry days. The main comparison includes 365 days with recorded intake activity, excluding December 25, 2024, for which no intake records are available. A sensitivity analysis additionally treats this missing date as a zero-intake day.
+1. **Daily intake volume.** Intake events are aggregated into daily counts, and mean daily intakes are compared between wet and dry days. The main comparison includes 365 days with recorded intake activity, excluding December 25, 2024, for which no intake records are available. A sensitivity analysis additionally treats this missing date as a zero-intake day.
 
-2. **Selected intake and outcome proportions (Q2–Q3).** The proportion of `Stray` intakes is compared between wet and dry days, while the proportion of `Adoption` outcomes is compared between hot and non-hot days. Both proportions are calculated from event counts within each weather group.
+2. **Selected intake and outcome proportions.** The proportion of `Stray` intakes is compared between wet and dry days, while the proportion of `Adoption` outcomes is compared between hot and non-hot days. Both proportions are calculated from event counts within each weather group.
 
-3. **Animal-type heterogeneity (Q4).** The daily intake, stray intake, and adoption outcome comparisons are repeated separately for dogs and cats. For daily counts, both animal types are evaluated over the same 365 recorded intake dates, assigning zero to an animal type on dates when AAC recorded intakes but none for that type. Stray and adoption proportions are calculated separately within each animal-type and weather group.
+3. **Animal-type heterogeneity.** The daily intake, stray intake, and adoption outcome comparisons are repeated separately for dogs and cats. For daily counts, both animal types are evaluated over the same 365 recorded intake dates, assigning zero to an animal type on dates when AAC recorded intakes but none for that type. Stray and adoption proportions are calculated separately within each animal-type and weather group.
 
-4. **Full event composition (Q5–Q7).** The analysis compares all six recorded intake types, all 16 intake conditions, and all nine non-missing outcome types across rainfall, extreme heat, cold weather, and freezing-day conditions. For each category, its share is calculated relative to all eligible intake or outcome events in the corresponding weather group.
+4. **Full event composition.** The analysis compares all six recorded intake types, all 16 intake conditions, and all nine non-missing outcome types across rainfall, extreme heat, cold weather, and freezing-day conditions. For each category, its share is calculated relative to all eligible intake or outcome events in the corresponding weather group.
 
 Differences in category shares are reported in **percentage points**, calculated as the weather-exposed group's percentage minus the reference group's percentage. The extended composition analyses produce category-level summary tables and visualizations, including three heatmaps consolidating the four weather comparisons.
 
@@ -333,7 +332,6 @@ The six themes below summarize the main differences between cat and dog records.
 
 These comparisons describe recorded events, not causal effects or an individual animal's eventual adoption probability. The full report includes the remaining trait comparisons and the map excluding the shelter's address.
 
-[Read the full Basic Analysis Findings →](artifacts/README/README-basic-analysis.md#visualization-and-findings)
 
 ### 4.3 Income
 The income analysis includes **5,990 eligible stray cat and dog intake events across 269 observed Census tracts**.
@@ -342,15 +340,15 @@ The Low- and Middle-income groups had similar numbers of recorded stray intakes,
 
 ![Intake counts by income group](artifacts/income/figures/01_income_intake_counts.png)
 
-However, these are **raw intake counts rather than population-adjusted rates**, so the lower count in higher-income tracts should not be interpreted as evidence that higher-income areas necessarily have fewer stray animals. :chatgpt-content-reference{index="3"}
+However, these are **raw intake counts rather than population-adjusted rates**, so the lower count in higher-income tracts should not be interpreted as evidence that higher-income areas necessarily have fewer stray animals.
 
-Species composition also differed across income groups. Cats accounted for **67.33%** of eligible intakes in the Low-income group, compared with about **61%** in both the Middle- and High-income groups. Age composition, however, showed relatively small differences across income groups within each species. :chatgpt-content-reference{index="4"}
+Species composition also differed across income groups. Cats accounted for **67.33%** of eligible intakes in the Low-income group, compared with about **61%** in both the Middle- and High-income groups. Age composition, however, showed relatively small differences across income groups within each species.
 
 Recorded outcomes did not show a simple monotonic relationship with income. Adoption was the most common outcome in every income group, but its share was highest in the Middle-income group at **63.34%**, compared with **59.00%** in Low-income tracts and **58.36%** in High-income tracts.
 
 ![Recorded outcomes by income group](artifacts/income/figures/03_income_recorded_outcomes.png)
 
-Return-to-owner patterns also differed strongly by species. Dogs had substantially higher RTO shares than cats in every income group. For dogs, the RTO share was **9.52%**, **14.80%**, and **12.39%** across the Low-, Middle-, and High-income groups, while the corresponding cat shares were **1.47%**, **2.78%**, and **3.04%**. :chatgpt-content-reference{index="5"}
+Return-to-owner patterns also differed strongly by species. Dogs had substantially higher RTO shares than cats in every income group. For dogs, the RTO share was **9.52%**, **14.80%**, and **12.39%** across the Low-, Middle-, and High-income groups, while the corresponding cat shares were **1.47%**, **2.78%**, and **3.04%**. 
 
 Overall, the income analysis shows clear differences in the composition and outcomes of AAC stray-intake records across income groups, but the patterns are not consistently increasing or decreasing with income. The results should therefore be interpreted as descriptive neighborhood differences rather than a direct income effect.
 
@@ -367,20 +365,20 @@ However, the relationship became substantially weaker after controlling for pers
 
 Overall, the raw data show a positive relationship between crime counts and stray-animal intakes across districts, but the evidence becomes much weaker after accounting for district and month differences. The results therefore do not support a causal interpretation that crime increases stray-animal intake.
 
-### <mark>4.5 Weather
+### 4.5 Weather
 The weather analysis reveals several descriptive differences in Austin Animal Center (AAC) intake and outcome patterns across rainfall and temperature conditions during 2024. The findings cover daily intake volume, stray intake and adoption outcome proportions, differences between dogs and cats, and the broader composition of intake and outcome events.
 
-**Rainfall and Daily Intake Volume (Q1).** Average daily intake counts were **32.57 on dry days** and **31.56 on wet days**, a difference of approximately **1.01 fewer intake events per day on wet days**. The difference was relatively small compared with the variation in daily intake counts within each group. Treating the one date without recorded intakes as a zero-intake day did not change the direction of this comparison.
+**Rainfall and Daily Intake Volume.** Average daily intake counts were **32.57 on dry days** and **31.56 on wet days**, a difference of approximately **1.01 fewer intake events per day on wet days**. The difference was relatively small compared with the variation in daily intake counts within each group. Treating the one date without recorded intakes as a zero-intake day did not change the direction of this comparison.
 
-**Rainfall and Stray Intake Proportions (Q2).** Stray intakes represented **68.90% of intake events on dry days**, compared with **72.01% on wet days**, a **3.11-percentage-point increase**. Thus, although the average daily intake count was slightly lower on wet days, stray animals accounted for a larger share of recorded intakes.
+**Rainfall and Stray Intake Proportions.** Stray intakes represented **68.90% of intake events on dry days**, compared with **72.01% on wet days**, a **3.11-percentage-point increase**. Thus, although the average daily intake count was slightly lower on wet days, stray animals accounted for a larger share of recorded intakes.
 
-**Extreme Heat and Adoption Outcome Proportions (Q3).** Adoptions represented **61.95% of valid outcome events on non-hot days** and **65.11% on hot days**, a **3.16-percentage-point increase**. This measures the composition of recorded shelter outcomes, not the probability that an individual animal entering AAC will eventually be adopted.
+**Extreme Heat and Adoption Outcome Proportions.** Adoptions represented **61.95% of valid outcome events on non-hot days** and **65.11% on hot days**, a **3.16-percentage-point increase**. This measures the composition of recorded shelter outcomes, not the probability that an individual animal entering AAC will eventually be adopted.
 
-**Animal-Type Heterogeneity (Q4).** Separate comparisons for dogs and cats reveal that the aggregate weather-related patterns are not uniform across animal types.
+**Animal-Type Heterogeneity.** Separate comparisons for dogs and cats reveal that the aggregate weather-related patterns are not uniform across animal types.
 
-- **Daily intake volume (Q4a):** Average daily dog intakes decreased from **14.31 on dry days to 13.81 on wet days**, while average daily cat intakes decreased from **16.60 to 16.43**. Both differences were modest.
-- **Stray intake proportions (Q4b):** The stray share increased from **60.01% to 64.19% for dogs** (**+4.18 percentage points**) but from **81.72% to 82.33% for cats** (**+0.61 percentage points**). The wet-day increase was therefore more pronounced among dogs, although cats had a higher stray intake share under both weather conditions.
-- **Adoption outcome proportions (Q4c):** The adoption share increased from **65.83% to 67.28% for dogs** (**+1.45 percentage points**) and from **61.65% to 67.20% for cats** (**+5.55 percentage points**) between non-hot and hot days. The hot-day difference was substantially larger among cats.
+- **Daily intake volume:** Average daily dog intakes decreased from **14.31 on dry days to 13.81 on wet days**, while average daily cat intakes decreased from **16.60 to 16.43**. Both differences were modest.
+- **Stray intake proportions:** The stray share increased from **60.01% to 64.19% for dogs** (**+4.18 percentage points**) but from **81.72% to 82.33% for cats** (**+0.61 percentage points**). The wet-day increase was therefore more pronounced among dogs, although cats had a higher stray intake share under both weather conditions.
+- **Adoption outcome proportions:** The adoption share increased from **65.83% to 67.28% for dogs** (**+1.45 percentage points**) and from **61.65% to 67.20% for cats** (**+5.55 percentage points**) between non-hot and hot days. The hot-day difference was substantially larger among cats.
 
 ![Adoption outcome proportions for dogs and cats](artifacts/weather_analysis/figures/04_animal_type/q4c_adoption_proportions_by_animal_type.png)
 
