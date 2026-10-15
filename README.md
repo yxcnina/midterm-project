@@ -476,4 +476,26 @@ Detailed instructions:
 
 #### 7.5.3 Income Analysis
 #### 7.5.4 Crime Analysis
+Build the council-district-level crime and stray-intake datasets:
+```
+python code/crime/crime_component.py
+```
+It creates the main processed files:
+```
+data/processed/crime_stray_district_month_2024.csv
+data/processed/crime_stray_district_2024.csv
+```
+Before running the full statistical analysis, you may verify the processed inputs without generating new outputs:
+```
+python code/crime/crime_analysis.py --check-only
+```
+Then run the full crime analysis:
+```
+python code/crime/crime_analysis.py
+```
+The analysis generates figures and statistical results under:
+```
+artifacts/crime/analysis/
+```
+
 #### 7.5.5 Weather Analysis
