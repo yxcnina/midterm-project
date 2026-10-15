@@ -19,7 +19,7 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 |---|---|---|
 | **Repeat Intakes** | How common are repeat intakes, how quickly do animals return, what are the most common return pathways, and what happens after they return? | [Repeat Intake Analysis](artifacts/README/README-repeat-intake-analysis.md) |
 | **Basic Analysis** | How do cat and dog intake profiles, monthly patterns, locations, and recorded outcomes differ, and how do adoption shares vary by age, sex, breed, and color? | [Basic Analysis](artifacts/README/README-basic-analysis.md) |
-| **Income & Found Location** | How do stray-animal intake patterns vary across areas with different income levels, and are animals found in different socioeconomic areas associated with different intake or outcome patterns? | [Income and Location Analysis](artifacts/README/README-income-analysis.md) |
+| **Income & Found Location** | How do stray-animal intake patterns vary across areas with different income levels, and are animals found in different socioeconomic areas associated with different intake or outcome patterns? | [Income and Location Analysis](artifacts/README/README-income.md) |
 | **Crime & Found Location** | Do areas with higher reported crime counts also tend to have more stray-animal intakes, and does this relationship remain after accounting for geographic and monthly differences? | [Crime and Location Analysis](artifacts/README/README-crime.md) |
 | **Weather** | How are precipitation and temperature associated with AAC intake volume, intake and outcome composition, and differences between dogs and cats? | [Weather Analysis](artifacts/README/README-weather-analysis.md) |
 
