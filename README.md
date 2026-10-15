@@ -5,7 +5,7 @@ This project studies stray-animal intakes at the Austin Animal Center (AAC) duri
 
 ## Table of Contents
 - [1. Research Questions and Analysis Modules](#1-research-questions-and-analysis-modules)
-- [2. Data Source](#2-data-Source)
+- [2. Data Source](#2-data-source)
 - [3. Methodology](#3-methodology)
 - [4. Main Findings](#4-main-findings)
 - [5. Limitations](#5-limitations)
@@ -19,10 +19,11 @@ This project examines stray-animal intakes at the Austin Animal Center in 2024 f
 | Analysis Module | Main Research Question | Detailed Analysis |
 |---|---|---|
 | **Repeat Intakes** | How common are repeat intakes, how quickly do animals return, what are the most common return pathways, and what happens after they return? | [Repeat Intake Analysis](artifacts/README/README-repeat-intake-analysis.md) |
-| **Animal Characteristics** | How are animal characteristics such as age, color, animal type, sex, breed, and intake condition associated with shelter outcomes? | [Animal Characteristics Analysis](artifacts/README/README-basic-analysis.md) |
+| **Basic Analysis** | How do cat and dog intake profiles, monthly patterns, locations, and recorded outcomes differ, and how do adoption shares vary by age, sex, breed, and color? | [Basic Analysis](artifacts/README/README-basic-analysis.md) |
 | **Income & Found Location** | How do stray-animal intake patterns vary across areas with different income levels, and are animals found in different socioeconomic areas associated with different intake or outcome patterns? | [Income and Location Analysis](artifacts/README/README-income-analysis.md) |
 | **Crime & Found Location** | Do areas with higher reported crime counts also tend to have more stray-animal intakes, and does this relationship remain after accounting for geographic and monthly differences? | [Crime and Location Analysis](artifacts/README/README-crime.md) |
 | **Weather** | How are precipitation and temperature associated with AAC intake volume, intake and outcome composition, and differences between dogs and cats? | [Weather Analysis](artifacts/README/README-weather-analysis.md) |
+
 > **Note:** This README is a condensed summary of the overall project.  
 More detailed methods, results, figures, limitations, and reproduction steps are available in the README for each analysis module.
 ## 2. Data Source
@@ -63,23 +64,25 @@ The outcome dataset records how and when animals leave Austin Animal Center. It 
 - Outcome Subtype
 - Animal Type
 - Sex upon Outcome
+- Age upon Outcome
+- Breed
+- Color
 
 The intake and outcome datasets are linked using `Animal ID` and `DateTime` when an analysis requires intake–outcome matching.
 
 #### 2.1.3 Geocoded Found Locations
 
-**Source:** [U.S. Census Bureau Geocoder](https://geocoding.geo.census.gov/geocoder/)
+**Source:** [City of Austin COA Locator](https://maps.austintexas.gov/arcgis/rest/services/Geocode/COA_Locator/GeocodeServer)
 
-AAC `Found Location` values are cleaned and geocoded into geographic coordinates.
+AAC `Found Location` values are matched to geographic coordinates. Only records that pass the matching checks are saved to `data/processed/aac_intakes_clean_geocoded.csv`, a separate subset of the cleaned intake records.
 
-The shared geographic fields include:
+The derived geographic fields are:
 
-- Latitude
-- Longitude
-- Geocoding status
-- Census geographic identifiers when available
+- `latitude`
+- `longitude`
+- `location_precision` (match type, such as an address point or street intersection)
 
-These coordinates are used as the common geographic input for the income and crime analyses. Each module then converts the coordinates into the geographic unit required for that specific analysis.
+These coordinates are used by the Basic Analysis maps and the income and crime analyses. Each module then converts the coordinates into the geographic unit required for that specific analysis.
 
 ### 2.2 Additional Data for Income
 
@@ -176,7 +179,7 @@ Open-Meteo provides additional daily weather measures used in the analysis.
 - cloud_cover_mean
 - wind_speed_10m_max
 
-The NOAA and Open-Meteo datasets are standardized and merged by calendar date, then matched with AAC intake and outcome records by event date. :chatgpt-content-reference{index="1"}
+The NOAA and Open-Meteo datasets are standardized and merged by calendar date, then matched with AAC intake and outcome records by event date.
 ## 3. Methodology
 
 ### 3.1 Repeat-Intake Analysis
@@ -194,7 +197,21 @@ Returns following `Transfer` or other outcome types are excluded from the main r
 
 The analysis measures the share of repeat-intake episodes, time until return, return pathways, outcomes after return, and the number of observed intake episodes per animal.
 
-### <mark>3.2 Basic</mark>
+### 3.2 Basic Analysis
+
+The basic analysis compares cats and dogs using cleaned 2024 AAC records, covering all recorded intake types. It addresses six questions:
+
+1. **Intake profiles:** Compare age, sex, and breed distributions.
+2. **Monthly patterns:** Count intakes by month and species, with an age breakdown for cats.
+3. **Intake types and conditions:** Compare how animals arrived and their recorded conditions.
+4. **Outcome composition:** Compare the shares of adoption, transfer, return to owner, and other outcomes.
+5. **Adoption shares by characteristics:** Compare adoption shares across age, sex, breed, and color groups recorded at outcome.
+6. **Intake locations:** Map geocoded intake counts and check how removing the shelter's own address changes the pattern.
+
+Composition percentages use all intake or outcome records for each species. Adoption shares use all outcome records within each species and trait group, including blank outcomes; `Rto-Adopt` is separate from `Adoption`. Intakes and outcomes are analyzed separately as events, not as a matched group of animals. Only the maps use the geocoded subset.
+
+[Read the full Basic Analysis Methodology →](artifacts/README/README-basic-analysis.md#data-preparation-and-methodology)
+
 ### <mark>3.3 Income-Level
 ### 3.4 Crime
 The crime analysis combines 2024 Austin crime reports with geocoded AAC stray-intake records at the council-district level.
@@ -258,7 +275,53 @@ The most common return pathway was **Adoption → Owner Surrender**, which accou
 Most repeat-intake animals returned only once during 2024: about **89%** had exactly two observed intake episodes.
 
 
-### <mark>4.2 Basic
+### 4.2 Basic Analysis
+
+The six themes below summarize the main differences between cat and dog records. Click any figure to view it at full size.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <p><strong>Intake Profiles</strong></p>
+      <a href="artifacts/basic_analysis/figures/01_intake_profile/age_distribution.png"><img src="artifacts/basic_analysis/figures/01_intake_profile/age_distribution.png" alt="Age distribution of cat and dog intakes" width="100%"></a>
+      <p>Cats have a younger intake profile: <strong>61.4%</strong> of cat records report an age under six months, compared with <strong>31.5%</strong> of dog records.</p>
+    </td>
+    <td width="50%" valign="top">
+      <p><strong>Monthly Intake Patterns</strong></p>
+      <a href="artifacts/basic_analysis/figures/02_intake_timing/monthly_intakes.png"><img src="artifacts/basic_analysis/figures/02_intake_timing/monthly_intakes.png" alt="Monthly cat and dog intakes" width="100%"></a>
+      <p>Cat intakes peak in <strong>May (887)</strong>, with cats under six months accounting for <strong>73.6%</strong> of that month's records. Dog intakes peak in <strong>April and May (512 each)</strong>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <p><strong>Intake Types and Conditions</strong></p>
+      <a href="artifacts/basic_analysis/figures/03_intake_context/intake_type.png"><img src="artifacts/basic_analysis/figures/03_intake_context/intake_type.png" alt="Recorded intake types for cats and dogs" width="100%"></a>
+      <p><strong>Stray</strong> is the most common intake type for cats (<strong>81.8%</strong>) and dogs (<strong>60.8%</strong>). Owner surrender accounts for a larger share of dog intakes (<strong>22.8% versus 14.3%</strong>).</p>
+    </td>
+    <td width="50%" valign="top">
+      <p><strong>Outcome Composition</strong></p>
+      <a href="artifacts/basic_analysis/figures/04_outcome_profile/outcome_distribution.png"><img src="artifacts/basic_analysis/figures/04_outcome_profile/outcome_distribution.png" alt="Recorded outcomes for cats and dogs" width="100%"></a>
+      <p>Adoption accounts for <strong>63.5%</strong> of cat outcomes and <strong>66.1%</strong> of dog outcomes. Cats have a higher transfer share, while dogs have a higher return-to-owner share.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <p><strong>Adoption Shares by Characteristics</strong></p>
+      <a href="artifacts/basic_analysis/figures/05_trait_comparisons/adoption_by_age.png"><img src="artifacts/basic_analysis/figures/05_trait_comparisons/adoption_by_age.png" alt="Adoption shares by recorded age at outcome" width="100%"></a>
+      <p>Among the five defined age bands, animals aged <strong>6 to under 12 months at outcome</strong> have the highest adoption shares: <strong>77.0% for cats</strong> and <strong>83.9% for dogs</strong>. Records labeled <code>0 years</code> are kept separate.</p>
+    </td>
+    <td width="50%" valign="top">
+      <p><strong>Recorded Intake Locations</strong></p>
+      <a href="artifacts/basic_analysis/figures/06_intake_locations/intake_locations_all_records.png"><img src="artifacts/basic_analysis/figures/06_intake_locations/intake_locations_all_records.png" alt="Geocoded cat and dog intake locations" width="100%"></a>
+      <p>The maps cover <strong>68.0%</strong> of cat intakes and <strong>58.5%</strong> of dog intakes. Coverage varies by intake type, so the maps show only part of the recorded intake activity.</p>
+    </td>
+  </tr>
+</table>
+
+These comparisons describe recorded events, not causal effects or an individual animal's eventual adoption probability. The full report includes the remaining trait comparisons and the map excluding the shelter's address.
+
+[Read the full Basic Analysis Findings →](artifacts/README/README-basic-analysis.md#visualization-and-findings)
+
 ### <mark>4.3 Income
 ### 4.4 Crime
 Across Austin's 10 council districts, districts with higher annual reported crime counts also tended to have more matched stray-animal intakes. The annual Pearson correlation between crime counts and stray-intake counts was **r = 0.6183**.
@@ -352,22 +415,34 @@ Place the raw AAC intake and outcome CSV files in:
 data/raw
 ```
 > Note: The raw data can be downloaded from the links above in [2.1 Core Austin Animal Center Data](#21-core-austin-animal-center-data), or you can use the copies already included in the `data/raw` folder.
-### 7.4 Prepare the Shared AAC Data and Geocode Data
-**Step 1:** Run the two cleaning scripts:
-``` 
+### 7.4 Prepare the Shared AAC Data
+
+Run the following commands from the repository root.
+
+**Step 1: Clean the intake and outcome records.**
+
+```bash
 python code/data_cleaning/clean_aac_intake.py
 python code/data_cleaning/clean_aac_outcomes.py
 ```
+
 These scripts create:
-``` 
+
+```text
 data/processed/aac_intakes_clean.csv
 data/processed/aac_outcomes_clean.csv
 ```
-**Step 2:** Run the geocode scripts:
-```
+
+**Step 2: Prepare the geocoded intake records.**
+
+The repository already includes [data/processed/aac_intakes_clean_geocoded.csv](data/processed/aac_intakes_clean_geocoded.csv), used by the Basic Analysis maps and the income and crime analyses. This file is produced separately from the two cleaning scripts above. To regenerate it, run the geocoding script with an internet connection:
+
+```bash
 python code/data_cleaning/geocode_aac_intakes.py
 ```
-This step converts usable `Found Location` records into geographic coordinates, and is used as the shared geographic input for the income and crime analyses.
+
+Only records that pass the geocoding checks are saved to this separate file.
+
 ### 7.5 Run the Analysis Modules
 After the shared AAC datasets have been prepared, each analysis module can be run independently.
 #### 7.5.1 Repeat Intake Analysis
@@ -381,7 +456,24 @@ These scripts create:
 data/processed/aac_in-out-episodes_2024.csv
 artifacts/repeat-intake-analysis/figures
 ```
-#### 7.5.2 Animal Characteristics Analysis
+#### 7.5.2 Basic Analysis
+
+Run the six scripts from the repository root:
+
+```bash
+python code/basic_analysis/01_intake_profile.py
+python code/basic_analysis/02_intake_timing.py
+python code/basic_analysis/03_intake_context.py
+python code/basic_analysis/04_outcome_profile.py
+python code/basic_analysis/05_trait_comparisons.py
+python code/basic_analysis/06_intake_locations.py
+```
+
+The scripts use the three processed intake, outcome, and geocoded intake CSVs already in the repository. They save 14 PNG figures and 12 CSV tables under `artifacts/basic_analysis/`, with a separate folder for each theme.
+
+Detailed instructions:
+[Basic Analysis README](artifacts/README/README-basic-analysis.md#reproducing-the-analysis)
+
 #### 7.5.3 Income Analysis
 #### 7.5.4 Crime Analysis
 #### 7.5.5 Weather Analysis

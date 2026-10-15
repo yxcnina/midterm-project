@@ -14,7 +14,7 @@ import urllib.request
 import pandas as pd
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 INPUT_PATH = PROJECT_ROOT / "data/processed/aac_intakes_clean.csv"
 OUTPUT_PATH = PROJECT_ROOT / "data/processed/aac_intakes_clean_geocoded.csv"
 CACHE_PATH = PROJECT_ROOT / ".cache/geocoder_cache.json"
