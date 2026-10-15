@@ -1,43 +1,43 @@
 income_group,animal_type,age_group,count,denominator,percent
 Low,Cat,<6 months,1064,1655,64.29003021148037
 Low,Cat,6 to <12 months,68,1655,4.108761329305136
-Low,Cat,1 to <3 years,0,1655,0.0
-Low,Cat,3 to <7 years,471,1655,28.459214501510573
+Low,Cat,1 to <3 years,382,1655,23.08157099697885
+Low,Cat,3 to <7 years,89,1655,5.377643504531722
 Low,Cat,7+ years,43,1655,2.598187311178248
 Low,Cat,Recorded as 0 years,9,1655,0.5438066465256798
 Low,Cat,Not recorded,0,1655,0.0
 Low,Dog,<6 months,280,803,34.8692403486924
 Low,Dog,6 to <12 months,72,803,8.966376089663761
-Low,Dog,1 to <3 years,0,803,0.0
-Low,Dog,3 to <7 years,377,803,46.94894146948941
+Low,Dog,1 to <3 years,273,803,33.997509339975096
+Low,Dog,3 to <7 years,104,803,12.95143212951432
 Low,Dog,7+ years,69,803,8.59277708592777
 Low,Dog,Recorded as 0 years,5,803,0.62266500622665
 Low,Dog,Not recorded,0,803,0.0
 Middle,Cat,<6 months,1011,1549,65.26791478373144
 Middle,Cat,6 to <12 months,51,1549,3.29244673983215
-Middle,Cat,1 to <3 years,0,1549,0.0
-Middle,Cat,3 to <7 years,443,1549,28.59909619109103
+Middle,Cat,1 to <3 years,353,1549,22.788896061975468
+Middle,Cat,3 to <7 years,90,1549,5.810200129115558
 Middle,Cat,7+ years,37,1549,2.3886378308586185
 Middle,Cat,Recorded as 0 years,7,1549,0.4519044544867657
 Middle,Cat,Not recorded,0,1549,0.0
 Middle,Dog,<6 months,328,979,33.50357507660878
 Middle,Dog,6 to <12 months,80,979,8.171603677221654
-Middle,Dog,1 to <3 years,0,979,0.0
-Middle,Dog,3 to <7 years,479,979,48.92747701736466
+Middle,Dog,1 to <3 years,343,979,35.035750766087844
+Middle,Dog,3 to <7 years,136,979,13.891726251276811
 Middle,Dog,7+ years,87,979,8.88661899897855
 Middle,Dog,Recorded as 0 years,5,979,0.5107252298263534
 Middle,Dog,Not recorded,0,979,0.0
 High,Cat,<6 months,383,614,62.37785016286645
 High,Cat,6 to <12 months,31,614,5.048859934853421
-High,Cat,1 to <3 years,0,614,0.0
-High,Cat,3 to <7 years,170,614,27.68729641693811
+High,Cat,1 to <3 years,134,614,21.824104234527688
+High,Cat,3 to <7 years,36,614,5.863192182410423
 High,Cat,7+ years,21,614,3.420195439739414
 High,Cat,Recorded as 0 years,9,614,1.4657980456026058
 High,Cat,Not recorded,0,614,0.0
 High,Dog,<6 months,132,390,33.84615384615385
 High,Dog,6 to <12 months,34,390,8.717948717948717
-High,Dog,1 to <3 years,0,390,0.0
-High,Dog,3 to <7 years,190,390,48.717948717948715
+High,Dog,1 to <3 years,124,390,31.794871794871792
+High,Dog,3 to <7 years,66,390,16.923076923076923
 High,Dog,7+ years,34,390,8.717948717948717
 High,Dog,Recorded as 0 years,0,390,0.0
 High,Dog,Not recorded,0,390,0.0

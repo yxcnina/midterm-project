@@ -12,28 +12,40 @@ AGE_ORDER=[
 def group_age(age):
     if pd.isna(age) or str(age).strip() == "":
         return "Not recorded"
+
     text=str(age).strip().lower()
     parts=text.split()
+
     if len(parts) != 2:
         raise ValueError(f"Unexpected intake age: {age!r}")
+
     number=float(parts[0])
     unit=parts[1].rstrip("s")
-    months_per_unit={
-        "year": 12, "month": 1, "week": 84 / 365.25, "day": 12 / 365.25,
+
+    months_per_unit = {
+        "year": 12,
+        "month": 1,
+        "week": 84 / 365.25,
+        "day": 12 / 365.25,
     }
+
     if unit not in months_per_unit or not 0 <= number < float("inf"):
         raise ValueError(f"Unexpected intake age: {age!r}")
-    if unit == "year" and number == 0:
+
+    if unit=="year" and number == 0:
         return "Recorded as 0 years"
+
     months=number * months_per_unit[unit]
-    if months<6:
+
+    if months < 6:
         return "<6 months"
-    if months<12:
+    if months < 12:
         return "6 to <12 months"
-    if months< 6:
+    if months < 36:
         return "1 to <3 years"
-    if months<84:
+    if months < 84:
         return "3 to <7 years"
+
     return "7+ years"
 
 
