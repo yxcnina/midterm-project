@@ -299,3 +299,217 @@ The input datasets are:
 - `data/processed/austin_weather_2024.csv`
 
 Required Python packages are listed in the project's root `requirements.txt` file. 
+
+
+## Research Question 4: Animal Type Heterogeneity in Weather-Related Intake and Outcome Patterns
+
+### Research Objectives
+
+The preceding analyses compare shelter intake and outcome patterns across weather conditions using all recorded animal types. However, aggregate comparisons may conceal differences between animal groups.
+
+To investigate this possibility, we focus on dogs and cats and examine three related questions:
+
+- **Q4a:** Do average daily intake counts on wet and dry days differ between dogs and cats?
+- **Q4b:** Do stray intake proportions on wet and dry days differ between dogs and cats?
+- **Q4c:** Do adoption outcome proportions on hot and non-hot days differ between dogs and cats?
+
+These analyses extend Q1–Q3 by examining whether the observed weather-related patterns vary across animal types.
+
+### Data and Methodology
+
+We use the same cleaned Austin Animal Center (AAC) intake and outcome datasets and the processed 2024 Austin weather dataset used in the preceding analyses.
+
+The analysis focuses on two categories in the `Animal Type` variable: `Dog` and `Cat`.
+
+The 2024 intake dataset contains 5,188 dog intake events and 6,046 cat intake events, for a combined total of 11,234 events. The outcome dataset contains 5,233 dog outcome events and 6,011 cat outcome events, totaling 11,244 events.
+
+Dogs and cats represent approximately 95% of the intake and outcome events in the cleaned datasets. Other animal types, including birds, livestock, and records classified as other animals, are excluded from this heterogeneity analysis but remain included in the original Q1–Q3 analyses.
+
+**Q4a — Daily Intake Counts by Animal Type**
+
+Individual intake events are grouped by intake date and animal type to calculate the number of dog and cat intake events recorded each day.
+
+These daily counts are then merged with weather observations. We distinguish wet days, defined as days with precipitation greater than 0 mm, from dry days, defined as days with no recorded precipitation.
+
+To ensure consistency with Q1, December 25, 2024, is excluded because no intake records are available for that date. On other dates with recorded AAC intake activity, an animal type with no recorded intake events is assigned a daily count of zero.
+
+Both dogs and cats are therefore analyzed using the same 365 dates: 293 dry days and 72 wet days.
+
+For each animal type and weather group, we calculate the total intake events, mean daily intake count, median daily intake count, and standard deviation.
+
+**Q4b — Stray Intake Proportions by Animal Type**
+
+Individual dog and cat intake events are matched to daily precipitation observations using their intake dates.
+
+An event is classified as a stray intake when `Intake Type` equals `Stray`.
+
+Within each animal type and rainfall category, the stray intake proportion is calculated as:
+
+Stray intake proportion = (Stray intake events / Total intake events in the group) × 100%.
+
+All 11,234 dog and cat intake events are included in this calculation.
+
+**Q4c — Adoption Outcome Proportions by Animal Type**
+
+Individual dog and cat outcome events are matched to daily maximum temperature observations using their outcome dates.
+
+A hot day is defined as a day with maximum temperature at or above 35°C. Other days are classified as non-hot days.
+
+Consistent with Q3, an adoption is defined strictly as an event whose `Outcome Type` equals `Adoption`. The `Rto-Adopt` category is not counted as an adoption.
+
+Of the 11,244 dog and cat outcome events, nine records have missing outcome classifications and are excluded. The remaining 11,235 events are used to calculate adoption outcome proportions within each animal type and temperature category:
+
+Adoption outcome proportion = (Adoption outcome events / Outcome events with known types in the group) × 100%.
+
+All comparisons are descriptive and do not estimate causal effects.
+
+### Findings
+
+#### Q4a: Rainfall and Daily Intake Counts by Animal Type
+
+| Animal Type | Weather | Days | Total Intakes | Mean Daily Intakes | Median | Standard Deviation |
+|---|---|---:|---:|---:|---:|---:|
+| Dog | Dry | 293 | 4,194 | 14.31 | 13.0 | 7.64 |
+| Dog | Wet | 72 | 994 | 13.81 | 14.0 | 6.86 |
+| Cat | Dry | 293 | 4,863 | 16.60 | 15.0 | 11.41 |
+| Cat | Wet | 72 | 1,183 | 16.43 | 14.5 | 10.08 |
+
+The mean daily dog intake count was 14.31 on dry days and 13.81 on wet days, a wet-minus-dry difference of approximately **−0.50 events per day**.
+
+For cats, the corresponding means were 16.60 and 16.43, a difference of approximately **−0.17 events per day**.
+
+Thus, both animal types had slightly lower mean daily intake counts on wet days. The descriptive difference was somewhat larger for dogs than for cats.
+
+Cat intake counts also exhibited greater day-to-day variability than dog intake counts across both weather categories.
+
+**Figure 4a. Average Daily Dog and Cat Intakes on Dry and Wet Days (2024)**
+
+![Average Daily Dog and Cat Intakes](../../artifacts/weather_analysis/figures/04_animal_type/q4a_daily_intakes_by_animal_type.png)
+
+These comparisons suggest that the relatively small overall wet-versus-dry difference identified in Q1 is also reflected in the two principal animal categories, although the magnitude varies somewhat by animal type.
+
+#### Q4b: Rainfall and Stray Intake Proportions by Animal Type
+
+| Animal Type | Weather | Total Intakes | Stray Intakes | Non-Stray Intakes | Stray Proportion |
+|---|---|---:|---:|---:|---:|
+| Dog | Dry | 4,194 | 2,517 | 1,677 | 60.01% |
+| Dog | Wet | 994 | 638 | 356 | 64.19% |
+| Cat | Dry | 4,863 | 3,974 | 889 | 81.72% |
+| Cat | Wet | 1,183 | 974 | 209 | 82.33% |
+
+Among dog intake events, the stray proportion increased from 60.01% on dry days to 64.19% on wet days, a difference of approximately **+4.18 percentage points**.
+
+Among cat intake events, the stray proportion increased from 81.72% to 82.33%, a smaller difference of approximately **+0.61 percentage points**.
+
+Cats consistently had a higher share of stray intake events than dogs under both weather conditions. However, the wet-versus-dry difference in the stray intake proportion was larger among dogs.
+
+**Figure 4b. Stray Intake Proportions by Animal Type and Rainfall (2024)**
+
+![Stray Intake Proportions by Animal Type](../../artifacts/weather_analysis/figures/04_animal_type/q4b_stray_proportions_by_animal_type.png)
+
+This result adds an important distinction to Q2. Although the overall stray intake proportion was higher on wet days, that difference was not uniform across animal types.
+
+The difference between the wet-minus-dry changes for dogs and cats was approximately 3.57 percentage points. This is a descriptive comparison of group differences, not evidence of a statistically significant interaction or a causal effect.
+
+#### Q4c: Extreme Heat and Adoption Outcome Proportions by Animal Type
+
+| Animal Type | Weather | Valid Outcomes | Adoptions | Non-Adoptions | Adoption Proportion |
+|---|---|---:|---:|---:|---:|
+| Dog | Non-Hot | 3,863 | 2,543 | 1,320 | 65.83% |
+| Dog | Hot | 1,363 | 917 | 446 | 67.28% |
+| Cat | Non-Hot | 3,948 | 2,434 | 1,514 | 61.65% |
+| Cat | Hot | 2,061 | 1,385 | 676 | 67.20% |
+
+Among dog outcome events, the adoption proportion was 65.83% on non-hot days and 67.28% on hot days, a difference of approximately **+1.45 percentage points**.
+
+Among cat outcome events, the adoption proportion was 61.65% on non-hot days and 67.20% on hot days, a larger difference of approximately **+5.55 percentage points**.
+
+Thus, adoption represented a larger share of recorded outcome events on hot days for both animal types, but the descriptive difference was substantially larger among cats.
+
+**Figure 4c. Adoption Outcome Proportions by Animal Type and Heat (2024)**
+
+![Adoption Outcome Proportions by Animal Type](../../artifacts/weather_analysis/figures/04_animal_type/q4c_adoption_proportions_by_animal_type.png)
+
+The difference between the hot-minus-non-hot changes for cats and dogs was approximately 4.10 percentage points.
+
+This pattern helps qualify the aggregate finding from Q3. The higher overall adoption outcome proportion on hot days may reflect different patterns across animal categories rather than a uniform relationship for all animal types.
+
+Importantly, the outcome proportion measures the composition of recorded shelter exits. It does not measure the probability that an individual dog or cat entering the shelter will ultimately be adopted.
+
+### Overall Interpretation
+
+The three analyses show that weather-related shelter event patterns vary both by animal type and by the activity being examined.
+
+For daily intake volume, dogs and cats both exhibited slightly lower mean counts on wet days, although the differences were modest.
+
+For stray intake composition, dogs showed a larger wet-versus-dry increase in the stray intake proportion than cats.
+
+For adoption outcome composition, cats showed a larger hot-versus-non-hot increase in the adoption proportion than dogs.
+
+These findings demonstrate that aggregate descriptive comparisons can obscure differences across animal groups.
+
+However, the direction and magnitude of the differences depend on the specific outcome. The results do not establish that one animal type is universally more responsive to weather conditions.
+
+### Limitations
+
+Several limitations apply to this heterogeneity analysis.
+
+First, comparisons are based on recorded shelter events rather than unique animals. An animal may contribute more than one event, and the resulting observations may not be statistically independent.
+
+Second, animal types differ in their underlying intake and outcome compositions. These differences may reflect factors other than weather, including animal characteristics, shelter practices, adoption availability, and seasonal patterns.
+
+Third, the analyses do not control for potential confounding variables such as weekdays, holidays, seasonal changes, shelter staffing, or changes in shelter capacity.
+
+Fourth, although dogs and cats represent most recorded events, the results do not necessarily apply to other animal categories.
+
+Fifth, Q4a measures average daily intake counts, whereas Q4b and Q4c measure event-level proportions. These quantities have different denominators and should not be interpreted interchangeably.
+
+Sixth, the hot-day and wet-day indicators simplify continuous weather conditions into binary categories. Differences in rainfall intensity, temperature, and duration of weather events are not directly examined.
+
+Finally, the observed group differences have not been subjected to formal statistical significance testing or causal identification. Differences in descriptive percentages should not be treated as evidence of statistically significant weather effects.
+
+### Possible Extensions
+
+Future analysis could investigate whether the observed differences remain after accounting for seasonality, weekdays, holidays, and shelter operational factors.
+
+Additional animal-level information, including age, health condition, and prior shelter histories, could help explain variation in intake and outcome patterns.
+
+Longer time series covering multiple years would provide a larger sample for evaluating whether these patterns are persistent.
+
+More detailed weather measures could also support analyses of rainfall intensity, heat duration, and lagged weather conditions.
+
+Finally, linked intake and outcome histories would allow future research to examine individual animal-level adoption probabilities and time to adoption, rather than relying solely on the composition of outcome events.
+
+### Reproducibility
+
+All Q4 analyses are implemented in:
+
+`code/weather_analysis/analyze_animal_type_heterogeneity.py`
+
+From the project root directory, run:
+
+```bash
+python3 code/weather_analysis/analyze_animal_type_heterogeneity.py
+```
+
+The script reads the following processed datasets:
+
+- `data/processed/aac_intakes_clean.csv`
+- `data/processed/aac_outcomes_clean.csv`
+- `data/processed/austin_weather_2024.csv`
+
+It produces three summary tables:
+
+- `artifacts/weather_analysis/tables/q4a_daily_intakes_by_animal_type.csv`
+- `artifacts/weather_analysis/tables/q4b_stray_proportions_by_animal_type.csv`
+- `artifacts/weather_analysis/tables/q4c_adoption_proportions_by_animal_type.csv`
+
+It also produces three figures:
+
+- `artifacts/weather_analysis/figures/04_animal_type/q4a_daily_intakes_by_animal_type.png`
+- `artifacts/weather_analysis/figures/04_animal_type/q4b_stray_proportions_by_animal_type.png`
+- `artifacts/weather_analysis/figures/04_animal_type/q4c_adoption_proportions_by_animal_type.png`
+
+The script uses project-relative paths, checks weather-date matching, verifies key event totals, and generates all statistics and figures programmatically.
+
+Required Python packages are listed in the project's root `requirements.txt` file.

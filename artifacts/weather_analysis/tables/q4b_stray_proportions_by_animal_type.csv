@@ -1,0 +1,5 @@
+Animal Type,wet_day,total_intakes,stray_intakes,non_stray_intakes,stray_proportion_pct
+Cat,0,4863,3974,889,81.72
+Cat,1,1183,974,209,82.33
+Dog,0,4194,2517,1677,60.01
+Dog,1,994,638,356,64.19

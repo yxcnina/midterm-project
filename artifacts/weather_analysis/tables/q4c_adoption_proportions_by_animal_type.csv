@@ -1,0 +1,5 @@
+Animal Type,hot_day,total_outcomes,adoption_outcomes,non_adoption_outcomes,adoption_proportion_pct
+Cat,0,3948,2434,1514,61.65
+Cat,1,2061,1385,676,67.2
+Dog,0,3863,2543,1320,65.83
+Dog,1,1363,917,446,67.28
