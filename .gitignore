@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 
+# Local responses from the geocoding service
+/.cache/geocoder_cache.json
+/.cache/geocoder_cache.tmp
+
 # Intermediate animal-level geocoding data
 /data/processed/stray_geocoded_districts_2024.csv
 

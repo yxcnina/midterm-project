@@ -1,3 +1,5 @@
+import argparse
+from collections import Counter
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
 import hashlib
@@ -18,6 +20,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 INPUT_PATH = PROJECT_ROOT / "data/processed/aac_intakes_clean.csv"
 OUTPUT_PATH = PROJECT_ROOT / "data/processed/aac_intakes_clean_geocoded.csv"
 CACHE_PATH = PROJECT_ROOT / ".cache/geocoder_cache.json"
+SUMMARY_PATH = PROJECT_ROOT / "artifacts/geocoding/geocoding_summary.csv"
 SERVICE = (
     "https://maps.austintexas.gov/arcgis/rest/services/Geocode/"
     "COA_Locator/GeocodeServer"
@@ -99,6 +102,7 @@ def _prepare(text):
 
 
 def _street(text, strip_house=False):
+    """Return comparable street parts, optionally removing the house number."""
     text = text.strip()
     if strip_house:
         text = re.sub(r"^\d+[A-Z]?\s+(?:[ABCD]\s+)?", "", text)
@@ -327,9 +331,11 @@ def request_batch(locations):
     }
 
 
-def validate_result(location, entry):
-    """Return the three coordinate fields for an accepted match, else None."""
+def assess_result(location, entry):
+    """Return accepted coordinates and 'accepted', or None and the first failure."""
     kind, detail, _, _ = classify(location)
+    if kind not in {"numbered_address", "intersection"}:
+        return None, kind
     candidate = entry["response"]
     attributes = candidate.get("attributes", {})
     address_type = attributes.get("Addr_type", "")
@@ -337,15 +343,14 @@ def validate_result(location, entry):
     matched = candidate.get("address", "")
     point = candidate.get("location", {})
     longitude, latitude = point.get("x"), point.get("y")
-    if (
-        kind not in {"numbered_address", "intersection"}
-        or attributes.get("Status") != "M"
-        or not math.isfinite(score)
-        or not MIN_SCORE <= score <= 100
-        or address_type not in PRECISIONS
-        or (kind == "intersection") != (address_type == "StreetInt")
-    ):
-        return None
+    if attributes.get("Status") != "M":
+        return None, "geocoder_status_not_matched"
+    if not math.isfinite(score) or not MIN_SCORE <= score <= 100:
+        return None, "score_outside_accepted_range"
+    if address_type not in PRECISIONS:
+        return None, "unsupported_match_type"
+    if (kind == "intersection") != (address_type == "StreetInt"):
+        return None, "address_type_mismatch"
     # response.location uses WGS84; attributes.X/Y may use projected feet.
     if not (
         isinstance(longitude, (int, float))
@@ -355,7 +360,7 @@ def validate_result(location, entry):
         and -98.6 <= longitude <= -96.9
         and 29.6 <= latitude <= 31.2
     ):
-        return None
+        return None, "invalid_or_out_of_area_coordinates"
     if kind == "numbered_address":
         source_number = re.match(r"^\d+[A-Za-z]?\b", detail)
         target_number = re.match(r"^\d+[A-Za-z]?\b", matched)
@@ -363,28 +368,42 @@ def validate_result(location, entry):
             not source_number or not target_number
             or source_number.group().upper() != target_number.group().upper()
         ):
-            return None
-    if street_consistency_reason(detail, matched, kind):
-        return None
+            return None, "house_number_mismatch"
+    reason = street_consistency_reason(detail, matched, kind)
+    if reason:
+        return None, reason
     return {
         "latitude": latitude,
         "longitude": longitude,
         "location_precision": PRECISIONS[address_type],
-    }
+    }, "accepted"
 
 
-def build_location_lookup(locations, cache_path):
-    """Query unique addresses, reuse local responses, and return valid points."""
+def validate_result(location, entry):
+    """Return the three coordinate fields for an accepted match, else None."""
+    return assess_result(location, entry)[0]
+
+
+def build_location_lookup(locations, cache_path, *, offline=False):
+    """Return accepted points and a primary decision for each unique location."""
     cache_path = Path(cache_path)
     cache = (
         json.loads(cache_path.read_text(encoding="utf-8"))
         if cache_path.exists() else {}
     )
-    candidates = sorted({
-        value for value in locations
-        if classify(value)[0] in {"numbered_address", "intersection"}
-    })
+    decisions = {location: classify(location)[0] for location in locations}
+    candidates = sorted(
+        location for location, kind in decisions.items()
+        if kind in {"numbered_address", "intersection"}
+    )
     needed = [value for value in candidates if value not in cache]
+    if offline and needed:
+        raise ValueError(
+            f"Cannot use --offline: {len(needed):,} eligible location(s) are "
+            f"missing from the cache at {cache_path}. Provide a complete "
+            "cache with --cache, or rerun without --offline with an internet "
+            "connection to retrieve the missing responses."
+        )
     print(f"Unique locations to query: {len(needed):,}", flush=True)
     for start in range(0, len(needed), BATCH_SIZE):
         cache.update(request_batch(needed[start:start + BATCH_SIZE]))
@@ -403,24 +422,47 @@ def build_location_lookup(locations, cache_path):
         )
     accepted = {}
     for location in candidates:
-        point = validate_result(location, cache[location])
+        point, decisions[location] = assess_result(location, cache[location])
         if point is not None:
             accepted[location] = point
-    return accepted
+    return accepted, decisions
 
 
-def run(input_path=INPUT_PATH, output_path=OUTPUT_PATH, cache_path=CACHE_PATH):
-    """Read cleaned events, save accepted points to one CSV, and return counts."""
-    input_path, output_path, cache_path = map(
-        Path, (input_path, output_path, cache_path)
+def summarize_decisions(locations, decisions):
+    """Count each input event once; shares use all intake events as denominator."""
+    counts = Counter(decisions[location] for location in locations)
+    counts.setdefault("accepted", 0)
+    reasons = ["accepted", *sorted(reason for reason in counts if reason != "accepted")]
+    total = len(locations)
+    return pd.DataFrame([
+        {
+            "reason": reason,
+            "count": counts[reason],
+            "share_of_all_intakes": counts[reason] / total if total else 0.0,
+        }
+        for reason in reasons
+    ])
+
+
+def run(
+    input_path=INPUT_PATH, output_path=OUTPUT_PATH, cache_path=CACHE_PATH,
+    *, summary_path=SUMMARY_PATH, offline=False,
+):
+    """Save accepted events and an event-level summary of acceptance decisions."""
+    input_path, output_path, cache_path, summary_path = map(
+        Path, (input_path, output_path, cache_path, summary_path)
     )
     temporary = output_path.with_suffix(output_path.suffix + ".tmp")
+    summary_temporary = summary_path.with_suffix(summary_path.suffix + ".tmp")
     paths = [
         input_path, output_path, temporary,
         cache_path, cache_path.with_suffix(".tmp"),
+        summary_path, summary_temporary,
     ]
     if len({path.resolve() for path in paths}) != len(paths):
-        raise ValueError("Input, output, cache, and temporary paths must differ.")
+        raise ValueError(
+            "Input, output, cache, summary, and temporary paths must differ."
+        )
     input_hash = hashlib.sha256(input_path.read_bytes()).digest()
     intakes = pd.read_csv(input_path, dtype=str, keep_default_na=False)
     if not {"Animal ID", "Found Location"}.issubset(intakes.columns):
@@ -438,9 +480,11 @@ def run(input_path=INPUT_PATH, output_path=OUTPUT_PATH, cache_path=CACHE_PATH):
         raise ValueError("Input needs Intake Date and Intake Time, or DateTime.")
     if not ((dates >= "2024-01-01") & (dates < "2025-01-01")).all():
         raise ValueError("Input must contain only valid 2024 intake dates.")
-    accepted = build_location_lookup(
-        intakes["Found Location"].str.strip().tolist(), cache_path
+    locations = intakes["Found Location"].str.strip().tolist()
+    accepted, decisions = build_location_lookup(
+        locations, cache_path, offline=offline,
     )
+    summary = summarize_decisions(locations, decisions)
     records = []
     for original in intakes.to_dict(orient="records"):
         location = original["Found Location"].strip()
@@ -448,15 +492,21 @@ def run(input_path=INPUT_PATH, output_path=OUTPUT_PATH, cache_path=CACHE_PATH):
             records.append({**original, **accepted[location]})
     output = pd.DataFrame(records, columns=[*intakes.columns, *GEO_FIELDS])
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
     try:
         output.to_csv(
             temporary, index=False, encoding="utf-8-sig", lineterminator="\n"
         )
+        summary.to_csv(
+            summary_temporary, index=False, encoding="utf-8", lineterminator="\n"
+        )
         if hashlib.sha256(input_path.read_bytes()).digest() != input_hash:
             raise RuntimeError("Input changed during this run; please rerun.")
         temporary.replace(output_path)
+        summary_temporary.replace(summary_path)
     finally:
         temporary.unlink(missing_ok=True)
+        summary_temporary.unlink(missing_ok=True)
     counts = {
         "total_records": len(intakes),
         "successfully_located_records": len(output),
@@ -466,8 +516,41 @@ def run(input_path=INPUT_PATH, output_path=OUTPUT_PATH, cache_path=CACHE_PATH):
     print(f"Successfully located records: {len(output):,}")
     print(f"Unsuccessfully located records: {len(intakes) - len(output):,}")
     print(f"Saved CSV: {output_path}")
+    print(f"Saved summary: {summary_path}")
     return counts
 
 
+def main():
+    """Parse file paths and the optional offline cache replay mode."""
+    parser = argparse.ArgumentParser(
+        description="Geocode cleaned AAC intake events using the COA Locator."
+    )
+    parser.add_argument(
+        "--input", type=Path, default=INPUT_PATH,
+        help="Cleaned intake CSV (default: data/processed/aac_intakes_clean.csv).",
+    )
+    parser.add_argument(
+        "--output", type=Path, default=OUTPUT_PATH,
+        help="Destination geocoded CSV (default: the processed geocoded file).",
+    )
+    parser.add_argument(
+        "--cache", type=Path, default=CACHE_PATH,
+        help="Local response cache (default: .cache/geocoder_cache.json).",
+    )
+    parser.add_argument(
+        "--summary", type=Path, default=SUMMARY_PATH,
+        help="Decision counts CSV (default: artifacts/geocoding/geocoding_summary.csv).",
+    )
+    parser.add_argument(
+        "--offline", action="store_true",
+        help="Use cached responses only; fail if any eligible location is missing.",
+    )
+    args = parser.parse_args()
+    run(
+        args.input, args.output, args.cache,
+        summary_path=args.summary, offline=args.offline,
+    )
+
+
 if __name__ == "__main__":
-    run()
+    main()

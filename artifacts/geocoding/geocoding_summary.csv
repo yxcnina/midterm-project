@@ -1,0 +1,14 @@
+reason,count,share_of_all_intakes
+accepted,7545,0.6385950063478629
+address_type_mismatch,16,0.0013542107490478205
+approximate_location_not_resolved,19,0.001608125264494287
+fractional_street_mismatch,1,8.463817181548878e-05
+geocoder_status_not_matched,586,0.04959796868387643
+house_number_mismatch,3,0.0002539145154464664
+score_outside_accepted_range,437,0.036986881083368596
+street_direction_mismatch,10,0.0008463817181548879
+street_name_mismatch,25,0.0021159542953872196
+street_only_or_landmark_not_resolved,810,0.06855691917054592
+street_or_highway_number_mismatch,3,0.0002539145154464664
+unsupported_match_type,37,0.003131612357173085
+vague_city_county_or_jurisdiction,2323,0.19661447312738045

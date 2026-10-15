@@ -76,6 +76,8 @@ The intake and outcome datasets are linked using `Animal ID` and `DateTime` when
 
 AAC `Found Location` values are matched to geographic coordinates. Only records that pass the matching checks are saved to `data/processed/aac_intakes_clean_geocoded.csv`, a separate subset of the cleaned intake records.
 
+The script uses numbered addresses and intersections. Accepted matches require matched status, a locator score of at least 95, a supported match type, consistent address components, and valid WGS84 coordinates within the study-area bounds. The score is not a probability of accuracy. The saved file contains 7,545 of 11,815 intake events; this is a selected subset, so non-spatial summaries use the full cleaned data.
+
 The derived geographic fields are:
 
 - `latitude`
@@ -471,7 +473,11 @@ The repository already includes [data/processed/aac_intakes_clean_geocoded.csv](
 python code/data_cleaning/geocode_aac_intakes.py
 ```
 
-Only records that pass the geocoding checks are saved to this separate file.
+Only records that pass the geocoding checks are saved to this separate file. The script preserves the original intake columns and adds the three geographic fields. If a complete local response cache is available, `--offline` rebuilds the file without network requests and stops if any required response is missing. The cache is not included in the repository.
+
+The script also writes [geocoding_summary.csv](artifacts/geocoding/geocoding_summary.csv), which counts accepted records and the first exclusion reason for each remaining intake event. Its counts sum to all 11,815 input events, including 7,545 accepted events and 4,270 excluded events. Shares use all intake events as the denominator. Use `--summary` to choose another destination.
+
+Matching rules, cache behavior, and checks: [Geocoding instructions](code/data_cleaning/README-geocoding.md).
 
 ### 7.5 Run the Analysis Modules
 After the shared AAC datasets have been prepared, each analysis module can be run independently.
