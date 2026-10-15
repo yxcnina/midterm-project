@@ -1,0 +1,13 @@
+weather_group,intake_type,intake_events,total_group_events,proportion_pct
+0,Stray,8093,11635,69.5574
+0,Owner Surrender,2091,11635,17.9716
+0,Public Assist,695,11635,5.9734
+0,Abandoned,400,11635,3.4379
+0,Wildlife,354,11635,3.0425
+0,Euthanasia Request,2,11635,0.0172
+1,Stray,118,180,65.5556
+1,Owner Surrender,37,180,20.5556
+1,Public Assist,15,180,8.3333
+1,Abandoned,4,180,2.2222
+1,Wildlife,6,180,3.3333
+1,Euthanasia Request,0,180,0.0

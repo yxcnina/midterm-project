@@ -1,0 +1,13 @@
+weather,wet_day,intake_type,intake_events,total_group_events,proportion_pct
+Dry,0,Stray,6575,9543,68.8987
+Dry,0,Owner Surrender,1728,9543,18.1075
+Dry,0,Public Assist,590,9543,6.1825
+Dry,0,Abandoned,342,9543,3.5838
+Dry,0,Wildlife,306,9543,3.2065
+Dry,0,Euthanasia Request,2,9543,0.021
+Wet,1,Stray,1636,2272,72.007
+Wet,1,Owner Surrender,400,2272,17.6056
+Wet,1,Public Assist,120,2272,5.2817
+Wet,1,Abandoned,62,2272,2.7289
+Wet,1,Wildlife,54,2272,2.3768
+Wet,1,Euthanasia Request,0,2272,0.0
