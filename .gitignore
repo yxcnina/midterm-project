@@ -1,0 +1,10 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Intermediate animal-level geocoding data
+/data/processed/stray_geocoded_districts_2024.csv
+
+# Redundant exploratory crime figures
+/artifacts/crime/district_scatter.png
+/artifacts/crime/monthly_trends.png
