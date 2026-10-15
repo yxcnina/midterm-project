@@ -215,12 +215,12 @@ def save_q1_summary(summary):
 def plot_intake_boxplot(daily_df):
     """Plot daily intake count distributions for dry and wet days."""
 
-    # Exclude days without recorded intake counts.
+    
     recorded_days = daily_df.dropna(
         subset=["intake_count"]
     ).copy()
 
-    # Separate daily intake counts by weather condition.
+    
     dry_counts = recorded_days.loc[
         recorded_days["wet_day"] == 0,
         "intake_count"
@@ -231,11 +231,11 @@ def plot_intake_boxplot(daily_df):
         "intake_count"
     ]
 
-    # Verify consistency with the original Q1 analysis.
+    
     assert len(dry_counts) == 293
     assert len(wet_counts) == 72
 
-    # Create the boxplot.
+    
     fig, ax = plt.subplots(figsize=(8, 5))
 
     box = ax.boxplot(
@@ -254,14 +254,14 @@ def plot_intake_boxplot(daily_df):
         }
     )
 
-    # Color the two groups.
+    
     colors = ["#547AA5", "#83B8A6"]
 
     for patch, color in zip(box["boxes"], colors):
         patch.set_facecolor(color)
         patch.set_alpha(0.7)
 
-    # Format the figure.
+    
     ax.set_title(
         "Daily Animal Intake Distribution: Dry vs. Wet Days (2024)"
     )
@@ -270,7 +270,7 @@ def plot_intake_boxplot(daily_df):
     ax.grid(axis="y", linestyle="--", alpha=0.3)
     ax.set_axisbelow(True)
 
-    # Explain the symbols and sample.
+    
     ax.plot([], [], "D", color="black", label="Mean")
     ax.plot([], [], "-", color="black", label="Median")
     ax.legend(loc="upper right")
@@ -285,7 +285,7 @@ def plot_intake_boxplot(daily_df):
 
     fig.tight_layout(rect=[0, 0.05, 1, 1])
 
-    # Save the new plot without replacing the original Q1 figure.
+    
     output_dir = (
         PROJECT_ROOT
         / "artifacts"
